@@ -1,0 +1,278 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #0000000b;
+}
+
+.header{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1rem 0;
+    /* border-bottom: 2px solid gray; */
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    width: 90%;
+    margin: auto;
+}
+
+.figure__logo{
+    width: 50px;
+}
+
+.icon__services{
+    max-width: 20px;
+    object-fit: cover;
+    aspect-ratio: 8 / 9;
+}
+
+.nav__header--content{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav__header--contentBg{
+    background: #05050597;
+    transition: none;
+}
+
+.nav__header--title{
+    position: absolute;
+    top: 29px;
+    left: 20px;
+    font-size: 1.3em;
+    color: orange;
+}
+
+.nav__header{
+    background: rgb(24, 24, 24);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 51%);
+    border-left: 2px solid gray;
+    transition: clip-path .4s ease;
+}   
+
+.nav__header--active{
+    transition: clip-path .5s ease-in-out;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 48%);
+}
+
+.box__model{
+    z-index: 10;
+}
+
+.nav__header--grid{
+    margin: 5rem auto 0rem auto;
+    /* margin-top: 5rem; */
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    padding: 1rem 0;
+    width: 84%;
+}
+
+
+.nav__froms--container{
+    text-align: center;
+}
+
+.nav__link{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    color: #aaaaaa;
+}
+
+
+/* ESTILO EN EL HTML */
+.grid--gap{
+    display: grid;
+    gap: 1rem;
+}
+
+
+.dropdown__list{
+    /* display: none; */
+    padding: .5rem 0 0 2rem;
+    display: grid;
+    gap: 1rem;
+    font-size: .9em;
+    max-height: 0px;
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path .1s ease;
+
+}
+.dropdown__list li:nth-child(-n + 2){
+    border-bottom: 1px solid rgba(147, 147, 147, 0.542);;
+
+}
+.dropdown__item{
+    padding-bottom: .5rem;
+}
+
+.icon__arrow{
+    width: 10px;
+    transition: .2s ease;
+}
+
+.dropdown__list--show{
+    max-height: 250px;
+    clip-path: inset(0 0 0 0);
+    transition: clip-path .5s ease-in-out;
+}
+
+.margin-bottom{
+    margin-bottom: 100px;
+}
+
+.rotate--arrow{
+    transform: rotate(180deg);
+}
+/* MediaQuerys */
+
+@media (min-width: 48rem){
+    
+    .header{
+        box-sizing: border-box;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        padding: 1rem 0 0 0;
+    }
+
+    .header__container{
+        display: grid;
+        grid-template-columns: 12% 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        width: 90%;
+        margin: auto;
+    }
+
+
+    .nav__header--content{
+        position: relative;
+        height: unset;
+        width: unset;
+    }
+
+    .nav__header--title{
+        display: none;
+    }
+
+    .nav__header{
+        background: transparent;
+        position: relative;
+        height: unset;
+        width: unset;
+        clip-path: none;
+        border-left: none;
+        transition: none;
+    }   
+
+
+    .box__model{
+        display: none;
+    }
+
+    .nav__header--grid{
+        margin: 0rem auto 0rem auto;
+        height: unset;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        align-items: center;
+        padding:0;
+        width: unset;
+        gap: 1rem;
+    }
+
+
+    .nav__froms--container{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 1rem;
+    }
+
+    .btn{
+        padding: .2rem .3rem;
+    }
+
+    
+    .flex__center{
+        display: flex;
+        align-items: center;
+
+    }
+
+    .nav__header--container{
+        justify-content: end;
+    }
+
+    .dropdown__list{
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        background-color: white;
+        top: 40px;
+        border-top: 15px solid orange ;
+        height: 160px;
+        width: 220px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: .5rem 1rem 0 2rem;
+        filter: drop-shadow(1px 1px 4px #00000020);
+        border-radius: 0 0 1rem 1rem;
+        
+    }
+
+    
+    
+    
+}
+
+
+@media (min-width: 64rem){
+
+    .dropdown__list{
+        border-top: 9px solid orange ;
+        
+    }
+
+}
