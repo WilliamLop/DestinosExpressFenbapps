@@ -77,25 +77,55 @@ navLinkDrop.addEventListener('click', (e) => {
 // Abrir Modal 
 
 const btnModalShow = document.querySelector('#reservaForm');
+const divModalContent = document.querySelector('.modal__content--reserva');
+const divModalContainer = document.querySelector('.modal__container--reserva');
+const btnModalShow2 = document.querySelector('#lineaForm');
+const divModalContent2 = document.querySelector('.modal__content--linea');
+const divModalContainer2 = document.querySelector('.modal__container--linea');
 const btncloseModal = document.querySelector('.close__modal');
-const divModalContent = document.querySelector('.modal__content');
-const divModalContainer = document.querySelector('.modal__container');
+const btncloseModal2 = document.querySelector('.close__modal--honesta');
+
+// Creo funcion para abrir modal
+function showModal(){
+    divModalContainer.classList.add('modal__container--show');
+    divModalContent.classList.add('modal__content--show');
+}
+
+function hideModal(){
+    divModalContent.classList.add('modal__content--hide');
+    setTimeout(() => {
+        divModalContainer.classList.remove('modal__container--show');
+        divModalContent.classList.remove('modal__content--show', 'modal__content--hide');
+    }, 400);
+}
+
+function showModal2(){
+    divModalContainer2.classList.add('modal__container--show');
+    divModalContent2.classList.add('modal__content--show');
+    
+}
+function hideModal2(){
+    divModalContent2.classList.add('modal__content--hide');
+    setTimeout(() => {
+        divModalContainer2.classList.remove('modal__container--show');
+        divModalContent2.classList.remove('modal__content--show', 'modal__content--hide');
+    }, 400);
+}
 
 
 btnModalShow.addEventListener('click', () => {
-    divModalContainer.classList.add('modal__container--show');
-    divModalContent.classList.add('modal__content--show');
-    
+    showModal();
 });
 btncloseModal.addEventListener('click', () => {
-    divModalContainer.classList.remove('modal__container--show');
-    divModalContent.classList.remove('modal__content--show');
-    
+    hideModal() ;   
+});
+btnModalShow2.addEventListener('click', () => {
+    showModal2();
+});
+btncloseModal2.addEventListener('click', () => {
+    hideModal2();
 });
 
-// BtncloseModal.addEventListener('click', () => {
-
-// });
 
 
 

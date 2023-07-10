@@ -174,17 +174,17 @@ body{
     place-items: center;
     width: 100%;
     overflow-y: auto;
-    /* transition: .5s ease-in-out; */
     clip-path: inset(0 0 100% 0);
-    transition: clip-path .5s ease;
+    transition: clip-path 1s ease;
+   
+    
 }
 
 .modal__container--show{
+    pointer-events: auto;
     clip-path: inset(0 0 0 0);
-    transition: clip-path .5s ease;
+    transition: clip-path 1s ease;
     height: 100vh;
-    /*transition: .5s ease-in-out; */
-
 }
 .btn{
     cursor: pointer;
@@ -193,29 +193,42 @@ body{
     box-sizing: border-box;
     background-color: white;
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px;
     padding: 1rem;
     margin: 2rem auto;
     position: relative;
     opacity: 0;
-    transition: opacity .6s .5s ease;
     border-radius: .5rem;
-    
 }
 
 .modal__content--show{
+    overflow-y: auto;
     opacity: 1;
-    transition: opacity .4s .2s ease-in-out;
+    transition: opacity 1.2s ease-in-out;
 }
 
 .form__modal{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    width: 80%;
+    /* display: grid; */
+    /* grid-template-columns: 1fr; */
+    /* gap: 1rem; */
+    width: 90%;
     margin: 0 auto;
 }
 
+.from__input{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+
+.modal__content--hide{
+    opacity: 0;
+    transform: translateY(-200%);
+}
 
 .center{
     text-align: center;
@@ -223,8 +236,12 @@ body{
 
 .close__modal{
     position: absolute;
-    top: 1.4%;
+    top: 2%;
     right: 3.6%;
+}
+
+.box__model{
+    cursor: pointer;
 }
 /* MediaQuerys */
 
@@ -327,13 +344,32 @@ body{
         
     }
 
-    
-   
-    
+    .inputs{
+        color: red;
+        /* width: 100px; */
+
+    }
     
 }
 
 
+@media (min-width: 55rem){
+
+    .from__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+    .from__input{
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+}
 @media (min-width: 64rem){
 
     .dropdown__list{

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logoDestinos.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logoDestinos.png">
     <title>Destinos Express – Servicio empresarial, ejecutivo y turístico</title>
     <!-- ESTILOS HEADER CSS -->
     <link rel="stylesheet" href="css/header.css">
@@ -71,68 +71,110 @@
             </a>
         </div>
 
-        <div class="modal__container">
-            <div class="modal__content">
+        <!-- MODAL DE RESERVACIÓN -->
+        <div class="modal__container modal__container--reserva" id="modalReserva">
+            <div class="modal__content modal__content--reserva">
                 <h2 class="reserva__title center">Bienvenido(a)</h2>
                         <p class="reserva__paragraph center">Aquí puedes reservar, deja tu datos y atenderemos tu
                             solicitud</p>
                         <form action="" class="form__reserva form__modal">
-                            <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
-                            <label class="labels" for="name" id="name-label">Nombre</label>
-                            <input class="inputs" type="text" name="name" id="name" placeholder="Escribe tu nombre"
-                                required>
-                            <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
-                            <label class="labels" for="services" id="services-label">Tipo De Servicio</label>
-                            <select class="selected" name="services" id="services" required>
-                                <option value="">Seleccione Servicio</option>
-                                <option value="ejecutivo">Ejecutivo</option>
-                                <option value="empresarial">Empresarial</option>
-                                <option value="normal">Normal</option>
-                            </select>
-                            <!-- ENTRADA DE FECHA Y HORA -->
-                            <label class="labels" for="datetime" id="datetime-label">Fecha y Hora</label>
-                            <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
-                            <!-- ENTRADA DE TELEFONO -->
-                            <label class="labels" for="phone" id="phone-label">Celular</label>
-                            <input class="inputs"  type="tel" name="phone" id="phone" placeholder="Número de celular" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" required>
-                            <!-- ENTRADA DE SELECCION TIPO VEHICULO -->
-                            <label class="labels" for="vehiculo" id="vehiculo-label">Tipo De Vehículo</label>
-                            <select class="selected" name="vehiculo" id="vehiculo" required>
-                                <option value="">Seleccione Vehículo</option>
-                                <option value="camionetas">Camionetas</option>
-                                <option value="dobleCabina">Doble Cabina</option>
-                                <option value="miniVan">Mini Van</option>
-                                <option value="vans">Vans</option>
-                                <option value="Buses">Buses</option>
-                            </select>
-                            <!-- ENTRADA DE DESTINO -->
-                            <label class="labels" for="destino" id="destino-label">Destino</label>
-                            <input class="inputs" type="text" name="destino" id="destino"
-                                placeholder="Escribe tu destino" required>
-                            <!-- ENTRADA DE EMAIL -->
-                            <label class="labels" for="email" id="email-label">Email</label>
-                            <input class="inputs" type="email" name="email" id="email" placeholder="Escribe tu email"
-                                required>
-                            <!-- ENTRADA DE CIUDAD -->
-                            <label class="labels" for="ciudad" id="ciudad-label">Ciudad</label>
-                            <input class="inputs" type="text" name="ciudad" id="ciudad" placeholder="Escribe tu ciudad"
-                                required>
-                            <!-- ENTRADA DE ITINERARIO DE VUELO -->
-                            <label class="labels" for="itirenario" id="itirenario-label">Itinerario de vuelo</label>
-                            <input class="inputs" type="text" name="itirenario" id="itirenario"
-                                placeholder="Escribe tu itirenario" required>
-                            <!-- ENTRADA DE EMPRESA -->
-                            <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
-                            <input class="inputs" type="text" name="Empresa" id="Empresa"
-                                placeholder="Escribe tu Empresa" required>
-                            <!-- ENTRADA DE DIRECCION -->
-                            <label class="labels" for="direccion" id="direccion-label">Dirección</label>
-                            <input class="inputs" type="text" name="direccion" id="direccion"
-                                placeholder="Escribe tu direccion" required>
-                            <!-- ENTRADA DE COMENTARIOS -->
-                            <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
-                            <textarea class="textarea" name="comentarios" id="comentarios"
-                                placeholder="Escribe tus comentarios" rows="4"></textarea>
+
+                            <div class="from__responsive">
+                                <div class="from__row">
+                                    <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="name" id="name-label">Nombre</label>
+                                        <input class="inputs" type="text" name="name" id="name" placeholder="Escribe tu nombre"
+                                            required>
+                                    </div>
+                                    <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="services" id="services-label">Tipo De Servicio</label>
+                                        <select class="selected" name="services" id="services" required>
+                                            <option value="">Seleccione Servicio</option>
+                                            <option value="ejecutivo">Ejecutivo</option>
+                                            <option value="empresarial">Empresarial</option>
+                                            <option value="normal">Normal</option>
+                                        </select>
+                                    </div>
+                                    <!-- ENTRADA DE FECHA Y HORA -->
+                                    <div class="from__input">
+                                        <label class="labels" for="datetime" id="datetime-label">Fecha y Hora</label>
+                                        <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
+                                    </div>
+                                </div>
+    
+                                <div class="from__row">
+                                    <!-- ENTRADA DE TELEFONO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="phone" id="phone-label">Celular</label>
+                                        <input class="inputs"  type="tel" name="phone" id="phone" placeholder="Número de celular" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" required>
+                                    </div>
+                                    
+
+                                    <!-- ENTRADA DE SELECCION TIPO VEHICULO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="vehiculo" id="vehiculo-label">Tipo De Vehículo</label>
+                                        <select class="selected" name="vehiculo" id="vehiculo" required>
+                                            <option value="">Seleccione Vehículo</option>
+                                            <option value="camionetas">Camionetas</option>
+                                            <option value="dobleCabina">Doble Cabina</option>
+                                            <option value="miniVan">Mini Van</option>
+                                            <option value="vans">Vans</option>
+                                            <option value="Buses">Buses</option>
+                                        </select>
+                                    </div>
+                                    <!-- ENTRADA DE DESTINO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="destino" id="destino-label">Destino</label>
+                                        <input class="inputs" type="text" name="destino" id="destino"
+                                            placeholder="Escribe tu destino" required>                            
+                                    </div>
+                                </div>
+    
+                                <div class="from__row">
+                                    <!-- ENTRADA DE EMAIL -->
+                                    <div class="from__input">
+                                        <label class="labels" for="email" id="email-label">Email</label>
+                                        <input class="inputs" type="email" name="email" id="email" placeholder="Escribe tu email"
+                                            required>
+                                    </div>
+                                    <!-- ENTRADA DE CIUDAD -->
+                                    <div class="from__input">
+                                        <label class="labels" for="ciudad" id="ciudad-label">Ciudad</label>
+                                        <input class="inputs" type="text" name="ciudad" id="ciudad" placeholder="Escribe tu ciudad"
+                                            required>
+                                    </div>
+                                    <!-- ENTRADA DE ITINERARIO DE VUELO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="itirenario" id="itirenario-label">Itinerario de vuelo</label>
+                                        <input class="inputs" type="text" name="itirenario" id="itirenario"
+                                            placeholder="Escribe tu itirenario" required>
+                                    </div>
+                                </div>
+    
+                                <div class="from__row">
+                                    <!-- ENTRADA DE EMPRESA -->
+                                    <div class="from__input">
+                                        <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
+                                        <input class="inputs" type="text" name="Empresa" id="Empresa"
+                                            placeholder="Escribe tu Empresa" required>
+                                    </div>
+                                    <!-- ENTRADA DE DIRECCION -->
+                                    <div class="from__input">
+                                        <label class="labels" for="direccion" id="direccion-label">Dirección</label>
+                                        <input class="inputs" type="text" name="direccion" id="direccion"
+                                            placeholder="Escribe tu direccion" required>
+                                    </div>
+                                    <!-- ENTRADA DE COMENTARIOS -->
+                                    <div class="from__input">
+                                        <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
+                                        <textarea class="textarea" name="comentarios" id="comentarios"
+                                            placeholder="Escribe tus comentarios" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <!-- BOTON COTIZACIÓN -->
                             <input type="submit" value="Solicitar cotización" class="btn btn-reserva btn-solicitud" id="btn-cotizar">
@@ -144,7 +186,129 @@
                         </a>
             </div>
         </div>
+        <!-- MODAL DE LINEA HONESTA -->
+        <div class="modal__container modal__container--linea" id="modalLinea">
+            <div class="modal__content modal__content--linea">
+                <h2 class="reserva__title center">Línea honesta</h2>
+                        <p class="reserva__paragraph center">Denuncias relacionadas con conductas deshonestas</p>
+                        <form action="" class="form__modal from__linea">
+
+                            <div class="from__responsive">
+                                <div class="from__row">
+                                    <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="asunto" id="asunto-label">Asunto</label>
+                                        <select class="selected" name="asunto" id="asunto" required>
+                                            <option value="">Apropiación de recursos</option>
+                                            <option value="solicitud">Solicitud de dinero para cierre</option>
+                                            <option value="conflictos">Conflicto de intereses</option>
+                                            <option value="falsedad">Falsedad de información</option>
+                                        </select>
+                                    </div>
+                                    <!-- ENTRADA DE FECHA Y HORA -->
+                                    <div class="from__input">
+                                        <label class="labels" for="datetime" id="datetime-label">Fecha y Hora</label>
+                                        <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
+                                    </div>
+        
+                                    <!-- ENTRADA DE SELECCION INVOLUCRADO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="involucrado" id="involucrado-label">Involucrado</label>
+                                        <select class="selected" name="involucrado" id="involucrado" required>
+                                            <option value="">Seleccione Cliente</option>
+                                            <option value="provedor">Provedor</option>
+                                            <option value="aliado">Aliado</option>
+                                            <option value="conductor">Conductor</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+    
+                                <div class="form__row">
+                                    <!-- ENTRADA DE CARGO/NOMBRE INVOLUCRADO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="cargo" id="cargo-label">Nombre y/o cargo del involucrado</label>
+                                        <input class="inputs" type="text" name="cargo" id="cargo" placeholder="Escribe el cargo"
+                                            required>
+                                    </div>
+        
+                                    <!-- ENTRADA DE LUGAR DE LOS HECHOS -->
+                                    <div class="from__input">
+                                        <label class="labels" for="ocurrido" id="ocurrido-label">¿Dónde Ocurrió?</label>
+                                        <input class="inputs" type="text" name="ocurrido" id="ocurrido"
+                                            placeholder="Escribe dónde ocurrió" required>
+                                    </div>
+        
+                                    <!-- ENTRADA DE COMENTARIOS -->
+                                    <div class="from__input">
+                                        <label class="labels" for="situacion" id="situacion-label">Descripción de la
+                                            situación</label>
+                                        <textarea class="textarea" name="situacion" id="situacion"
+                                            placeholder="Escribe tu situación" rows="4" required></textarea>
+                                    </div>
+                                </div>
+    
+                                <div class="from__row">
+                                    <!-- ENTRADA DE ARCHIVO -->
+                                    <div class="from__input">
+                                        <label for="file" class="labels" id="file-label">Seleccionar archivo</label>
+                                        <input type="file" name="file" id="file" class="filebtn" accept=".jpg, .png, .pdf" required>
+                                    </div>
+        
+                                    <!-- ENTRADA DE DECISION -->
+                                    <div class="from__input">
+                                        <label for="checkbox" class="checkbox-lab" id="checkbox-label">
+                                            <input type="checkbox" class="checkbox" name="checkbox" id="checkbox" required>
+                                            ¿Desea ser contactado(a)
+                                        </label>
+                                    </div>
+        
+                                    <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="name" id="name-label">Name</label>
+                                        <input class="inputs" type="text" name="name" id="name" placeholder="Escribe tu nombre"
+                                            required>
+                                    </div>
+                                </div>
+    
+                                <div class="from__row">
+                                    <!-- ENTRADA DE TELEFONO -->
+                                    <div class="from__input">
+                                        <label class="labels" for="phone" id="phone-label">Celular</label>
+                                        <input class="inputs"  type="tel" name="phone" id="phone" placeholder="Número de celular" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" required>
+            
+                                    </div>
+                                    <!-- ENTRADA DE EMAIL -->
+                                    <div class="from__input">
+                                        <label class="labels" for="email" id="email-label">Email</label>
+                                        <input class="inputs" type="email" name="email" id="email" placeholder="Escribe tu email"
+                                            required>
+                                    </div>
+        
+                                    <!-- ENTRADA DE DECISION -->
+                                    <div class="from__input">
+                                        <label for="checkbox" class="checkbox-lab" id="checkbox-label">
+                                            <input type="checkbox" class="checkbox" name="checkbox" id="checkbox" required>
+                                            Estoy de acuerdo con los términos y condiciones
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BOTON SOLICITUD -->
+                            <input type="submit" value="Enviar Reporte" class="btn btn-reserva btn-solicitud" id="btn-observacion">
+                        </form>
+
+                        <a href="#" class="close__modal close__modal--honesta" id="close__modal--honesta">
+                            <img src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar" id="close-modal"
+                                class="close__modal--icon">
+                        </a>
+            </div>
+        </div>
     </header>
+
+    <main>
+    </main>
 
     <!-- SCRIPT HEADER JS -->
     <script src="js/header.js"></script>
