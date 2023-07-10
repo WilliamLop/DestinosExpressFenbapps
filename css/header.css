@@ -176,7 +176,6 @@ body{
     overflow-y: auto;
     clip-path: inset(0 0 100% 0);
     transition: clip-path 1s ease;
-   
     
 }
 
@@ -240,9 +239,57 @@ body{
     right: 3.6%;
 }
 
+.close__modal--prevent{
+    display: none;
+}
+
 .box__model{
     cursor: pointer;
 }
+
+
+/* CARDS BACK */
+.card__back--container{
+    position: absolute;
+    top: 0;
+    height: 0vh;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1s ease;
+    background: #05050597;
+}
+
+.card__back--container-show{
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 1s ease;
+    height: 100vh;
+
+}
+.card__back--content{
+    text-align: center;
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: .5rem;
+    max-width: 450px;
+    padding: 1rem .5rem;
+    display: grid;
+    gap: 1rem;
+    opacity: 0;
+}
+
+.card__back__content--show{
+    opacity: 1;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.card__back--content img{
+    margin: 0 auto;
+}
+
 /* MediaQuerys */
 
 @media (min-width: 48rem){

@@ -1,4 +1,5 @@
 
+
 // MENU PARA ABRIR
 const navHeaderContent = document.querySelector('.nav__header--content');
 const navHeader = document.querySelector('.nav__header');
@@ -87,45 +88,116 @@ const btncloseModal2 = document.querySelector('.close__modal--honesta');
 
 // Creo funcion para abrir modal
 function showModal(){
-    divModalContainer.classList.add('modal__container--show');
-    divModalContent.classList.add('modal__content--show');
+    
+    btnModalShow.addEventListener('click', () => {
+        divModalContainer.classList.add('modal__container--show');
+        divModalContent.classList.add('modal__content--show');
+        btnMenu.classList.add('close__modal--prevent');
+    });
+    btnModalShow2.addEventListener('click', () => {
+        divModalContainer2.classList.add('modal__container--show');
+        divModalContent2.classList.add('modal__content--show');
+        btnMenu.classList.add('close__modal--prevent');
+    });
 }
 
+// Creo funcion para cerrar modal
 function hideModal(){
     divModalContent.classList.add('modal__content--hide');
+    btnMenu.classList.remove('close__modal--prevent');
+    divModalContent2.classList.add('modal__content--hide');
     setTimeout(() => {
         divModalContainer.classList.remove('modal__container--show');
         divModalContent.classList.remove('modal__content--show', 'modal__content--hide');
-    }, 400);
-}
-
-function showModal2(){
-    divModalContainer2.classList.add('modal__container--show');
-    divModalContent2.classList.add('modal__content--show');
-    
-}
-function hideModal2(){
-    divModalContent2.classList.add('modal__content--hide');
-    setTimeout(() => {
         divModalContainer2.classList.remove('modal__container--show');
         divModalContent2.classList.remove('modal__content--show', 'modal__content--hide');
-    }, 400);
+    }, 280);
+
 }
 
 
-btnModalShow.addEventListener('click', () => {
-    showModal();
-});
+
+showModal();
+
 btncloseModal.addEventListener('click', () => {
     hideModal() ;   
 });
-btnModalShow2.addEventListener('click', () => {
-    showModal2();
-});
 btncloseModal2.addEventListener('click', () => {
-    hideModal2();
+    hideModal();
 });
 
 
+// Abrir Modal cardBack
+
+// const cardBackContainer = document.querySelector('.back--reservacion-container');
+// const cardBackContent = document.querySelector('.back--reservacion-content');
+const btnSalirCard = document.querySelectorAll('#btn--salir-card');
+const cardBackContainer = document.querySelectorAll('.card__back--container');
+const btnSolicitudCard = document.querySelectorAll('#btn-solicitud');
+const cardBackContainer2 = document.querySelector('.back--linea-container');
+const cardBackContent = document.querySelectorAll('.card__back--content');
+// const btnSalirCard2 = document.querySelectorAll('#btn--salir-card');
+
+console.log(cardBackContainer2);
+
+console.log(cardBackContent);
+console.log(btnSolicitudCard);
 
 
+
+
+// Creo funcion para abrir cardBack
+
+
+
+function showCardModal(){
+
+    // Agrego controladores de eventos a cada boton
+    btnSolicitudCard.forEach((button, index) => {
+        
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            cardBackContainer.forEach((modal, modalIndex) => {
+                if(index === modalIndex) {
+                    modal.classList.add('card__back--container-show');
+                    
+                }else{
+                    modal.classList.remove('card__back--container-show')  ; 
+                }
+            });
+            cardBackContent.forEach((modalCotnent, modalContentIndex) => {
+                if(index === modalContentIndex) {
+                    modalCotnent.classList.add('card__back__content--show');
+                }else{
+                    modalCotnent.classList.remove('card__back__content--show')  ; 
+                }
+            });
+        });
+
+    });
+   
+    btnSalirCard.forEach((btnSalir, index) => {
+        btnSalir.addEventListener('click', () => {
+            cardBackContainer.forEach((container, containerIndex) => {
+                
+                if(index ===  containerIndex){
+                    console.log('Si entra');
+                    setTimeout(() => {
+                        container.classList.remove('card__back--container-show');
+
+                    },300);
+                }
+            });
+        });
+    });
+
+}
+
+
+showCardModal();
+
+// Creo funcion para cerrara cardBack
+
+function hideCardModal(){
+
+}
