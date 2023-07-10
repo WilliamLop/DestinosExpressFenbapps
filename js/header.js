@@ -1,13 +1,9 @@
-
-
 // MENU PARA ABRIR
 const navHeaderContent = document.querySelector('.nav__header--content');
+const header = document.querySelector('.header');
 const navHeader = document.querySelector('.nav__header');
 const btnMenu = document.querySelector('.box__model');
 const btnMenuIcon = document.querySelector('.box__model--icon');
-
-console.log(navHeaderContent);
-
 
 btnMenu.addEventListener('click', () => {
 
@@ -74,77 +70,78 @@ navLinkDrop.addEventListener('click', (e) => {
     }
 });
 
-
-
-// Abrir Modal 
-
-const btnModalShow = document.querySelector('#reservaForm');
-const divModalContent = document.querySelector('.modal__content--reserva');
-const divModalContainer = document.querySelector('.modal__container--reserva');
-const btnModalShow2 = document.querySelector('#lineaForm');
-const divModalContent2 = document.querySelector('.modal__content--linea');
-const divModalContainer2 = document.querySelector('.modal__container--linea');
-const btncloseModal = document.querySelector('.close__modal');
-const btncloseModal2 = document.querySelector('.close__modal--honesta');
-
 // Creo funcion para abrir modal
+const btnModalShow = document.querySelector('#reservaForm');
+const btncloseModal = document.querySelector('.close__modal');
+const figureLogo = document.querySelector('.figure__logo');
+const openModal = document.querySelectorAll('.open-modal');
+const openModalContainer = document.querySelectorAll('.modal__container');
+const openModalContent = document.querySelectorAll('.modal__content');
+const closeModal = document.querySelectorAll('.close__modal');
+
 function showModal() {
 
-    btnModalShow.addEventListener('click', () => {
-        divModalContainer.classList.add('modal__container--show');
-        divModalContent.classList.add('modal__content--show');
-        btnMenu.classList.add('close__modal--prevent');
+    openModal.forEach((modalOpen, modalIndex) => {
+        modalOpen.addEventListener('click', () => {
+            console.log(modalIndex);
+            openModalContainer.forEach((containerOpen, containerIndex) => {
+                if(containerIndex === modalIndex){
+                    containerOpen.classList.add('modal__container--show');
+                    btnMenu.classList.add('close__modal--prevent');
+                    figureLogo.classList.add('filters');
+                    navHeaderContent.classList.add('filters');
+                }
+            });
+            openModalContent.forEach((contentOpen, contentIndex) => {
+                if(contentIndex === modalIndex){
+                    contentOpen.classList.add('modal__content--show');
+                }
+            });
+            
+
+        });
     });
-    btnModalShow2.addEventListener('click', () => {
-        divModalContainer2.classList.add('modal__container--show');
-        divModalContent2.classList.add('modal__content--show');
-        btnMenu.classList.add('close__modal--prevent');
+
+
+    closeModal.forEach((modalCierre, modalIndex) => {
+        modalCierre.addEventListener('click', () => {
+            console.log(modalIndex + 'cerrar');
+
+            openModalContainer.forEach((containerOpen, containerIndex) => {
+                if(containerIndex === modalIndex){
+                    containerOpen.classList.add('modal__container--hide');
+                    btnMenu.classList.remove('close__modal--prevent');
+                    figureLogo.classList.remove('filters');
+                    navHeaderContent.classList.remove('filters');
+
+                    setTimeout(() => {
+                        containerOpen.classList.remove('modal__container--show');
+                    }, 360);
+                }
+            });
+            openModalContent.forEach((contentOpen, contentIndex) => {
+                if(contentIndex === modalIndex){
+                    setTimeout(() => {
+                        contentOpen.classList.remove('modal__content--show');
+                    }, 120);
+                }
+            });
+        });
+        
     });
+    
 }
-
-// Creo funcion para cerrar modal
-function hideModal() {
-    divModalContent.classList.add('modal__content--hide');
-    btnMenu.classList.remove('close__modal--prevent');
-    divModalContent2.classList.add('modal__content--hide');
-    setTimeout(() => {
-        divModalContainer.classList.remove('modal__container--show');
-        divModalContent.classList.remove('modal__content--show', 'modal__content--hide');
-        divModalContainer2.classList.remove('modal__container--show');
-        divModalContent2.classList.remove('modal__content--show', 'modal__content--hide');
-    }, 280);
-
-}
-
-
-
+// Funcion para abrir modales
 showModal();
 
-btncloseModal.addEventListener('click', () => {
-    hideModal();
-});
-btncloseModal2.addEventListener('click', () => {
-    hideModal();
-});
 
 
 // Abrir Modal cardBack
 
-// const cardBackContainer = document.querySelector('.back--reservacion-container');
-// const cardBackContent = document.querySelector('.back--reservacion-content');
 const btnSalirCard = document.querySelectorAll('#btn--salir-card');
 const cardBackContainer = document.querySelectorAll('.card__back--container');
 const btnSolicitudCard = document.querySelectorAll('#btn-solicitud');
-const cardBackContainer2 = document.querySelector('.back--linea-container');
 const cardBackContent = document.querySelectorAll('.card__back--content');
-// const btnSalirCard2 = document.querySelectorAll('#btn--salir-card');
-
-console.log(cardBackContainer2);
-
-console.log(cardBackContent);
-console.log(btnSolicitudCard);
-
-
 
 
 // Creo funcion para abrir cardBack
@@ -162,6 +159,7 @@ function resertForm() {
 // FUNCION  PARA RECORRER LOS MODALES Y MOSTRAR LAS CARD
 
 const form = document.querySelectorAll('.form__modal');
+
 function showCardModal() {
 
     // Agrego controladores de eventos a cada boton
@@ -175,7 +173,10 @@ function showCardModal() {
                         cardBackContainer.forEach((modal, modalIndex) => {
                             if (index === modalIndex) {
                                 modal.classList.add('card__back--container-show');
-    
+
+                                openModalContainer.forEach(modalOp => {
+                                    modalOp.classList.add('filters');
+                                });
                             } else {
                                 modal.classList.remove('card__back--container-show');
                             }
@@ -192,6 +193,7 @@ function showCardModal() {
                     }
                 }
             });
+            
         });
     });
 
@@ -199,6 +201,7 @@ function showCardModal() {
     btnSalirCard.forEach((btnSalir, index) => {
         btnSalir.addEventListener('click', () => {
             cardBackContainer.forEach((container, containerIndex) => {
+                
 
                 if (index === containerIndex) {
                     console.log('Si entra');
@@ -212,6 +215,10 @@ function showCardModal() {
                 }
             });
             resertForm();
+            openModalContainer.forEach(modalCl => {
+                modalCl.classList.remove('filters');
+            });
+
         });
     });
 
