@@ -171,7 +171,7 @@ body{
     /* background-color:red; */
     background: #05050597;
     display: grid;
-    place-items: center;
+    align-items: center;
     width: 100%;
     overflow-y: auto;
     clip-path: inset(0 0 100% 0);
@@ -181,7 +181,6 @@ body{
 }
 
 .modal__container--show{
-    pointer-events: auto;
     clip-path: inset(0 0 0 0);
     transition: clip-path 1s ease;
     height: 100vh;
@@ -191,6 +190,7 @@ body{
 }
 .modal__content{
     box-sizing: border-box;
+    border: 1px solid black;
     background-color: white;
     width: 90%;
     max-width: 1000px;
@@ -343,13 +343,6 @@ body{
         border-radius: 0 0 1rem 1rem;
         
     }
-
-    .inputs{
-        color: red;
-        /* width: 100px; */
-
-    }
-    
 }
 
 
