@@ -290,6 +290,19 @@ body{
     margin: 0 auto;
 }
 
+.text__error{
+    color: red;
+    font-size: .8em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.text__error--show{
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
 /* MediaQuerys */
 
 @media (min-width: 48rem){

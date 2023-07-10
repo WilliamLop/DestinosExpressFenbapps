@@ -9,14 +9,14 @@ const btnMenuIcon = document.querySelector('.box__model--icon');
 console.log(navHeaderContent);
 
 
-btnMenu.addEventListener('click', () =>{
+btnMenu.addEventListener('click', () => {
 
     navHeader.classList.toggle('nav__header--active');
 
-    if(navHeader.classList.contains('nav__header--active')){
+    if (navHeader.classList.contains('nav__header--active')) {
         btnMenuIcon.setAttribute('src', './images/icon-close-menu.svg');
         navHeaderContent.classList.add('nav__header--contentBg');
-    }else{
+    } else {
         btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
         navHeaderContent.classList.remove('nav__header--contentBg');
     }
@@ -30,13 +30,14 @@ const dropdowmList = document.querySelector('.dropdown__list');
 
 // Funcion para agregar clases al dropdown y mostarlo
 
-function showDropdown(){
+function showDropdown() {
     dropdowmList.classList.add('dropdown__list--show');
     iconArrow.classList.add('rotate--arrow');
 }
 
+
 // Funcion para remover clases al dropdown 
-function hideDropdown(){
+function hideDropdown() {
     dropdowmList.classList.remove('dropdown__list--show');
     iconArrow.classList.remove('rotate--arrow');
 }
@@ -87,8 +88,8 @@ const btncloseModal = document.querySelector('.close__modal');
 const btncloseModal2 = document.querySelector('.close__modal--honesta');
 
 // Creo funcion para abrir modal
-function showModal(){
-    
+function showModal() {
+
     btnModalShow.addEventListener('click', () => {
         divModalContainer.classList.add('modal__container--show');
         divModalContent.classList.add('modal__content--show');
@@ -102,7 +103,7 @@ function showModal(){
 }
 
 // Creo funcion para cerrar modal
-function hideModal(){
+function hideModal() {
     divModalContent.classList.add('modal__content--hide');
     btnMenu.classList.remove('close__modal--prevent');
     divModalContent2.classList.add('modal__content--hide');
@@ -120,7 +121,7 @@ function hideModal(){
 showModal();
 
 btncloseModal.addEventListener('click', () => {
-    hideModal() ;   
+    hideModal();
 });
 btncloseModal2.addEventListener('click', () => {
     hideModal();
@@ -148,56 +149,74 @@ console.log(btnSolicitudCard);
 
 // Creo funcion para abrir cardBack
 
+function resertForm() {
+    const fromContainer = document.querySelectorAll('.form__modal');
+
+    fromContainer.forEach((form) => {
+        form.reset();
+    });
+}
 
 
-function showCardModal(){
+
+// FUNCION  PARA RECORRER LOS MODALES Y MOSTRAR LAS CARD
+
+const form = document.querySelectorAll('.form__modal');
+function showCardModal() {
 
     // Agrego controladores de eventos a cada boton
     btnSolicitudCard.forEach((button, index) => {
-        
         button.addEventListener('click', (e) => {
-            e.preventDefault();
-            cardBackContainer.forEach((modal, modalIndex) => {
-                if(index === modalIndex) {
-                    modal.classList.add('card__back--container-show');
-                    
-                }else{
-                    modal.classList.remove('card__back--container-show')  ; 
-                }
-            });
-            cardBackContent.forEach((modalCotnent, modalContentIndex) => {
-                if(index === modalContentIndex) {
-                    modalCotnent.classList.add('card__back__content--show');
-                }else{
-                    modalCotnent.classList.remove('card__back__content--show')  ; 
+            // Validacion de formularios
+            form.forEach((formContent, fromIndex) => {
+                if(fromIndex === index){
+                    if(formContent.checkValidity()) {
+                        e.preventDefault();
+                        cardBackContainer.forEach((modal, modalIndex) => {
+                            if (index === modalIndex) {
+                                modal.classList.add('card__back--container-show');
+    
+                            } else {
+                                modal.classList.remove('card__back--container-show');
+                            }
+                        });
+                        cardBackContent.forEach((modalCotnent, modalContentIndex) => {
+                            if (index === modalContentIndex) {
+                                modalCotnent.classList.add('card__back__content--show');
+                            } else {
+                                modalCotnent.classList.remove('card__back__content--show');
+                            }
+                        });
+                    }else{
+                        formContent.reportValidity();
+                    }
                 }
             });
         });
-
     });
-   
+
+    // Boton para volver al from 
     btnSalirCard.forEach((btnSalir, index) => {
         btnSalir.addEventListener('click', () => {
             cardBackContainer.forEach((container, containerIndex) => {
-                
-                if(index ===  containerIndex){
+
+                if (index === containerIndex) {
                     console.log('Si entra');
                     setTimeout(() => {
                         container.classList.remove('card__back--container-show');
 
-                    },300);
+                        // Mover el enfoque al inicio del formulario
+                        form[containerIndex].scrollIntoView({ behavior: 'smooth', block: 'start'});
+
+                    }, 300);
                 }
             });
+            resertForm();
         });
     });
 
 }
 
-
+// LLamado de funcion Mostrar modales
 showCardModal();
 
-// Creo funcion para cerrara cardBack
-
-function hideCardModal(){
-
-}
