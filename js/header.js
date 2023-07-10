@@ -22,7 +22,6 @@ btnMenu.addEventListener('click', () =>{
 });
 
 // DROPDOWN LISTA 
-
 const navLinkDrop = document.querySelector('#item__drop');
 const LinkDrop = document.querySelector('#link__drop');
 const iconArrow = document.querySelector('#arrow');
@@ -72,3 +71,31 @@ navLinkDrop.addEventListener('click', (e) => {
         }
     }
 });
+
+
+
+// Abrir Modal 
+
+const btnModalShow = document.querySelector('#reservaForm');
+const btncloseModal = document.querySelector('.close__modal');
+const divModalContent = document.querySelector('.modal__content');
+const divModalContainer = document.querySelector('.modal__container');
+
+
+btnModalShow.addEventListener('click', () => {
+    divModalContainer.classList.add('modal__container--show');
+    divModalContent.classList.add('modal__content--show');
+    
+});
+btncloseModal.addEventListener('click', () => {
+    divModalContainer.classList.remove('modal__container--show');
+    divModalContent.classList.remove('modal__content--show');
+    
+});
+
+// BtncloseModal.addEventListener('click', () => {
+
+// });
+
+
+

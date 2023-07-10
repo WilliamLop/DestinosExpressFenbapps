@@ -70,6 +70,80 @@
                 <img src="images/icon-hamburger.svg" class="box__model--icon" alt="Menú">
             </a>
         </div>
+
+        <div class="modal__container">
+            <div class="modal__content">
+                <h2 class="reserva__title center">Bienvenido(a)</h2>
+                        <p class="reserva__paragraph center">Aquí puedes reservar, deja tu datos y atenderemos tu
+                            solicitud</p>
+                        <form action="" class="form__reserva form__modal">
+                            <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
+                            <label class="labels" for="name" id="name-label">Nombre</label>
+                            <input class="inputs" type="text" name="name" id="name" placeholder="Escribe tu nombre"
+                                required>
+                            <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
+                            <label class="labels" for="services" id="services-label">Tipo De Servicio</label>
+                            <select class="selected" name="services" id="services" required>
+                                <option value="">Seleccione Servicio</option>
+                                <option value="ejecutivo">Ejecutivo</option>
+                                <option value="empresarial">Empresarial</option>
+                                <option value="normal">Normal</option>
+                            </select>
+                            <!-- ENTRADA DE FECHA Y HORA -->
+                            <label class="labels" for="datetime" id="datetime-label">Fecha y Hora</label>
+                            <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
+                            <!-- ENTRADA DE TELEFONO -->
+                            <label class="labels" for="phone" id="phone-label">Celular</label>
+                            <input class="inputs"  type="tel" name="phone" id="phone" placeholder="Número de celular" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" required>
+                            <!-- ENTRADA DE SELECCION TIPO VEHICULO -->
+                            <label class="labels" for="vehiculo" id="vehiculo-label">Tipo De Vehículo</label>
+                            <select class="selected" name="vehiculo" id="vehiculo" required>
+                                <option value="">Seleccione Vehículo</option>
+                                <option value="camionetas">Camionetas</option>
+                                <option value="dobleCabina">Doble Cabina</option>
+                                <option value="miniVan">Mini Van</option>
+                                <option value="vans">Vans</option>
+                                <option value="Buses">Buses</option>
+                            </select>
+                            <!-- ENTRADA DE DESTINO -->
+                            <label class="labels" for="destino" id="destino-label">Destino</label>
+                            <input class="inputs" type="text" name="destino" id="destino"
+                                placeholder="Escribe tu destino" required>
+                            <!-- ENTRADA DE EMAIL -->
+                            <label class="labels" for="email" id="email-label">Email</label>
+                            <input class="inputs" type="email" name="email" id="email" placeholder="Escribe tu email"
+                                required>
+                            <!-- ENTRADA DE CIUDAD -->
+                            <label class="labels" for="ciudad" id="ciudad-label">Ciudad</label>
+                            <input class="inputs" type="text" name="ciudad" id="ciudad" placeholder="Escribe tu ciudad"
+                                required>
+                            <!-- ENTRADA DE ITINERARIO DE VUELO -->
+                            <label class="labels" for="itirenario" id="itirenario-label">Itinerario de vuelo</label>
+                            <input class="inputs" type="text" name="itirenario" id="itirenario"
+                                placeholder="Escribe tu itirenario" required>
+                            <!-- ENTRADA DE EMPRESA -->
+                            <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
+                            <input class="inputs" type="text" name="Empresa" id="Empresa"
+                                placeholder="Escribe tu Empresa" required>
+                            <!-- ENTRADA DE DIRECCION -->
+                            <label class="labels" for="direccion" id="direccion-label">Dirección</label>
+                            <input class="inputs" type="text" name="direccion" id="direccion"
+                                placeholder="Escribe tu direccion" required>
+                            <!-- ENTRADA DE COMENTARIOS -->
+                            <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
+                            <textarea class="textarea" name="comentarios" id="comentarios"
+                                placeholder="Escribe tus comentarios" rows="4"></textarea>
+
+                            <!-- BOTON COTIZACIÓN -->
+                            <input type="submit" value="Solicitar cotización" class="btn btn-reserva btn-solicitud" id="btn-cotizar">
+                        </form>
+
+                        <a href="#" class="close__modal">
+                            <img src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar" id="close-modal"
+                                class="close__modal--icon">
+                        </a>
+            </div>
+        </div>
     </header>
 
     <!-- SCRIPT HEADER JS -->
