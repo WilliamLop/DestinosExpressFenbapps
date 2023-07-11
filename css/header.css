@@ -22,12 +22,12 @@ body{
 }
 
 .header{
-    background-color: black;
+    background-color: #00000041;
     position: fixed;
     width: 100%;
     top: 0;
     padding: 1rem 0;
-    /* border-bottom: 2px solid gray; */
+    border-bottom: 1px solid rgba(143, 143, 143, 0.105);
 }
 
 .header__container{
@@ -37,6 +37,7 @@ body{
     gap: .5rem;
     width: 90%;
     margin: auto;
+    max-width: 1400px;
 }
 
 .figure__logo{
@@ -114,6 +115,7 @@ body{
     align-items: center;
     gap: .6rem;
     color: #aaaaaa;
+    transition: color .5s ease-in-out;
 }
 
 
@@ -170,6 +172,8 @@ body{
     height: 0vh;
     /* background-color:red; */
     background: #05050597;
+    filter:  brightness(80%) saturate(90%); 
+
     display: grid;
     /* align-items: center; */
     width: 100%;
@@ -190,7 +194,7 @@ body{
 .modal__content{
     box-sizing: border-box;
     border: 1px solid black;
-    background-color: white;
+    background-color: white;    
     width: 90%;
     max-width: 1000px;
     padding: 1rem;
@@ -275,7 +279,7 @@ body{
 .card__back--content{
     text-align: center;
     background-color: white;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     border-radius: .5rem;
     max-width: 450px;
@@ -294,21 +298,16 @@ body{
     margin: 0 auto;
 }
 
-.text__error{
-    color: red;
-    font-size: .8em;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
+/* Elementos hover */
 
-.text__error--show{
-    opacity: 1;
-    transition: opacity 1s ease-in;
+.nav__link:hover{
+    color: orange;
+
 }
 
 /* MediaQuerys */
 
+/* Dispositivos tablet de 768px */
 @media (min-width: 48rem){
     
     .header{
@@ -413,7 +412,7 @@ body{
     }
 }
 
-
+/* Dispositivos desktop mini */
 @media (min-width: 55rem){
 
     .from__row{
@@ -431,11 +430,56 @@ body{
     }
 
 }
+
+/* Dispositivos desktop mini de 1024px */
 @media (min-width: 64rem){
 
     .dropdown__list{
         border-top: 9px solid orange ;
         
     }
+
+}
+
+/* Dispositivos desktop de 1280px */
+@media (min-width: 80rem) {
+
+}
+
+/* Dispositivos desktop de 1440px */
+@media (min-width: 90rem) {
+
+}
+
+/* Dispositivos desktop de 1920px */
+@media (min-width: 100rem) {
+    .header{
+        padding: 1.4rem 0 0 0;
+    }
+
+    .nav__link{
+        font-size: 1.2em;
+    }
+    .nav__header--grid{
+        grid-template-columns: 1fr 400px;
+    }
+    .nav__header--grid{
+        gap: 2rem;
+    }
+    .grid--gap{
+        gap: 2.5rem;
+    }
+    .open-modal{
+        font-size: 1em;
+    }
+    
+
+    
+
+}
+
+/* Dispositivos desktop de 2560px */
+@media (min-width: 150rem) {
+
 
 }

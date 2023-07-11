@@ -8,11 +8,12 @@
     <title>Destinos Express – Servicio empresarial, ejecutivo y turístico</title>
     <!-- ESTILOS HEADER CSS -->
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__container">
             <picture class="figure__header">
                 <img src="images/logoDestinos.png" title="Destinos Express" class="figure__logo"
@@ -28,9 +29,9 @@
                                 <ul class="dropdown__trigger">
                                     <li class="nav__item" id="item__drop">
                                         <a href="#" class="nav__link" id="link__drop">
-                                            <img src="images/iconServicios.png" class="icon__services" alt="">
+                                            <img loading="lazy" src="images/iconServicios.png" class="icon__services" alt="">
                                             Servicios
-                                            <img src="images/icon-arrow.svg" id="arrow" class="icon__arrow" alt="">
+                                            <img loading="lazy" src="images/icon-arrow.svg" id="arrow" class="icon__arrow" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -47,13 +48,13 @@
                                 <ul class="nav__list grid--gap flex__center">
                                     <li class="nav__item">
                                         <a href="#" class="nav__link">
-                                            <img src="images/iconContacto.png" class="icon__services" alt="">
+                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services" alt="">
                                             Contacto
                                         </a>
                                     </li>
                                     <li class="nav__item">
                                         <a href="#" class="nav__link">
-                                            <img src="images/iconTrabajaConNosotros.png" class="icon__services" alt="">
+                                            <img loading="lazy" src="images/iconTrabajaConNosotros.png" class="icon__services" alt="">
                                             Trabaja con nosotros
                                         </a>
                                     </li>
@@ -71,7 +72,7 @@
             </div>
 
             <a class="box__model" id="menu" title="Menú">
-                <img src="images/icon-hamburger.svg" class="box__model--icon" alt="Menú">
+                <img loading="lazy" src="images/icon-hamburger.svg" class="box__model--icon" alt="Menú">
             </a>
         </div>
 
@@ -88,8 +89,8 @@
                             <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
                             <div class="from__input">
                                 <label class="labels" for="name" id="name-label">Nombre</label>
-                                <input class="inputs" type="text" name="name" id="name" placeholder="Escribe tu nombre"
-                                    required>
+                                <input class="inputs" type="text" name="name" id="name" autocomplete="on"
+                                    placeholder="Escribe tu nombre" required>
                             </div>
                             <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
                             <div class="from__input">
@@ -114,7 +115,7 @@
                                 <label class="labels" for="phone" id="phone-label">Celular</label>
                                 <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
                                     onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
-                                    required>
+                                    autocomplete="on" required>
                             </div>
 
 
@@ -143,7 +144,7 @@
                             <div class="from__input">
                                 <label class="labels" for="email" id="email-label">Email</label>
                                 <input class="inputs" type="email" name="email" id="email"
-                                    placeholder="Escribe tu email" required>
+                                    placeholder="Escribe tu email" autocomplete="on" required>
                             </div>
                             <!-- ENTRADA DE CIUDAD -->
                             <div class="from__input">
@@ -188,7 +189,7 @@
                 </form>
 
                 <a href="#" class="close__modal">
-                    <img src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar" id="close-modal"
+                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar" id="close-modal"
                         class="close__modal--icon">
                 </a>
             </div>
@@ -266,8 +267,8 @@
 
                             <!-- ENTRADA DE DECISION -->
                             <div class="from__input">
-                                <label for="checkbox" class="checkbox-lab" id="checkbox-label">
-                                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox" required>
+                                <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
+                                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
                                     ¿Desea ser contactado(a)
                                 </label>
                             </div>
@@ -276,7 +277,7 @@
                             <div class="from__input">
                                 <label class="labels" for="name" id="name-label">Name</label>
                                 <input class="inputs" type="text" name="name" id="name" placeholder="Escribe tu nombre"
-                                    required>
+                                    autocomplete="on" required>
                             </div>
                         </div>
 
@@ -286,13 +287,13 @@
                                 <label class="labels" for="phone" id="phone-label">Celular</label>
                                 <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
                                     onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
-                                    required>
+                                    autocomplete="on" required>
 
                             </div>
                             <!-- ENTRADA DE EMAIL -->
                             <div class="from__input">
                                 <label class="labels" for="email" id="email-label">Email</label>
-                                <input class="inputs" type="email" name="email" id="email"
+                                <input class="inputs" type="email" name="email" id="email" autocomplete="on"
                                     placeholder="Escribe tu email" required>
                             </div>
 
@@ -312,7 +313,7 @@
                 </form>
 
                 <a href="#" class="close__modal close__modal--honesta" id="close__modal--honesta">
-                    <img src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar" id="close-modal"
+                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar" id="close-modal"
                         class="close__modal--icon">
                 </a>
             </div>
@@ -320,7 +321,7 @@
         <!-- CARDBACK DE RESERVACIÖN -->
         <section class="card__back--container back--reservacion-container" id="cardBack">
             <div class="card__back--content back--reservacion-content">
-                <img src="images/icon-check.svg" alt="icon-check" class="icon__check">
+                <img loading="lazy" src="images/icon-check.svg" alt="icon-check" class="icon__check">
 
                 <p class="card__title">Gracias por tu reserva</p>
 
@@ -330,14 +331,14 @@
                     transportadora de confianza.
                 </p>
 
-                <button type="submit" class="btn-confimacion btn"  id="btn--salir-card">Salir</button>
+                <button type="submit" class="btn-confimacion btn" id="btn--salir-card">Salir</button>
             </div>
         </section>
 
         <!-- CARDBACK DE SOPORTE -->
         <section class="card__back--container back--linea-container" id="cardBack">
             <div class="card__back--content back--linea-content">
-                <img src="images/icon-soporte.png" alt="icon-support" class="icon__check">
+                <img loading="lazy" src="images/icon-soporte.png" alt="icon-support" class="icon__check">
 
                 <p class="card__title">Gracias por tu información</p>
 
@@ -350,14 +351,49 @@
                 <button type="submit" class="btn-confimacion btn" id="btn--salir-card">Gracias</button>
             </div>
         </section>
-    
+
     </header>
 
-    <main>
+    <main class="main">
+        <div class="main__container--media">
+            <div class="video__wrapper">
+                <video src="video/welcomeVideo.mp4" class="video__express" autoplay loop muted></video>
+            </div>
+            <div class="main__info--home">
+                <div class="info__home">
+                    <div class="title__container">
+                        <h1 class="home__title">
+                            Somos Destinos Express <br> <span class="home__title--change" id="element-text"></span>
+                        </h1>
+                    </div>
+    
+                    <p class="home__paragraph">
+                        Servicio de transporte empresarial, ejecutivo y turístico.
+                    </p>
+    
+                    <button type="submit" class="btn btn-cotizar"> Cotizar ahora</button>
+                </div>
+            </div>
+        </div>
+        <div class="main__container">
+            <h1>Hello</h1>
+        </div>
     </main>
 
     <!-- SCRIPT HEADER JS -->
     <script src="js/header.js"></script>
+    <!-- CND TIPED JS -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- SCRIPT MAIN.JS -->
+    <script src="js/main.js"></script>
+
+    <script>
+        let typed = new Typed('#element-text', {
+            strings: ['tu mejor aliado en transporte.','eficiente y confiable.', 'rápido y seguro.'],
+            typeSpeed: 70,
+            loop: true,
+        });
+    </script>
 </body>
 
 </html>

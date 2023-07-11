@@ -1,0 +1,157 @@
+
+
+.main{
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+}
+
+.main__container--media {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -99;
+}
+
+.video__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(60%) saturate(80%); 
+}
+
+.video__express {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que el video se ajuste manteniendo la relación de aspecto */
+}
+
+.blur {
+    filter: blur(.7px) brightness(70%) saturate(70%);
+}
+
+.main__info--home {
+    color: white;
+    position: relative;
+    top: 25%;
+    width: 100%;
+    margin: auto;
+    height: 40vh;
+    /* border: 1px solid orange; */
+    text-align: center;
+    display: grid;
+    align-items: center;
+    max-width: 1400px;
+}
+
+.info__home{
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+    width: 100%;
+    backdrop-filter: blur(5px); /* Ajusta el valor del desenfoque según tus preferencias */
+    -webkit-backdrop-filter: blur(5px); /* Prefijo para compatibilidad con navegadores WebKit */
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+
+}
+
+.btn-cotizar{
+    width: 40%;
+    max-width: 150px;
+    margin: auto;
+}
+
+.home__title--change{
+    color: orange;
+    font-size: .8em;
+}
+
+/* mediaQuerys */
+
+@media (min-width: 48rem) {
+
+    .main__info--home {
+        text-align: left;
+        width: 90%;
+    }
+
+    .home__title{
+        width: 450px;
+        /* font-size: 2.5em; */
+    }
+    
+    .info__home{
+        max-width: 450px;
+        border-radius: 0 1rem 1rem 0;
+        gap: 2rem;
+        padding: 1.5rem 0 1.5rem 1rem;
+        border-left: 1px solid #eeeeee5b;
+
+    }
+    .btn-cotizar{
+        width: 150px;
+        margin: 0;
+    }
+    .home__title--change{
+        color: orange;
+    }
+}
+@media (min-width: 64rem) {
+
+    .home__title{
+        width: 550px;
+        font-size: 2.5em;
+    }
+
+}
+
+/* Dispositivos desktop de 1280px */
+@media (min-width: 80rem) {
+
+    .home__title{
+        width: 550px;
+        font-size: 2.5em;
+    }
+
+}
+
+/* Dispositivos desktop de 1440px */
+@media (min-width: 90rem) {
+
+    .home__title{
+        width: 550px;
+        font-size: 2.5em;
+    }
+
+}
+
+/* Dispositivos desktop de 1920px */
+@media (min-width: 100rem) {
+    .info__home{
+        max-width: 550px;
+        gap: 2rem;
+    }
+
+    .home__title{
+        width: 650px;
+        font-size: 3.2em;
+    }
+
+    .home__paragraph{
+        font-size: 1.3em;
+
+    }
+
+}
+
+/* Dispositivos desktop de 2560px */
+@media (min-width: 150rem) {
+
+    
+}

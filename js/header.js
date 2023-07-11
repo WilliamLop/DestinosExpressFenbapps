@@ -4,17 +4,24 @@ const header = document.querySelector('.header');
 const navHeader = document.querySelector('.nav__header');
 const btnMenu = document.querySelector('.box__model');
 const btnMenuIcon = document.querySelector('.box__model--icon');
+const figureLogo = document.querySelector('.figure__logo');
+const main = document.querySelector('.main');
 
 btnMenu.addEventListener('click', () => {
-
+    
     navHeader.classList.toggle('nav__header--active');
-
+    
     if (navHeader.classList.contains('nav__header--active')) {
         btnMenuIcon.setAttribute('src', './images/icon-close-menu.svg');
         navHeaderContent.classList.add('nav__header--contentBg');
+        figureLogo.classList.add('filters');
+        main.classList.add('blur');
     } else {
         btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
         navHeaderContent.classList.remove('nav__header--contentBg');
+        figureLogo.classList.remove('filters');
+        main.classList.remove('blur');
+
     }
 });
 
@@ -41,31 +48,39 @@ function hideDropdown() {
 
 navLinkDrop.addEventListener('mouseenter', () => {
     showDropdown();
+    LinkDrop.style.color = 'orange';
+
 });
 
 navLinkDrop.addEventListener('mouseleave', () => {
     setTimeout(() => {
         if (!dropdowmList.matches(':hover')) {
             hideDropdown();
+            LinkDrop.style.color= '#aaaaaa';
         }
     }, 300);
 
 });
 
+
 dropdowmList.addEventListener('mouseenter', () => {
     showDropdown();
+    LinkDrop.style.color = 'red';
 });
 
 dropdowmList.addEventListener('mouseleave', () => {
     hideDropdown();
+    LinkDrop.style.color= '#aaaaaa';
 });
 
 navLinkDrop.addEventListener('click', (e) => {
     if (e.target.classList.contains('nav__link')) {
         if (dropdowmList.classList.contains('dropdown__list--show')) {
             hideDropdown();
+            LinkDrop.style.color = '#aaaaaa';
         } else {
             showDropdown();
+            LinkDrop.style.color = 'orange';
         }
     }
 });
@@ -73,7 +88,6 @@ navLinkDrop.addEventListener('click', (e) => {
 // Creo funcion para abrir modal
 const btnModalShow = document.querySelector('#reservaForm');
 const btncloseModal = document.querySelector('.close__modal');
-const figureLogo = document.querySelector('.figure__logo');
 const openModal = document.querySelectorAll('.open-modal');
 const openModalContainer = document.querySelectorAll('.modal__container');
 const openModalContent = document.querySelectorAll('.modal__content');
@@ -90,6 +104,7 @@ function showModal() {
                     btnMenu.classList.add('close__modal--prevent');
                     figureLogo.classList.add('filters');
                     navHeaderContent.classList.add('filters');
+                    main.classList.add('blur');
                 }
             });
             openModalContent.forEach((contentOpen, contentIndex) => {
@@ -113,6 +128,7 @@ function showModal() {
                     btnMenu.classList.remove('close__modal--prevent');
                     figureLogo.classList.remove('filters');
                     navHeaderContent.classList.remove('filters');
+                    main.classList.remove('blur');
 
                     setTimeout(() => {
                         containerOpen.classList.remove('modal__container--show');
@@ -134,10 +150,7 @@ function showModal() {
 // Funcion para abrir modales
 showModal();
 
-
-
 // Abrir Modal cardBack
-
 const btnSalirCard = document.querySelectorAll('#btn--salir-card');
 const cardBackContainer = document.querySelectorAll('.card__back--container');
 const btnSolicitudCard = document.querySelectorAll('#btn-solicitud');
@@ -227,3 +240,11 @@ function showCardModal() {
 // LLamado de funcion Mostrar modales
 showCardModal();
 
+
+const navItem = document.querySelectorAll('.nav__item');
+
+navItem.forEach((item, index) => {
+    item.addEventListener('mouseenter', () => {
+    
+    });
+});
