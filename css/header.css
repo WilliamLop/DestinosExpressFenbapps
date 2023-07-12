@@ -21,6 +21,11 @@ body{
     background-color: #0000000b;
 }
 
+body.modal-open{
+    overflow: hidden;
+    width: 100%;
+}
+
 .header{
     background-color: #00000041;
     position: fixed;
@@ -28,6 +33,8 @@ body{
     top: 0;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(143, 143, 143, 0.105);
+    transition: .5s ease;
+    animation: opacity 2s ease;
 }
 
 .header__container{
@@ -41,7 +48,7 @@ body{
 }
 
 .figure__logo{
-    width: 50px;
+    width: 100px;
 }
 
 .icon__services{
@@ -53,7 +60,7 @@ body{
 .nav__header--content{
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: auto;
     right: 0;
     left: 0;
     bottom: 0;
@@ -305,6 +312,15 @@ body{
 
 }
 
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 /* MediaQuerys */
 
 /* Dispositivos tablet de 768px */
@@ -394,7 +410,7 @@ body{
         display: block;
         position: absolute;
         background-color: white;
-        top: 40px;
+        top: 32px;
         border-top: 15px solid orange ;
         height: 160px;
         width: 220px;
@@ -413,7 +429,7 @@ body{
 }
 
 /* Dispositivos desktop mini */
-@media (min-width: 55rem){
+@media (min-width: 48rem){
 
     .from__row{
         display: flex;

@@ -9,6 +9,8 @@
     <!-- ESTILOS HEADER CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -16,7 +18,7 @@
     <header class="header" id="header">
         <div class="header__container">
             <picture class="figure__header">
-                <img src="images/logoDestinos.png" title="Destinos Express" class="figure__logo"
+                <img src="images/DestinosLogo.svg.png" title="Destinos Express" class="figure__logo"
                     alt="logo-destinos-express">
             </picture>
 
@@ -25,13 +27,26 @@
                     <h2 class="nav__header--title">Destinos Express</h2>
                     <div class="nav__header--grid">
                         <div class="nav__header--container flex__center grid--gap">
+                            <!-- <nav class="nav">
+                                <ul class="nav__list grid--gap flex__center">
+                                    <li class="nav__item">
+                                        <a href="#" class="nav__link">
+                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
+                                                alt="">
+                                            Inicio
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav> -->
                             <div class="dropdown__container">
                                 <ul class="dropdown__trigger">
                                     <li class="nav__item" id="item__drop">
                                         <a href="#" class="nav__link" id="link__drop">
-                                            <img loading="lazy" src="images/iconServicios.png" class="icon__services" alt="">
+                                            <img loading="lazy" src="images/iconServicios.png" class="icon__services"
+                                                alt="">
                                             Servicios
-                                            <img loading="lazy" src="images/icon-arrow.svg" id="arrow" class="icon__arrow" alt="">
+                                            <img loading="lazy" src="images/icon-arrow.svg" id="arrow"
+                                                class="icon__arrow" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -48,13 +63,15 @@
                                 <ul class="nav__list grid--gap flex__center">
                                     <li class="nav__item">
                                         <a href="#" class="nav__link">
-                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services" alt="">
+                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
+                                                alt="">
                                             Contacto
                                         </a>
                                     </li>
                                     <li class="nav__item">
                                         <a href="#" class="nav__link">
-                                            <img loading="lazy" src="images/iconTrabajaConNosotros.png" class="icon__services" alt="">
+                                            <img loading="lazy" src="images/iconTrabajaConNosotros.png"
+                                                class="icon__services" alt="">
                                             Trabaja con nosotros
                                         </a>
                                     </li>
@@ -189,8 +206,8 @@
                 </form>
 
                 <a href="#" class="close__modal">
-                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar" id="close-modal"
-                        class="close__modal--icon">
+                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar"
+                        id="close-modal" class="close__modal--icon">
                 </a>
             </div>
         </div>
@@ -313,8 +330,8 @@
                 </form>
 
                 <a href="#" class="close__modal close__modal--honesta" id="close__modal--honesta">
-                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar" id="close-modal"
-                        class="close__modal--icon">
+                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar"
+                        id="close-modal" class="close__modal--icon">
                 </a>
             </div>
         </div>
@@ -366,34 +383,296 @@
                             Somos Destinos Express <br> <span class="home__title--change" id="element-text"></span>
                         </h1>
                     </div>
-    
+
                     <p class="home__paragraph">
                         Servicio de transporte empresarial, ejecutivo y turístico.
                     </p>
-    
+
                     <button type="submit" class="btn btn-cotizar"> Cotizar ahora</button>
                 </div>
             </div>
         </div>
-        <div class="main__container">
-            <h1>Hello</h1>
+        <div class="main__services--icons">
+            <div class="main__services--container">
+                <div class="swiper my-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-slide--info">
+                                <img src="images/Transporte-Empresarial.svg" alt="">
+                                <p>Transporte
+                                    <span>Empresarial</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide--info">
+                                <img src="images/Transporte-Aeropuerto.svg" alt="">
+                                <p>Transporte
+                                    <span>aeropuerto</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="swiper-slide--info">
+                                <img src="images/Transporte-Turistico-Eventos.svg" alt="">
+                                <p>Transporte
+                                    <span>turístico y eventos</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="swiper-slide--info">
+                                <img src="images/Tansporte-DestinosVip.svg" alt="">
+                                <p>Transporte
+                                    <span>elite VIP</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="swiper-slide--info">
+                                <img src="images/Ingenieria-Petroleras.svg" alt="">
+                                <p>Transporte
+                                    <span>Ingeniería y petroleras</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="swiper-slide--info">
+                                <img src="images/Mensajaria-Empresarial.svg" alt="">
+                                <p>Transporte
+                                    <span>Mensajería empresarial</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
+
+        <section class="section__container--transporte ">
+            
+            <div class="trasnporte__container container">
+                <h2 class="transporte__title">Cubrimos sus necesidades
+                    en transporte con los
+                    <span class="title__span">mejores vehículos a nivel nacional</span>
+                </h2>
+
+                <!-- LISTA DE TRANSPORTE DISPONIBLES -->
+                <nav class="nav__transporte">
+                    <ul class="transporte__list">
+                        <div class="content__transporte--item">
+                            <li class="transporte__item features__link--active" data-article="1">
+                                <a href="#" class="transporte__link">Camioneta</a>
+                            </li>
+                            <li class="transporte__item" data-article="2">
+                                <a href="#" class="transporte__link">Doble Cabina</a>
+                            </li>
+                            <li class="transporte__item" data-article="3">
+                                <a href="#" class="transporte__link">Mini Van</a>
+                            </li>
+                        </div>
+                        <div class="content__transporte--item item--content">
+
+                            <li class="transporte__item" data-article="4">
+                                <a href="#" class="transporte__link">Van</a>
+                            </li>
+
+                            <li class="transporte__item" data-article="5">
+                                <a href="#" class="transporte__link">Bus</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <!-- CAROUSEL VEHICULOS-->
+
+                <!-- CAMIONETA-->
+
+                <div class="transporte__content transporte__article--show">
+                    <article class="transporte__article ">
+                        <div class="vehiculo__container--info">
+                            <h3 class="vehiculo__title">Camioneta</h3>
+
+                            <div class="vehiculo__table">
+                                <ul class="vehiculo__list">
+                                    <h4 class="vechiculo__subtitle">Marcas y Líneas</h4>
+                                    <li class="vehiculo__item">
+                                        <img src="images/Renault-Logo.png" class="logo__marca" alt="">
+                                        <a href="" class="vehiculo__link">Renault</a>
+                                    </li>
+                                    <li class="vehiculo__item">
+                                        <img src="images/Cheverolet-Logo.png" class="logo__marca" alt="">
+                                        <a href="" class="vehiculo__link">Cheverolet</a>
+                                    </li>
+                                    <li class="vehiculo__item">
+                                        <img src="images/Chery-Emblem.png" class="logo__marca" alt="">
+                                        <a href="" class="vehiculo__link">Chery</a>
+                                    </li>
+                                </ul>
+    
+                                <div class="vehiculo__model">
+                                    <h4 class="model__title">Modelos</h4>
+                                    <p class="model__text">2015 en adelante</p>
+                                </div>
+                                <div class="vehiculo__capacidad">
+                                    <h4 class="model__title">Capacidad</h4>
+                                    <p class="model__text">4 personas máximo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <picture class="transporte__figure">
+                            <img src="images/carroCamioneta.webp" alt="" class="img__vehiculos">
+                        </picture>
+                    </article>
+                </div>
+                <!-- CAMIONETA CON PLATÓN -->
+                <div class="transporte__content">
+                    <article class="transporte__article">
+                        <div class="vehiculo__container--info">
+                            <h3 class="vehiculo__title">Doble Cabina</h3>
+
+                            <div class="vehiculo__table">
+                                <ul class="vehiculo__list">
+                                    <h4 class="vechiculo__subtitle">Marcas y Líneas</h4>
+                                    <li class="vehiculo__item">
+                                        <img src="images/Renault-Logo.png" class="logo__marca" alt="">
+                                        <a href="" class="vehiculo__link">Platón</a>
+                                    </li>
+                                </ul>
+    
+                                <div class="vehiculo__model">
+                                    <h4 class="model__title">Modelos</h4>
+                                    <p class="model__text">2015 en adelante</p>
+                                </div>
+                                <div class="vehiculo__capacidad">
+                                    <h4 class="model__title">Capacidad</h4>
+                                    <p class="model__text">5 personas máximo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <picture class="transporte__figure">
+                            <img src="images/Camioneta-doble-cabina.webp" alt="" class="img__vehiculos">
+                        </picture>
+                    </article>
+                </div>
+
+                <!-- MINI VANS -->
+
+                <div class="transporte__content">
+                    <article class="transporte__article">
+                        <div class="vehiculo__container--info">
+                            <h3 class="vehiculo__title">MINI VAN</h3>
+
+                            <div class="vehiculo__table">
+                                <ul class="vehiculo__list">
+                                    <h4 class="vechiculo__subtitle">Marcas y Líneas</h4>
+                                    <li class="vehiculo__item">
+                                        <img src="images/Renault-Logo.png" class="logo__marca" alt="">
+                                        <a href="" class="vehiculo__link">H1</a>
+                                    </li>
+                                </ul>
+    
+                                <div class="vehiculo__model">
+                                    <h4 class="model__title">Modelos</h4>
+                                    <p class="model__text">2010 en adelante</p>
+                                </div>
+                                <div class="vehiculo__capacidad">
+                                    <h4 class="model__title">Capacidad</h4>
+                                    <p class="model__text">Entre 6 y 10 pasajeros</p>
+                                </div>
+                            </div>
+                        </div>
+                        <picture class="transporte__figure">
+                            <img src="images/Mini-van.webp" alt="" class="img__vehiculos">
+                        </picture>
+                    </article>
+                </div>
+                <!-- VANS -->
+                <div class="transporte__content">
+                    <article class="transporte__article">
+                        <div class="vehiculo__container--info">
+                            <h3 class="vehiculo__title">VAN</h3>
+
+                            <div class="vehiculo__table">
+                                <ul class="vehiculo__list">
+                                    <h4 class="vechiculo__subtitle">Marcas y Líneas</h4>
+                                    <li class="vehiculo__item">
+                                        <img src="images/mercedes-benz-logo.png" class="logo__marca" alt="">
+                                        <a href="" class="vehiculo__link">Mercedes-benz</a>
+                                    </li>
+                                </ul>
+    
+                                <div class="vehiculo__model">
+                                    <h4 class="model__title">Modelos</h4>
+                                    <p class="model__text">2010 en adelante</p>
+                                </div>
+                                <div class="vehiculo__capacidad">
+                                    <h4 class="model__title">Capacidad</h4>
+                                    <p class="model__text">Entre 12 y 19 pasajeros</p>
+                                </div>
+                            </div>
+                        </div>
+                        <picture class="transporte__figure">
+                            <img src="images/van.webp" alt="" class="img__vehiculos">
+                        </picture>
+                    </article>
+                </div>
+                <!-- BUSES -->
+                <div class="transporte__content">
+                    <article class="transporte__article">
+                        <div class="vehiculo__container--info">
+                            <h3 class="vehiculo__title">Bus</h3>
+
+                            <div class="vehiculo__table">
+                                <ul class="vehiculo__list">
+                                    <h4 class="vechiculo__subtitle">Marcas y Líneas</h4>
+                                    <li class="vehiculo__item">
+                                        <img src="images/mercedes-benz-logo.png" class="logo__marca" alt="">
+                                        <a href="" class="vehiculo__link">Mercedes-benz</a>
+                                    </li>
+                                </ul>
+    
+                                <div class="vehiculo__model">
+                                    <h4 class="model__title">Modelos</h4>
+                                    <p class="model__text">2010 en adelante</p>
+                                </div>
+                                <div class="vehiculo__capacidad">
+                                    <h4 class="model__title">Capacidad</h4>
+                                    <p class="model__text">Entre 20, 28 y 49 pasajeros</p>
+                                </div>
+                            </div>
+                        </div>
+                        <picture class="transporte__figure">
+                            <img src="images/Bus.webp" alt="" class="img__vehiculos">
+                        </picture>
+                    </article>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <!-- SCRIPT HEADER JS -->
     <script src="js/header.js"></script>
     <!-- CND TIPED JS -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- SCRIPT MAIN.JS -->
     <script src="js/main.js"></script>
 
-    <script>
-        let typed = new Typed('#element-text', {
-            strings: ['tu mejor aliado en transporte.','eficiente y confiable.', 'rápido y seguro.'],
-            typeSpeed: 70,
-            loop: true,
-        });
-    </script>
+
 </body>
 
 </html>

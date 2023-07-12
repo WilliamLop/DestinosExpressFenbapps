@@ -1,6 +1,12 @@
 
+.container{
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
+}
 
-.main{
+
+.main {
     box-sizing: border-box;
     width: 100%;
     position: relative;
@@ -22,13 +28,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    filter: brightness(60%) saturate(80%); 
+    filter: brightness(60%) saturate(80%);
+    animation: opacity 2.5s;
 }
 
 .video__express {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Para que el video se ajuste manteniendo la relación de aspecto */
+    object-fit: cover;
+    /* Para que el video se ajuste manteniendo la relación de aspecto */
 }
 
 .blur {
@@ -49,28 +57,226 @@
     max-width: 1400px;
 }
 
-.info__home{
+.info__home {
     box-sizing: border-box;
     /* border: 1px solid white; */
     width: 100%;
-    backdrop-filter: blur(5px); /* Ajusta el valor del desenfoque según tus preferencias */
-    -webkit-backdrop-filter: blur(5px); /* Prefijo para compatibilidad con navegadores WebKit */
+    backdrop-filter: blur(5px);
+    /* Ajusta el valor del desenfoque según tus preferencias */
+    -webkit-backdrop-filter: blur(5px);
+    /* Prefijo para compatibilidad con navegadores WebKit */
     display: grid;
     gap: 1.5rem;
     padding: 1rem;
 
 }
 
-.btn-cotizar{
+.btn-cotizar {
     width: 40%;
     max-width: 150px;
     margin: auto;
 }
 
-.home__title--change{
+.home__title--change {
     color: orange;
     font-size: .8em;
 }
+
+
+
+/* ESTILO CONTENDOR SERVICES ICONS */
+
+.main__services--icons{
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-blend-mode: multiply;
+    padding: 2rem 0;
+    height: 250px;
+    position: relative
+}
+/* ESTILOS SWIPERS */
+.swiper {
+    width: 90%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.swiper-slide {
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    object-fit: cover;
+}
+.swiper-slide p {
+    color: orange;
+    text-align: center;
+    display: grid;
+    text-transform: uppercase;
+    gap: .3rem;
+}
+
+.swiper-slide--info{
+    display: grid;
+    gap: 1rem;
+    height:100%;
+}
+.swiper-pagination{
+    padding-bottom: 1rem;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: orange !important;
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    background-color: #eee !important;
+}
+
+.autoplay-progress {
+    position: absolute;
+    right: 26px;
+    bottom: 36px;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    color: orange;
+    display: none;
+}
+
+.autoplay-progress svg {
+    display: none;
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: orange;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+/* ESTILO SECCION VEHICULOS */
+
+
+.section__container--transporte {
+    z-index: 999;
+}
+
+.transporte__title{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+.transporte__list{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+}
+
+.content__transporte--item{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+
+.transporte__item{
+    padding: .3rem .5rem;
+    border-bottom: 5px solid transparent;
+    transition:  border-color .7s;
+}
+
+.transporte__content{
+    opacity: 0;
+    pointer-events: none;
+    
+    transition:  opacity .6s;
+    
+}
+
+.transporte__article{
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 1400px;
+
+}
+
+.features__link--active{
+    border-color: red;
+}
+
+.transporte__article--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition:  opacity .6s;
+    
+}
+
+.img__vehiculos{
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.logo__marca{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    aspect-ratio: 16 / 9;
+}
+.vehiculo__table{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.vehiculo__item{
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.vehiculo__title{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+/* @keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
 
 /* mediaQuerys */
 
@@ -81,12 +287,12 @@
         width: 90%;
     }
 
-    .home__title{
+    .home__title {
         width: 450px;
         /* font-size: 2.5em; */
     }
-    
-    .info__home{
+
+    .info__home {
         max-width: 450px;
         border-radius: 0 1rem 1rem 0;
         gap: 2rem;
@@ -94,17 +300,53 @@
         border-left: 1px solid #eeeeee5b;
 
     }
-    .btn-cotizar{
+
+    .btn-cotizar {
         width: 150px;
         margin: 0;
     }
-    .home__title--change{
+
+    .home__title--change {
         color: orange;
     }
+    .main__services--icons{
+        height: 220px;
+    }
+    .transporte__list{
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+    }
+
+    .content__transporte--item{
+        justify-content: end;
+        gap: 1rem;
+    }
+
+    .transporte__item{
+    padding: .5rem 1rem;
+
+    }
+    
+
+    .item--content{
+        justify-content: start;
+    }
+
+    .transporte__article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .img__vehiculos{
+        max-height: 250px;
+    }
 }
+
 @media (min-width: 64rem) {
 
-    .home__title{
+    .home__title {
         width: 550px;
         font-size: 2.5em;
     }
@@ -114,7 +356,7 @@
 /* Dispositivos desktop de 1280px */
 @media (min-width: 80rem) {
 
-    .home__title{
+    .home__title {
         width: 550px;
         font-size: 2.5em;
     }
@@ -124,7 +366,7 @@
 /* Dispositivos desktop de 1440px */
 @media (min-width: 90rem) {
 
-    .home__title{
+    .home__title {
         width: 550px;
         font-size: 2.5em;
     }
@@ -133,17 +375,17 @@
 
 /* Dispositivos desktop de 1920px */
 @media (min-width: 100rem) {
-    .info__home{
+    .info__home {
         max-width: 550px;
         gap: 2rem;
     }
 
-    .home__title{
+    .home__title {
         width: 650px;
         font-size: 3.2em;
     }
 
-    .home__paragraph{
+    .home__paragraph {
         font-size: 1.3em;
 
     }
@@ -151,7 +393,4 @@
 }
 
 /* Dispositivos desktop de 2560px */
-@media (min-width: 150rem) {
-
-    
-}
+@media (min-width: 150rem) {}

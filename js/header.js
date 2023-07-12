@@ -7,6 +7,14 @@ const btnMenuIcon = document.querySelector('.box__model--icon');
 const figureLogo = document.querySelector('.figure__logo');
 const main = document.querySelector('.main');
 
+let ubicacionPrincipal = pageYOffset;
+
+//  Página se desplace hasta el inicio cuando se actualice
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
+// Evento para abrir el menu mobile
 btnMenu.addEventListener('click', () => {
     
     navHeader.classList.toggle('nav__header--active');
@@ -16,14 +24,40 @@ btnMenu.addEventListener('click', () => {
         navHeaderContent.classList.add('nav__header--contentBg');
         figureLogo.classList.add('filters');
         main.classList.add('blur');
+        document.body.classList.add('modal-open');
     } else {
         btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
         navHeaderContent.classList.remove('nav__header--contentBg');
         figureLogo.classList.remove('filters');
         main.classList.remove('blur');
+        document.body.classList.remove('modal-open');
 
     }
 });
+
+// Menú interactivo al cambiar de posicion en scroll
+
+window.addEventListener('scroll', (e) => {
+    e.preventDefault();
+    const desplazamientoActual = window.pageYOffset;
+    if(ubicacionPrincipal >= desplazamientoActual){
+        this.document.getElementsByClassName("header")[0].style.top = '0px';
+
+        if(ubicacionPrincipal <=10){
+            this.document.getElementsByClassName("header")[0].style.backgroundColor = 'transparent';
+        }
+    }else{
+        this.document.getElementsByClassName("header")[0].style.top = '-200px';
+        this.document.getElementsByClassName("header")[0].style.backgroundColor = 'hsl(233, 12%, 13%)';
+    }
+
+    ubicacionPrincipal = desplazamientoActual;
+});
+
+
+const imgServices = document.querySelectorAll('.icon__services');
+
+
 
 // DROPDOWN LISTA 
 const navLinkDrop = document.querySelector('#item__drop');
@@ -112,6 +146,7 @@ function showModal() {
                     contentOpen.classList.add('modal__content--show');
                 }
             });
+            document.body.classList.add('modal-open');
             
 
         });
@@ -119,7 +154,8 @@ function showModal() {
 
 
     closeModal.forEach((modalCierre, modalIndex) => {
-        modalCierre.addEventListener('click', () => {
+        modalCierre.addEventListener('click', (e) => {
+            e.preventDefault();
             console.log(modalIndex + 'cerrar');
 
             openModalContainer.forEach((containerOpen, containerIndex) => {
@@ -142,6 +178,8 @@ function showModal() {
                     }, 120);
                 }
             });
+            document.body.classList.remove('modal-open');
+
         });
         
     });
@@ -248,3 +286,23 @@ navItem.forEach((item, index) => {
     
     });
 });
+
+
+// resize del menu
+
+window.addEventListener('resize', () => {
+    const isMenuActive = document.querySelectorAll('nav__header--active');
+
+    if(isMenuActive){
+        navHeader.classList.remove('nav__header--active');
+        btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
+        main.classList.remove('blur');
+        figureLogo.classList.remove('filters');
+        navHeaderContent.classList.remove('filters');
+        navHeaderContent.classList.remove('nav__header--contentBg');
+        document.body.classList.remove('modal-open');
+    }
+});
+
+
+
