@@ -225,3 +225,36 @@ tabButtons.forEach((tabLink, index) => {
     });
 });
 
+
+// CODIGO EN PRUEBA
+
+const linkTiposVehiculos = document.querySelectorAll('.vehiculo__item--change');
+const imgTiposVehiculos = document.querySelectorAll('.img__camioneta');
+
+console.log(imgTiposVehiculos);
+
+linkTiposVehiculos.forEach((tipoVehiculo, index) => {
+    tipoVehiculo.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!tipoVehiculo.classList.contains('vehiculo__item--active')){
+            const imgNumber = tipoVehiculo.getAttribute('data-article');
+            
+            const imgShow = document.querySelector(`.img__camioneta:nth-child(${imgNumber})`);
+            console.log(imgShow);
+
+            removeActiveElements('vehiculo__item--active');
+            removeActiveElements('img-camioneta-show');
+
+            imgShow.classList.add('img-camioneta-show');
+            tipoVehiculo.classList.add('vehiculo__item--active');
+        }
+    });
+});
+
+
+
+
+
+
+
+

@@ -462,7 +462,7 @@
 
         <section class="section__container--transporte ">
             
-            <div class="trasnporte__container container">
+            <div class="transporte__container container">
                 <h2 class="transporte__title">Cubrimos sus necesidades
                     en transporte con los
                     <span class="title__span">mejores vehículos a nivel nacional</span>
@@ -501,43 +501,49 @@
                     <div class="swiper-wrapper">
                             <!-- CAMIONETA-->
                             <div class="sw  transporte__article--show">
-                                <div class="transporte__content ">
+                                <div class="transporte__content">
                                     <article class="transporte__article ">
                                         <div class="vehiculo__container--info">
                                             <h3 class="vehiculo__title">Camioneta</h3>
                 
                                             <div class="vehiculo__table">
-                                                <ul class="vehiculo__list vehiculo__list--camioneta">
+                                                <div class="vehiculo__list--content">
                                                     <h4 class="vehiculo__subtitle">Marcas y Líneas</h4>
-                                                    <li class="vehiculo__item">
-                                                        <!-- <img src="images/Renault-Logo.png" class="logo__marca" alt=""> -->
-                                                        <span>||</span>
-                                                        <a href="" class="vehiculo__link">Renault</a>
-                                                    </li>
-                                                    <li class="vehiculo__item">
-                                                        <!-- <img src="images/Cheverolet-Logo.png" class="logo__marca" alt=""> -->
-                                                        <span>||</span>
-                                                        <a href="" class="vehiculo__link">Cheverolet</a>
-                                                    </li>
-                                                    <li class="vehiculo__item">
-                                                        <!-- <img src="images/Chery-Emblem.png" class="logo__marca" alt=""> -->
-                                                        <span>||</span>
-                                                        <a href="" class="vehiculo__link">Chery</a>
-                                                    </li>
-                                                </ul>
-                    
-                                                <div class="vehiculo__model vehiculo__info--list ">
-                                                    <h4 class="vehiculo__subtitle">Modelos</h4>
-                                                    <p class="model__text">2015 en adelante</p>
+                                                    <ul class="vehiculo__list vehiculo__list--camioneta">
+                                                        <li class="vehiculo__item vehiculo__item--change vehiculo__item--active" data-article="1">
+                                                            <!-- <img src="images/Renault-Logo.png" class="logo__marca" alt=""> -->
+                                                            <!-- <span>||</span> -->
+                                                            <a href="" class="vehiculo__link  ">Renault</a>
+                                                        </li>
+                                                        <li class="vehiculo__item vehiculo__item--change"  data-article="2">
+                                                            <!-- <img src="images/Cheverolet-Logo.png" class="logo__marca" alt=""> -->
+                                                            <!-- <span>||</span> -->
+                                                            <a href="" class="vehiculo__link">Cheverolet</a>
+                                                        </li>
+                                                        <li class="vehiculo__item vehiculo__item--change" data-article="3">
+                                                            <!-- <img src="images/Chery-Emblem.png" class="logo__marca" alt=""> -->
+                                                            <!-- <span>||</span> -->
+                                                            <a href="" class="vehiculo__link">Chery</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <div class="vehiculo__capacidad vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Capacidad</h4>
-                                                    <p class="model__text">4 personas máximo</p>
+                    
+                                                <div class="vehiculo__content--models">
+                                                    <div class="vehiculo__model vehiculo__info--list ">
+                                                        <h4 class="vehiculo__subtitle">Modelos</h4>
+                                                        <p class="model__text">2015 en adelante</p>
+                                                    </div>
+                                                    <div class="vehiculo__capacidad vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Capacidad</h4>
+                                                        <p class="model__text">4 personas</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <picture class="transporte__figure">
-                                            <img src="images/carroCamioneta.png" alt="" class="img__vehiculos" draggable="false">
+                                            <img src="images/carroCamioneta.png" alt="" data-article="1" class="img__vehiculos img__camioneta img-camioneta-show" draggable="false">
+                                            <img src="images/van.png" alt="" data-article="2" class="img__vehiculos img__camioneta" draggable="false">
+                                            <img src="images/Bus.png" alt="" data-article="3" class="img__vehiculos img__camioneta" draggable="false">
                                         </picture>
                                     </article>
                                 </div>
@@ -551,22 +557,26 @@
                                             <h3 class="vehiculo__title">Doble Cabina</h3>
                 
                                             <div class="vehiculo__table">
-                                                <ul class="vehiculo__list">
+                                                <div class="vehiculo__list--content">
                                                     <h4 class="vehiculo__subtitle">Marcas y Líneas</h4>
-                                                    <li class="vehiculo__item">
-                                                        <!-- <img src="images/Renault-Logo.png" class="logo__marca" alt=""> -->
-                                                        <span>||</span>
-                                                        <a href="" class="vehiculo__link">Platón</a>
-                                                    </li>
-                                                </ul>
-                    
-                                                <div class="vehiculo__model vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Modelos</h4>
-                                                    <p class="model__text">2015 en adelante</p>
+                                                    <ul class="vehiculo__list">
+                                                        <li class="vehiculo__item">
+                                                            <!-- <img src="images/Renault-Logo.png" class="logo__marca" alt=""> -->
+                                                            <span>||</span>
+                                                            <a href="" class="vehiculo__link">Platón</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <div class="vehiculo__capacidad vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Capacidad</h4>
-                                                    <p class="model__text">5 personas máximo</p>
+                                                <div class="vehiculo__content--models">
+                                                    <div class="vehiculo__model vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Modelos</h4>
+                                                        <p class="model__text">2015 en adelante</p>
+                                                    </div>
+                                                    <div class="vehiculo__capacidad vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Capacidad</h4>
+                                                        <p class="model__text">5 personas</p>
+                                                        
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -584,21 +594,26 @@
                                             <h3 class="vehiculo__title">MINI VAN</h3>
                 
                                             <div class="vehiculo__table">
-                                                <ul class="vehiculo__list">
+                                                <div class="vehiculo__list--content">
                                                     <h4 class="vehiculo__subtitle">Marcas y Líneas</h4>
-                                                    <li class="vehiculo__item">
-                                                        <span>||</span>
-                                                        <a href="" class="vehiculo__link">H1</a>
-                                                    </li>
-                                                </ul>
-                    
-                                                <div class="vehiculo__model vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Modelos</h4>
-                                                    <p class="model__text">2010 en adelante</p>
+                                                    <ul class="vehiculo__list">
+                                                        <li class="vehiculo__item">
+                                                            <span>||</span>
+                                                            <a href="" class="vehiculo__link">H1</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <div class="vehiculo__capacidad vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Capacidad</h4>
-                                                    <p class="model__text">Entre 6 y 10 pasajeros</p>
+                                                <div class="vehiculo__content--models">
+                                                    <div class="vehiculo__model vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Modelos</h4>
+                                                        <p class="model__text">2010 en adelante</p>
+                                                    </div>
+                                                    <div class="vehiculo__capacidad vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Capacidad</h4>
+                                                        <p class="model__text">6 pasajeros</p>
+                                                        <p class="model__text">10 pasajeros</p>
+
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -617,22 +632,26 @@
                                             <h3 class="vehiculo__title">VAN</h3>
                 
                                             <div class="vehiculo__table">
-                                                <ul class="vehiculo__list">
+                                                <div class="vehiculo__list--content">
                                                     <h4 class="vehiculo__subtitle">Marcas y Líneas</h4>
-                                                    <li class="vehiculo__item">
-                                                        <!-- <img src="images/mercedes-benz-logo.png" class="logo__marca" alt=""> -->
-                                                        <span>||</span>
-                                                        <a href="" class="vehiculo__link">Mercedes-benz</a>
-                                                    </li>
-                                                </ul>
-                    
-                                                <div class="vehiculo__model vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Modelos</h4>
-                                                    <p class="model__text">2010 en adelante</p>
+                                                    <ul class="vehiculo__list">
+                                                        <li class="vehiculo__item">
+                                                            <!-- <img src="images/mercedes-benz-logo.png" class="logo__marca" alt=""> -->
+                                                            <span>||</span>
+                                                            <a href="" class="vehiculo__link">Mercedes-benz</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <div class="vehiculo__capacidad vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Capacidad</h4>
-                                                    <p class="model__text">Entre 12 y 19 pasajeros</p>
+                                                <div class="vehiculo__content--models">
+                                                    <div class="vehiculo__model vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Modelos</h4>
+                                                        <p class="model__text">2010 en adelante</p>
+                                                    </div>
+                                                    <div class="vehiculo__capacidad vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Capacidad</h4>
+                                                        <p class="model__text">12 pasajeros</p>
+                                                        <p class="model__text">19 pasajeros</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -651,22 +670,27 @@
                                             <h3 class="vehiculo__title">Bus</h3>
                 
                                             <div class="vehiculo__table">
-                                                <ul class="vehiculo__list">
+                                                <div class="vehiculo__list--content">
                                                     <h4 class="vehiculo__subtitle">Marcas y Líneas</h4>
-                                                    <li class="vehiculo__item">
-                                                        <!-- <img src="images/mercedes-benz-logo.png" class="logo__marca" alt=""> -->
-                                                        <span>||</span>
-                                                        <a href="" class="vehiculo__link">Mercedes-benz</a>
-                                                    </li>
-                                                </ul>
-                    
-                                                <div class="vehiculo__model vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Modelos</h4>
-                                                    <p class="model__text">2010 en adelante</p>
+                                                    <ul class="vehiculo__list">
+                                                        <li class="vehiculo__item">
+                                                            <!-- <img src="images/mercedes-benz-logo.png" class="logo__marca" alt=""> -->
+                                                            <span>||</span>
+                                                            <a href="" class="vehiculo__link">Mercedes-benz</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <div class="vehiculo__capacidad vehiculo__info--list">
-                                                    <h4 class="vehiculo__subtitle">Capacidad</h4>
-                                                    <p class="model__text">Entre 20, 28 y 49 pasajeros</p>
+                                                <div class="vehiculo__content--models">
+                                                    <div class="vehiculo__model vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Modelos</h4>
+                                                        <p class="model__text">2010 en adelante</p>
+                                                    </div>
+                                                    <div class="vehiculo__capacidad vehiculo__info--list">
+                                                        <h4 class="vehiculo__subtitle">Capacidad</h4>
+                                                        <p class="model__text">20 pasajeros</p>
+                                                        <p class="model__text">28 pasajeros</p>
+                                                        <p class="model__text">49 pasajeros</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
