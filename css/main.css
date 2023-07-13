@@ -94,13 +94,13 @@
     position: relative
 }
 /* ESTILOS SWIPERS */
-.swiper {
+.my-swiper {
     width: 90%;
     height: 100%;
     padding: 1rem;
 }
 
-.swiper-slide {
+.swiper-slide--icons {
     box-sizing: border-box;
     text-align: center;
     font-size: 18px;
@@ -108,17 +108,17 @@
     flex-direction: column;
     height: 100%;
     padding: 1rem;
-
+    
 }
 
-.swiper-slide img {
+.swiper-slide--icons img {
     display: block;
     width: 80px;
     height: 80px;
     margin: auto;
     object-fit: cover;
 }
-.swiper-slide p {
+.swiper-slide--icons p {
     color: orange;
     text-align: center;
     display: grid;
@@ -179,24 +179,33 @@
 
 
 .section__container--transporte {
-    z-index: 999;
+    border: 10px solid #2E2E2E;
+    padding: 2rem 0;
+
 }
 
+.trasnporte__container{
+}
+
+.nav__transporte{
+    margin: 2rem auto;
+}
 .transporte__title{
     text-align: center;
-    padding: 1rem 0;
+}
+
+.vehiculo__container--info{
+    /* background-color: red; */
 }
 
 
 .transporte__list{
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr;
     gap: .5rem;
 }
 
 .content__transporte--item{
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     gap: .5rem;
@@ -207,42 +216,82 @@
     padding: .3rem .5rem;
     border-bottom: 5px solid transparent;
     transition:  border-color .7s;
+    background-color: orange;
+    width: 90px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2rem;
 }
 
-.transporte__content{
+.transporte__link{
+    color: white;
+}
+
+.sw{
     opacity: 0;
     pointer-events: none;
-    
     transition:  opacity .6s;
     
 }
-
 .transporte__article{
     width: 90%;
     margin: auto;
     position: absolute;
     left: 0;
+    top: 0;
+    bottom: 0;
     right: 0;
     max-width: 1400px;
+    display: grid;
+    align-items: center;
 
 }
 
+.vehiculo__container--info{
+    align-self: start;
+
+}
+
+
+.transporte__content{
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+.swiper-transporte{
+    display: grid;
+    height: 60vh;
+}
+
 .features__link--active{
-    border-color: red;
+    border-color: black;
 }
 
 .transporte__article--show{
     opacity: 1;
     pointer-events: unset;
     transition:  opacity .6s;
-    
 }
 
 .img__vehiculos{
     width: 100%;
     max-width: 600px;
     object-fit: cover;
-    max-height: 200px;
+    max-height: 170px;
+}
+.img__bus{
+    object-fit: contain;
+}
+
+.vehiculo__subtitle{
+    color: black;
+    border-bottom: 1px solid #4e4e4e;
+    height: 35px;
+    vertical-align: middle;
+
+
 }
 
 .logo__marca{
@@ -255,18 +304,62 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
+    gap: 1rem;
+    height: 25vh;
 }
 
+
 .vehiculo__item{
-    display: flex;
-    align-items: center;
-    gap: .2rem;
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: .2rem; */
+    padding: .5rem;
 }
+
+
+
+
+.vehiculo__model,
+    .v-m{
+        align-self: center;
+    }
+
+    .vehiculo__capacidad,
+    .v-c{
+        align-self: end;
+    }
+
+    .vehiculo__table{
+        text-align: left;
+    }
 
 .vehiculo__title{
     padding: 1rem 0;
     text-align: center;
+    text-transform: uppercase;
 }
+
+
+.btn-slider{
+    position: absolute;
+    height: 20px;
+    background-color: orange;    
+    width: 20px;
+    top: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem;
+    color: black;
+    font-weight: bold;
+    border-radius: 999px;
+    cursor: pointer;
+    z-index: 999;
+}
+.button-next{
+    right: 0;
+}
+
 
 
 /* @keyframes opacity{
@@ -313,7 +406,6 @@
         height: 220px;
     }
     .transporte__list{
-        border: 1px solid black;
         display: grid;
         grid-template-columns: auto auto;
         gap: 1rem;
@@ -342,6 +434,23 @@
     .img__vehiculos{
         max-height: 250px;
     }
+    .vehiculo__subtitle{
+        height: unset;
+    }
+    .btn-slider{
+        top: 150px;
+    }
+    .swiper-transporte{
+        display: grid;
+        height: 50vh;
+    }
+    
+
+    
+    
+    
+
+    
 }
 
 @media (min-width: 64rem) {
