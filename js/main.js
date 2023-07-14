@@ -237,22 +237,38 @@ linkTiposVehiculos.forEach((tipoVehiculo, index) => {
     tipoVehiculo.addEventListener('click', (e) => {
         e.preventDefault();
         if(!tipoVehiculo.classList.contains('vehiculo__item--active')){
-            const imgNumber = tipoVehiculo.getAttribute('data-article');
-            
-            const imgShow = document.querySelector(`.img__camioneta:nth-child(${imgNumber})`);
-            console.log(imgShow);
 
             removeActiveElements('vehiculo__item--active');
-            removeActiveElements('img-camioneta-show');
+            // removeActiveElements('img-camioneta-show');
 
-            imgShow.classList.add('img-camioneta-show');
+            // imgShow.classList.add('img-camioneta-show');
             tipoVehiculo.classList.add('vehiculo__item--active');
         }
     });
 });
 
+const renault = document.querySelector('.vehiculo__item--renault');
+const chevrolet = document.querySelector('.vehiculo__item--chevrolet');
+const chery = document.querySelector('.vehiculo__item--chery');
+const imgChange = document.getElementById('imgChange');
 
 
+renault.addEventListener('click', (e) =>{
+    e.preventDefault();
+    imgChange.src = './images/carroCamioneta.png';
+});
+
+chevrolet.addEventListener('click', (e) =>{
+    e.preventDefault();
+    imgChange.src = './images/PLATA-BRILLANTE.png';
+    
+});
+
+chery.addEventListener('click', (e) =>{
+    e.preventDefault();
+    imgChange.setAttribute('src', './images/Chery_Tiggo-removebg-preview.png');    
+
+});
 
 
 

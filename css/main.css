@@ -373,9 +373,9 @@
 }
 
 
-.img-camioneta{
-    opacity: 0;
-    pointer-events: none;
+.img__camioneta{
+    /* opacity: 0; */
+    /* pointer-events: none; */
     transition:  opacity .6s;
     
 }
