@@ -234,14 +234,15 @@
     border-bottom: 5px solid transparent;
 }
 .vehiculo__item--active{
-    border-color: black;
+    border-color: orangered;
 }
 .transporte__link{
     color: white;
-    
-
 }
-
+.displayNone{
+    opacity: 0;
+    transition: opacity .5s ease;
+}
 .sw{
     opacity: 0;
     pointer-events: none;
@@ -301,9 +302,6 @@
     object-fit: contain;
 }
 
-.img__camioneta{
-    object-fit: cover;
-}
 
 .vehiculo__subtitle{
     color: black;
@@ -372,12 +370,22 @@
     right: 0;
 }
 
+.transporte__figure{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 280px;
+    width: 100%;
+}
 
 .img__camioneta{
-    /* opacity: 0; */
-    /* pointer-events: none; */
+    opacity: 0;
+    pointer-events: none;
     transition:  opacity .6s;
-    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
 }
 
 .img-camioneta-show{

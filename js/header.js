@@ -22,13 +22,14 @@ btnMenu.addEventListener('click', () => {
     if (navHeader.classList.contains('nav__header--active')) {
         btnMenuIcon.setAttribute('src', './images/icon-close-menu.svg');
         navHeaderContent.classList.add('nav__header--contentBg');
-        figureLogo.classList.add('filters');
+        // figureLogo.classList.add('filters');
+        figureLogo.classList.add('displayNone');
         main.classList.add('blur');
         document.body.classList.add('modal-open');
     } else {
         btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
         navHeaderContent.classList.remove('nav__header--contentBg');
-        figureLogo.classList.remove('filters');
+        figureLogo.classList.remove('displayNone');
         main.classList.remove('blur');
         document.body.classList.remove('modal-open');
 
@@ -108,6 +109,7 @@ dropdowmList.addEventListener('mouseleave', () => {
 });
 
 navLinkDrop.addEventListener('click', (e) => {
+    e.preventDefault();
     if (e.target.classList.contains('nav__link')) {
         if (dropdowmList.classList.contains('dropdown__list--show')) {
             hideDropdown();
@@ -164,8 +166,7 @@ function showModal() {
                     btnMenu.classList.remove('close__modal--prevent');
                     figureLogo.classList.remove('filters');
                     navHeaderContent.classList.remove('filters');
-                    main.classList.remove('blur');
-
+                    
                     setTimeout(() => {
                         containerOpen.classList.remove('modal__container--show');
                     }, 360);
@@ -178,8 +179,6 @@ function showModal() {
                     }, 120);
                 }
             });
-            document.body.classList.remove('modal-open');
-
         });
         
     });
