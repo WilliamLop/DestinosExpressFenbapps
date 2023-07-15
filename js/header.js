@@ -138,8 +138,7 @@ function showModal() {
                     containerOpen.classList.add('modal__container--show');
                     btnMenu.classList.add('close__modal--prevent');
                     navHeaderContent.classList.add('filters');
-                    main.classList.add('filters');
-                    document.body.classList.add('modal-open');
+                    main.classList.add('blur');
 
                 }
             });
@@ -148,7 +147,7 @@ function showModal() {
                     contentOpen.classList.add('modal__content--show');
                 }
             });
-            // document.body.classList.add('modal-open');
+            document.body.classList.add('modal-open');
             
 
         });
@@ -170,7 +169,7 @@ function showModal() {
 
                     navHeaderContent.classList.remove('nav__header--contentBg');
 
-                    main.classList.remove('filters');
+                    main.classList.remove('blur');
 
                     
                     
