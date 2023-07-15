@@ -83,7 +83,7 @@ body.modal-open{
     position: absolute;
     top: 0;
     right: 0;
-    height: 100vh;
+    min-height: unset;
     width: 250px;
     clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 51%);
     border-left: 2px solid gray;
@@ -417,6 +417,11 @@ body.modal-open{
         align-items: center;
         
     }
+    body.modal-open-desktop{
+        overflow: hidden;
+        width: 100%;
+    }
+    
 }
 
 /* Dispositivos desktop mini */

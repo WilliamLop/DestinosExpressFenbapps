@@ -100,6 +100,8 @@
     padding: 1rem;
     max-width: 1400px;
     margin: 0 auto;
+    cursor: pointer;
+    user-select: none;
 }
 
 .swiper-slide--icons {
@@ -244,10 +246,12 @@
     transition: opacity .5s ease;
 }
 .sw{
-    opacity: 0;
+    /* opacity: 0;
+    transition:  opacity .6s; */
+    clip-path: polygon(49% 44%, 47% 46%, 50% 45%, 49% 46%, 50% 46%, 48% 46%, 49% 47%, 49% 46%, 49% 46%, 49% 47%);
+    transition: clip-path .5s ease;
     pointer-events: none;
-    transition:  opacity .6s;
-    
+
 }
 .transporte__article{
     width: 90%;
@@ -287,9 +291,14 @@
 
 
 .transporte__article--show{
-    opacity: 1;
+    /* opacity: 1;
     pointer-events: unset;
-    transition:  opacity .6s;
+    transition:  opacity .6s; */
+    clip-path: polygon(50% 0%, 100% 0, 100% 34%, 100% 66%, 100% 100%, 50% 100%, 0 100%, 0 62%, 0 33%, 0 0);
+    transition:  clip-path .5s ease;
+    pointer-events: unset;
+    width: 100%;
+
 }
 
 .img__vehiculos{
@@ -380,9 +389,11 @@
 }
 
 .img__camioneta{
-    opacity: 0;
+    clip-path: circle(0.8% at 100% 0);
+    transition: clip-path .5s ease-in-out;
+    /* opacity: 0; */
     pointer-events: none;
-    transition:  opacity .6s;
+    /* transition:  opacity .6s; */
     width: 100%;
     height: 100%;
     position: absolute;
@@ -390,9 +401,10 @@
 }
 
 .img-camioneta-show{
-    opacity: 1;
+    /* opacity: 1; */
     pointer-events: unset;
-    transition:  opacity .6s;
+    clip-path: circle(70.7% at 50% 50%);
+    transition:  clip-path .6s ease-in-out;
 }
 
 

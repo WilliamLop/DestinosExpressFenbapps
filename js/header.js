@@ -24,13 +24,13 @@ btnMenu.addEventListener('click', () => {
         navHeaderContent.classList.add('nav__header--contentBg');
         // figureLogo.classList.add('filters');
         figureLogo.classList.add('displayNone');
-        main.classList.add('blur');
+        main.classList.add('filters');
         document.body.classList.add('modal-open');
     } else {
         btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
         navHeaderContent.classList.remove('nav__header--contentBg');
         figureLogo.classList.remove('displayNone');
-        main.classList.remove('blur');
+        main.classList.remove('filters');
         document.body.classList.remove('modal-open');
 
     }
@@ -138,7 +138,7 @@ function showModal() {
                 if(containerIndex === modalIndex){
                     containerOpen.classList.add('modal__container--show');
                     btnMenu.classList.add('close__modal--prevent');
-                    figureLogo.classList.add('filters');
+                    // figureLogo.classList.add('filters');
                     navHeaderContent.classList.add('filters');
                     main.classList.add('blur');
                 }
@@ -162,14 +162,23 @@ function showModal() {
 
             openModalContainer.forEach((containerOpen, containerIndex) => {
                 if(containerIndex === modalIndex){
+                    
                     containerOpen.classList.add('modal__container--hide');
                     btnMenu.classList.remove('close__modal--prevent');
-                    figureLogo.classList.remove('filters');
+                    // figureLogo.classList.remove('filters');
                     navHeaderContent.classList.remove('filters');
+
+                    
+                    main.classList.remove('blur');
+
+                    
                     
                     setTimeout(() => {
                         containerOpen.classList.remove('modal__container--show');
                     }, 360);
+                    if (window.innerWidth >= 768) {
+                        document.body.classList.remove('modal-open');
+                    }                   
                 }
             });
             openModalContent.forEach((contentOpen, contentIndex) => {
@@ -179,6 +188,11 @@ function showModal() {
                     }, 120);
                 }
             });
+            if (window.innerWidth >= 768) {
+                document.body.classList.remove('modal-open');
+            }
+            
+
         });
         
     });

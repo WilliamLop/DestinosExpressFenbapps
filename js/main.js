@@ -264,4 +264,4 @@ setInterval(() => {
     imgTiposVehiculos[currentIndex].classList.add('img-camioneta-show');
 
     currentIndex = (currentIndex + 1) % maxIndex;
-}, 5000);
+}, 60000);
