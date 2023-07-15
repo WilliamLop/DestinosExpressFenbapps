@@ -178,7 +178,7 @@ function showModal() {
                     }, 360);
                     if (window.innerWidth >= 768) {
                         document.body.classList.remove('modal-open');
-                    }                   
+                    }                                     
                 }
             });
             openModalContent.forEach((contentOpen, contentIndex) => {
