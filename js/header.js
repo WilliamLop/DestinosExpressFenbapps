@@ -140,7 +140,7 @@ function showModal() {
                     btnMenu.classList.add('close__modal--prevent');
                     // figureLogo.classList.add('filters');
                     navHeaderContent.classList.add('filters');
-                    main.classList.add('blur');
+                    main.classList.add('filters');
                 }
             });
             openModalContent.forEach((contentOpen, contentIndex) => {
