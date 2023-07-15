@@ -49,7 +49,7 @@ window.addEventListener('scroll', (e) => {
         }
     }else{
         this.document.getElementsByClassName("header")[0].style.top = '-200px';
-        this.document.getElementsByClassName("header")[0].style.backgroundColor = 'hsl(233, 12%, 13%)';
+        this.document.getElementsByClassName("header")[0].style.backgroundColor = '#171717';
     }
 
     ubicacionPrincipal = desplazamientoActual;

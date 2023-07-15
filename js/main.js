@@ -226,14 +226,12 @@ tabButtons.forEach((tabLink, index) => {
 });
 
 
-// CODIGO EN PRUEBA
+// Cambio de tipo de vehiculo 
 
 const linkTiposVehiculos = document.querySelectorAll('.vehiculo__item--change');
 const imgTiposVehiculos = document.querySelectorAll('.img__camioneta');
 const imgChange = document.getElementById('imgChange');
 
-
-console.log(imgTiposVehiculos);
 
 linkTiposVehiculos.forEach((tipoVehiculo, index) => {
     tipoVehiculo.addEventListener('click', (e) => {
@@ -255,3 +253,15 @@ linkTiposVehiculos.forEach((tipoVehiculo, index) => {
 
 
 
+let currentIndex = 0;
+const maxIndex = linkTiposVehiculos.length;
+
+setInterval(() => {
+    removeActiveElements('vehiculo__item--active');
+    linkTiposVehiculos[currentIndex].classList.add('vehiculo__item--active');
+
+    removeActiveElements('img-camioneta-show');
+    imgTiposVehiculos[currentIndex].classList.add('img-camioneta-show');
+
+    currentIndex = (currentIndex + 1) % maxIndex;
+}, 5000);

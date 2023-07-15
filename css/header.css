@@ -74,7 +74,7 @@ body.modal-open{
 
 .nav__logo--title{
     position: absolute;
-    top: 16px;
+    top: 18px;
     left: 20px;
 }
 
@@ -101,7 +101,6 @@ body.modal-open{
 
 .nav__header--grid{
     margin: 5rem auto 0rem auto;
-    /* margin-top: 5rem; */
     height: 100vh;
     display: grid;
     justify-content: center;
@@ -132,7 +131,6 @@ body.modal-open{
 
 
 .dropdown__list{
-    /* display: none; */
     padding: .5rem 0 0 2rem;
     display: grid;
     gap: 1rem;
@@ -175,12 +173,10 @@ body.modal-open{
     top: 0;
     bottom: 0;
     height: 0vh;
-    /* background-color:red; */
     background: #05050597;
     filter:  brightness(80%) saturate(90%); 
 
     display: grid;
-    /* align-items: center; */
     width: 100%;
     overflow-y: auto;
     clip-path: inset(0 0 100% 0);
@@ -216,9 +212,6 @@ body.modal-open{
 }
 
 .form__modal{
-    /* display: grid; */
-    /* grid-template-columns: 1fr; */
-    /* gap: 1rem; */
     width: 90%;
     margin: 0 auto;
 }
@@ -349,7 +342,7 @@ body.modal-open{
         width: unset;
     }
 
-    .nav__header--title{
+    .nav__logo--title{
         display: none;
     }
 

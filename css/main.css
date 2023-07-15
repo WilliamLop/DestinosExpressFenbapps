@@ -298,8 +298,9 @@
     object-fit: contain;
     max-height: 170px;
 }
-.img__bus{
-    object-fit: contain;
+.img__bus,
+.chverolet-traker{
+    object-fit: contain !important;
 }
 
 
@@ -392,7 +393,41 @@
     opacity: 1;
     pointer-events: unset;
     transition:  opacity .6s;
+}
 
+
+/* ESTILO COMPROMISOS */
+
+.main__container--compromiso{
+    background-color: black;
+    padding: 2rem 0;
+}
+
+.compromiso__content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1400PX;
+}
+
+.compromiso__info:nth-child(-n + 2){
+    border-bottom: 1px solid white;
+}
+.compromiso__info{
+    padding: 1rem 0;
+    display: grid;
+    gap: .5rem;
+}
+
+.compromiso__title{
+    color:white;
+}
+
+.compromiso__paragraph{
+    color: #eeeeeec9;
 }
 
 /* @keyframes opacity{
@@ -467,6 +502,7 @@
     .img__vehiculos{
         max-height: 250px;
         object-fit: cover;
+        filter: drop-shadow(4px 4px 8px rgba(73, 73, 73, 0.623));
     }
     .vehiculo__subtitle{
         height: unset;
@@ -532,6 +568,19 @@
         align-items: start;
     }
 
+    .compromiso__content{
+        text-align: start;
+    }
+
+    .compromiso__info:nth-child(-n + 2){
+        border-bottom: none;
+        border-right: 1px solid white;
+    }
+    
+    .compromiso__paragraph{
+        padding-inline-start: .5rem;
+    }
+    
 }
 
 @media (min-width: 64rem) {
