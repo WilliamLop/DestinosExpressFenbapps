@@ -32,7 +32,6 @@ btnMenu.addEventListener('click', () => {
         figureLogo.classList.remove('displayNone');
         main.classList.remove('filters');
         document.body.classList.remove('modal-open');
-
     }
 });
 
@@ -140,6 +139,8 @@ function showModal() {
                     btnMenu.classList.add('close__modal--prevent');
                     navHeaderContent.classList.add('filters');
                     main.classList.add('filters');
+                    document.body.classList.add('modal-open');
+
                 }
             });
             openModalContent.forEach((contentOpen, contentIndex) => {
@@ -147,7 +148,7 @@ function showModal() {
                     contentOpen.classList.add('modal__content--show');
                 }
             });
-            document.body.classList.add('modal-open');
+            // document.body.classList.add('modal-open');
             
 
         });
@@ -303,17 +304,17 @@ navItem.forEach((item, index) => {
 
 // resize del menu
 
-window.addEventListener('resize', () => {
-    const isMenuActive = document.querySelectorAll('nav__header--active');
+// window.addEventListener('resize', () => {
+//     const isMenuActive = document.querySelectorAll('nav__header--active');
 
-    if(isMenuActive){
-        navHeader.classList.remove('nav__header--active');
-        btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
-        main.classList.remove('blur');
-        figureLogo.classList.remove('filters');
-        navHeaderContent.classList.remove('filters');
-        navHeaderContent.classList.remove('nav__header--contentBg');
-        document.body.classList.remove('modal-open');
-    }
-});
+//     if(isMenuActive){
+//         navHeader.classList.remove('nav__header--active');
+//         btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
+//         main.classList.remove('blur');
+//         figureLogo.classList.remove('filters');
+//         navHeaderContent.classList.remove('filters');
+//         navHeaderContent.classList.remove('nav__header--contentBg');
+//         document.body.classList.remove('modal-open');
+//     }
+// });
 
