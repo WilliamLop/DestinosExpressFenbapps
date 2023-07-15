@@ -251,6 +251,7 @@ linkTiposVehiculos.forEach((tipoVehiculo, index) => {
 });
 
 
+const imgMensajeria = document.querySelectorAll('.mensajeria__img');
 
 
 let currentIndex = 0;
@@ -265,3 +266,11 @@ setInterval(() => {
 
     currentIndex = (currentIndex + 1) % maxIndex;
 }, 60000);
+
+
+setInterval(() => {
+    removeActiveElements('mensajeria__img--show');
+    imgMensajeria[currentIndex].classList.add('mensajeria__img--show');
+
+    currentIndex = (currentIndex + 1) % maxIndex;
+}, 4000);

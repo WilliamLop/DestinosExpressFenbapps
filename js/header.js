@@ -317,5 +317,3 @@ window.addEventListener('resize', () => {
     }
 });
 
-
-
