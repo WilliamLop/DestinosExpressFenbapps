@@ -138,7 +138,6 @@ function showModal() {
                 if(containerIndex === modalIndex){
                     containerOpen.classList.add('modal__container--show');
                     btnMenu.classList.add('close__modal--prevent');
-                    // figureLogo.classList.add('filters');
                     navHeaderContent.classList.add('filters');
                     main.classList.add('filters');
                 }
@@ -168,8 +167,9 @@ function showModal() {
                     // figureLogo.classList.remove('filters');
                     navHeaderContent.classList.remove('filters');
 
-                    
-                    main.classList.remove('blur');
+                    navHeaderContent.classList.remove('nav__header--contentBg');
+
+                    main.classList.remove('filters');
 
                     
                     
