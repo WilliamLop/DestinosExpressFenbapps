@@ -9,6 +9,7 @@
     <!-- ESTILOS HEADER CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
@@ -20,7 +21,7 @@
             <picture class="figure__header">
                 <a href="#welcome">
                     <img src="images/DestinosLogo.svg.png" title="Destinos Express" class="figure__logo "
-                    alt="logo-destinos-express">
+                        alt="logo-destinos-express">
                 </a>
             </picture>
 
@@ -29,12 +30,12 @@
                     <picture class="figure__header">
                         <a href="#welcome">
                             <img src="images/DestinosLogo.svg.png" title="Destinos Express"
-                            class="figure__logo nav__logo--title" alt="logo-destinos-express">
+                                class="figure__logo nav__logo--title" alt="logo-destinos-express">
                         </a>
                     </picture>
                     <div class="nav__header--grid">
                         <div class="nav__header--container flex__center grid--gap">
-                            
+
                             <div class="dropdown__container">
                                 <ul class="dropdown__trigger">
                                     <li class="nav__item" id="item__drop">
@@ -103,7 +104,7 @@
                 <h2 class="reserva__title center">Bienvenido(a)</h2>
                 <p class="reserva__paragraph center">Aquí puedes reservar, deja tu datos y atenderemos tu
                     solicitud</p>
-                <form action=""  class="form__modal form__reserva ">
+                <form action="" class="form__modal form__reserva ">
 
                     <div class="from__responsive">
                         <div class="from__row">
@@ -394,7 +395,7 @@
                         Servicio de transporte empresarial, ejecutivo y turístico.
                     </p>
 
-                    <a href="#contentCotizar" class="btn btn-cotizar"> Cotizar ahora</a>
+                    <a href="" class="btn btn-cotizar--link"> Cotizar ahora</a>
                 </div>
             </div>
         </div>
@@ -557,9 +558,11 @@
                                             class="img__vehiculos img__camioneta img-camioneta-show" id="imgChange"
                                             draggable="false">
                                         <img src="images/PLATA-BRILLANTE.png" alt=""
-                                            class="img__vehiculos img__camioneta chverolet-traker" id="imgChange" draggable="false">
+                                            class="img__vehiculos img__camioneta chverolet-traker" id="imgChange"
+                                            draggable="false">
                                         <img src="images/Chery_Tiggo-removebg-preview.png" alt=""
-                                            class="img__vehiculos img__camioneta chverolet-traker" id="imgChange" draggable="false">
+                                            class="img__vehiculos img__camioneta chverolet-traker" id="imgChange"
+                                            draggable="false">
                                     </picture>
                                 </article>
                             </div>
@@ -722,7 +725,7 @@
                     </div>
                     <!-- If we need navigation buttons -->
                     <div class="btn-slider button-prev"><</div>
-                        <div class="btn-slider button-next">></div>
+                            <div class="btn-slider button-next">></div>
                     </div>
 
                 </div>
@@ -766,9 +769,11 @@
                         <span class="span__mensajeria">mensajería empresarial</span>
                     </h2>
                     <p class="mensajeria__paragraph">
-                        Contamos con soluciones para los envíos cotidianos y trámites en tiempos mínimos de su empresa. A través de nuestra plataforma podrá llevar el seguimiento de sus envíos.
+                        Contamos con soluciones para los envíos cotidianos y trámites en tiempos mínimos de su empresa.
+                        A través de nuestra plataforma podrá llevar el seguimiento de sus envíos.
                     </p>
-                    <a href="https://www.destinosmensajeria.com/" class="link__mensajeria" target="_blank" title="">Saber más</a>
+                    <a href="https://www.destinosmensajeria.com/" class="link__mensajeria" target="_blank"
+                        title="">Saber más</a>
                 </div>
                 <picture class="mensajeria__imgs">
                     <img src="images/inicio-de-sesión-1.webp" alt="" class="mensajeria__img mensajeria__img--show">
@@ -785,53 +790,52 @@
                 <img src="images/bgFormulario2.png" alt="" class="img__cotizar img-cotixa">
             </picture> -->
             <div class="cotizar__content">
-                <form action=""  class="from__cotizar">
+                <form action="" class="from__cotizar">
                     <div class="from__responsive">
                         <h3 class="form__title">Contáctanos y recibe más información</h3>
                         <!-- <div class="from__row"> -->
-                            <!-- ENTRADA DE NOMBRE USUARIO Y EMPRESA-->
-                            <div class="from__input">
-                                <label class="labels" for="name" id="name-label">Nombre</label>
-                                <input class="inputs" type="text" name="name" id="name" autocomplete="on"
-                                    placeholder="Escribe tu nombre" required>
+                        <!-- ENTRADA DE NOMBRE USUARIO Y EMPRESA-->
+                        <div class="from__input">
+                            <label class="labels" for="name" id="name-label">Nombre</label>
+                            <input class="inputs" type="text" name="name" id="name" autocomplete="on"
+                                placeholder="Escribe tu nombre" required>
 
-                                <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
-                                <input class="inputs" type="text" name="Empresa" id="Empresa"
-                                    placeholder="Escribe tu Empresa" required>
-                            </div>
-                            <!-- ENTRADA DE TELEFONO Y GMAIL -->
-                            <div class="from__input">
+                            <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
+                            <input class="inputs" type="text" name="Empresa" id="Empresa"
+                                placeholder="Escribe tu Empresa" required>
+                        </div>
+                        <!-- ENTRADA DE TELEFONO Y GMAIL -->
+                        <div class="from__input">
                             <!-- ENTRADA DE TELEFONO -->
-                                <label class="labels" for="phone" id="phone-label">Celular</label>
-                                <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
-                                    autocomplete="on" required>
+                            <label class="labels" for="phone" id="phone-label">Celular</label>
+                            <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
+                                autocomplete="on" required>
                             <!-- ENTRADA DE EMAIL -->
-                                <label class="labels" for="email" id="email-label">Email</label>
-                                <input class="inputs" type="email" name="email" id="email"
-                                    placeholder="Escribe tu email" autocomplete="on" required>
-                            </div>
+                            <label class="labels" for="email" id="email-label">Email</label>
+                            <input class="inputs" type="email" name="email" id="email" placeholder="Escribe tu email"
+                                autocomplete="on" required>
+                        </div>
 
                         <!-- </div> -->
 
                         <!-- <div class="from__row"> -->
-                            <!-- ENTRADA DE COMENTARIOS -->
-                            <div class="from__input">
-                                <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
-                                <textarea class="textarea" name="comentarios" id="comentarios"
-                                    placeholder="Escribe tus comentarios" rows="4"></textarea>
-                                <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
-                                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
-                                    ¿Desea ser contactado(a)
-                                </label>
-                            </div>
+                        <!-- ENTRADA DE COMENTARIOS -->
+                        <div class="from__input">
+                            <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
+                            <textarea class="textarea" name="comentarios" id="comentarios"
+                                placeholder="Escribe tus comentarios" rows="4"></textarea>
+                            <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
+                                <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
+                                ¿Desea ser contactado(a)
+                            </label>
+                        </div>
                         <!-- </div>
                          -->
                     </div>
                     <!-- BOTON COTIZACIÓN -->
-                    <input type="submit" value="Enviar Mensaje" class="btn-cotizar"
-                        id="btn-cotizar">
-                        
+                    <input type="submit" value="Enviar Mensaje" class="btn-cotizar" id="btn-cotizar">
+
                 </form>
                 <picture class="content__imgs--cotizar ">
                     <!-- <img src="images/bgFormulario1.png" alt="" class="img__cotizar"> -->
@@ -841,13 +845,13 @@
                     <div class="cotizar__content--card">
                         <img src="images/icon-check.svg" alt="" class="img__cotizar--card">
                         <p class="card__title">Gracias Cotizar</p>
-        
+
                         <p class="card__description">
                             En breve nos pondremos en contacto contigo.
                             Trabajaremos rápido para brindarte soluciones <span class="destinos--span">Destinos
                                 Express</span>, tu transportadora de confianza.
                         </p>
-        
+
                         <button type="submit" class="btn btn--salir-card" id="btn--salir-card">Gracias</button>
                     </div>
                 </div>
@@ -855,7 +859,139 @@
         </section>
 
 
+        <!-- CONTENEDOR TBRAJAMOS CONTIGO -->
+        <div class="work__container">
+            <div class="work__content container">
+                <img src="images/icons8-coche-75.png" class="work__img" alt="">
+                <div class="work__info">
+                    <h3 class="work__title">Queremos trabajar contigo</h3>
+                    <p class="work__paragraph">Nuestro equipo de trabajo está listo para atnederte</p>
+                </div>
+                <button type="submit" class="btn btn__work">¿Cómo hacerlo?</button>
+            </div>
+        </div>
+
     </main>
+
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__container--images">
+                <div class="footer__images">
+                    <a href="#" class="link__home">
+                        <img src="images/DestinosLogo.svg.png" alt="">
+                    </a>
+                    <div class="info__redes">
+                        <a href="#" class="redes__link">
+                            <img src="images/icon-facebook.svg" title="Facebook" alt="icono-facebook"
+                                class="info__redes--img">
+                        </a>
+                        <a href="#" class="redes__link">
+                            <img src="images/icon-twitter.svg" title="Twitter" alt="icono-twitter"
+                                class="info__redes--img">
+                        </a>
+                        <a href="#" class="redes__link">
+                            <img src="images/icon-pinterest.svg" title="Pinterest" alt="icono-pinterest"
+                                class="info__redes--img">
+                        </a>
+                        <a href="#" class="redes__link">
+                            <img src="images/icon-instagram.svg" i title="Instagram" alt="icono-instagram"
+                                class="info__redes--img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <div class="footer__container--info">
+                    <p class="info__text--footer">
+                        Una empresa 100% colombiana, orientada a prestar un servicio excelente, exclusivo y cordial,
+                        principalmente a ejecutivos,
+                        funcionarios y turistas del sector privado y público.
+                    </p>
+                </div>
+    
+                <div class="footer__container--ubi">
+                    <div class="ubi__content">
+                        <h3 class="ubi__title">Bogotá</h3>
+                        <p class="footer__text">
+                            <img src="images/icon-location.svg" alt="">
+                            Carrera 71 No. 48A - 55 Normandia
+                        </p>
+                        <p class="footer__text">
+                            <img src="images/icon-phone.svg" alt="">
+                            (+57) 302 406 0101 - (1) 482 4050
+                        </p>
+                        <p class="footer__text">
+                            <img src="images/icon-email.svg" alt="">
+                            example@fylo.com
+                        </p>
+    
+                    </div>
+                    <div class="ubi__content">
+                        <h3 class="ubi__title">Medellín</h3>
+                        <p class="footer__text">
+                            <img src="images/icon-location.svg" alt="">
+                            Cll. 34 b # 65d – 02 Oficina 201 B
+                        </p>
+                        <p class="footer__text">
+                            <img src="images/icon-phone.svg" alt="">
+                            (4) 520 4795
+                        </p>
+                        <p class="footer__text">
+                            <img src="images/icon-email.svg" alt="">
+                            example@fylo.com
+                        </p>
+    
+                    </div>
+                    <div class="ubi__content">
+                        <h3 class="ubi__title">Calí</h3>
+                        <p class="footer__text">
+                            <img src="images/icon-location.svg" alt="">
+                            Avenida 4ta Norte #7N-46
+                        </p>
+                        <p class="footer__text">
+                            <img src="images/icon-phone.svg" alt="">
+                            (2) 489 1221
+                        </p>
+                        <p class="footer__text">
+                            <img src="images/icon-email.svg" alt="">
+                            example@fylo.com
+                        </p>
+    
+                    </div>
+                </div>
+    
+                <nav class="nav__footer">
+                    <ul class="footer__list">
+                        <h4 class="footer__title">Acerca de</h4>
+                        <li class="footer__item"><a href="#" class="footer__link">Nosotros</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contacto</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">PQRS</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
+                    </ul>
+                    <ul class="footer__list">
+                        <h4 class="footer__title">Privacidad</h4>
+                        <li class="footer__item"><a href="#" class="footer__link">Política de privacidad</a></li>
+                    </ul>
+                    <!-- <ul class="footer__list">
+                        <h4 class="footer__title"></h4>
+                        <li class="footer__item"><a href="#" class="footer__link"></a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"></a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"></a></li>
+                    </ul> -->
+                    
+                </nav>
+    
+                <div class="footer__transportadoras">
+                    <img src="images/transportadora1.webp" alt="" class="transportadora__img">
+                    <img src="images/transportadora2.webp" alt="" class="transportadora__img">
+                </div>
+            </div>
+
+            <p class="copy__text">© 2023 Destinos Exrpress. All rights reserved</p>
+        </div>
+    </footer>
 
     <!-- SCRIPT HEADER JS -->
     <script src="js/header.js"></script>

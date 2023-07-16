@@ -279,6 +279,7 @@ setInterval(() => {
 
 
 const btnCotizarCard = document.getElementById('btn-cotizar');
+const linkCotizar = document.querySelector('.btn-cotizar--link');
 const btnSrCard = document.querySelector('.btn--salir-card');
 const cotizarCard = document.querySelector('.cotizar__container');
 const cotizarContainerCard = document.querySelector('.cotizar__content--card');
@@ -288,6 +289,12 @@ function resertForm2() {
     const fromContainer = document.querySelector('.from__cotizar');
     fromContainer.reset();
 }
+
+linkCotizar.addEventListener('click', (e) => {
+    e.preventDefault();
+    form2.scrollIntoView({ behavior: 'smooth'});
+});
+
 
 btnCotizarCard.addEventListener('click', (e) => {
     if(form2.checkValidity()) {

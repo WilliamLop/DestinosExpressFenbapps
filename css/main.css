@@ -2,6 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 
+
 .container{
     width: 90%;
     margin: auto;
@@ -14,7 +15,6 @@ html{
     width: 100%;
     position: relative;
     z-index: -1;
-    height: 100vh;
 }
 
 .main__container--media {
@@ -598,6 +598,25 @@ html{
     margin: auto;
 }
 
+
+.work__container{
+    background-color: #eee;
+    padding: 1rem 0;
+}
+
+.work__content{
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.work__img{
+    margin: 0 auto;
+}
+.btn__work{
+    justify-self: center;
+    width: 50%;
+}
 /* @keyframes opacity{
     0%{
         opacity: 0;
@@ -800,6 +819,19 @@ html{
         background-position: left bottom;
         /* filter: blur(1.5px) brightness(100%) saturate(100%); */
         /* z-index: -1; */
+    }
+
+    .work__content{
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+    .work__img{
+        margin: 0;
+    }
+    
+    .btn__work{
+        justify-self: end;
+        width: 50%;
     }
     
 }
