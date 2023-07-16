@@ -19,11 +19,14 @@ body{
     margin: 0;
     padding: 0;
     background-color: #0000000b;
+    position: relative;
+    height: 10vh;
 }
 
 body.modal-open{
     overflow: hidden;
     width: 100%;
+    
 }
 
 .header{

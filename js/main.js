@@ -278,3 +278,37 @@ setInterval(() => {
 }, 4000);
 
 
+const btnCotizarCard = document.getElementById('btn-cotizar');
+const btnSrCard = document.querySelector('.btn--salir-card');
+const cotizarCard = document.querySelector('.cotizar__container');
+const cotizarContainerCard = document.querySelector('.cotizar__content--card');
+const form2 = document.querySelector('.from__cotizar');
+
+function resertForm2() {
+    const fromContainer = document.querySelector('.from__cotizar');
+    fromContainer.reset();
+}
+
+btnCotizarCard.addEventListener('click', (e) => {
+    if(form2.checkValidity()) {
+        e.preventDefault();
+        cotizarCard.classList.add('cotizar__container--show');
+        cotizarCard.classList.add('nav__header--contentBg');
+        form2.classList.add('filters');
+        cotizarContainerCard.classList.add('cotizar__content--card-show');
+    }
+});
+btnSrCard.addEventListener('click', (e) => {
+    e.preventDefault();
+    cotizarCard.classList.remove('cotizar__container--show');
+    cotizarCard.classList.remove('nav__header--contentBg');
+    form2.classList.remove('filters');
+    cotizarContainerCard.classList.remove('cotizar__content--card-show');
+    resertForm2();
+
+});
+
+
+console.log(btnSrCard);
+
+

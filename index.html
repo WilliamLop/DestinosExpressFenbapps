@@ -18,15 +18,19 @@
     <header class="header" id="header">
         <div class="header__container">
             <picture class="figure__header">
-                <img src="images/DestinosLogo.svg.png" title="Destinos Express" class="figure__logo"
+                <a href="#welcome">
+                    <img src="images/DestinosLogo.svg.png" title="Destinos Express" class="figure__logo "
                     alt="logo-destinos-express">
+                </a>
             </picture>
 
             <div class="nav__header--content">
                 <div class="nav__header">
                     <picture class="figure__header">
-                        <img src="images/DestinosLogo.svg.png" title="Destinos Express"
+                        <a href="#welcome">
+                            <img src="images/DestinosLogo.svg.png" title="Destinos Express"
                             class="figure__logo nav__logo--title" alt="logo-destinos-express">
+                        </a>
                     </picture>
                     <div class="nav__header--grid">
                         <div class="nav__header--container flex__center grid--gap">
@@ -374,7 +378,7 @@
     <main class="main">
 
         <!-- VIDEO Y BIENVENIDA DESITNOS EXPRESS -->
-        <div class="main__container--media">
+        <div class="main__container--media" id="welcome">
             <div class="video__wrapper">
                 <video src="video/welcomeVideo.mp4" class="video__express" autoplay loop muted></video>
             </div>
@@ -390,7 +394,7 @@
                         Servicio de transporte empresarial, ejecutivo y turístico.
                     </p>
 
-                    <button type="submit" class="btn btn-cotizar"> Cotizar ahora</button>
+                    <a href="#contentCotizar" class="btn btn-cotizar"> Cotizar ahora</a>
                 </div>
             </div>
         </div>
@@ -776,17 +780,13 @@
         </section>
 
         <!-- CONTENEDOR DE COTIZAR -->
-        <section class="section__cotizar--container">
+        <section class="section__cotizar--container" id="contentCotizar">
             <!-- <picture class="content__imgs--cotizar ">
                 <img src="images/bgFormulario2.png" alt="" class="img__cotizar img-cotixa">
             </picture> -->
             <div class="cotizar__content">
-                <picture class="content__imgs--cotizar ">
-                    <!-- <img src="images/bgFormulario1.png" alt="" class="img__cotizar"> -->
-                </picture>
-                
                 <form action=""  class="from__cotizar">
-                    <div class="from__responsive from__cotizar">
+                    <div class="from__responsive">
                         <h3 class="form__title">Contáctanos y recibe más información</h3>
                         <!-- <div class="from__row"> -->
                             <!-- ENTRADA DE NOMBRE USUARIO Y EMPRESA-->
@@ -829,14 +829,31 @@
                          -->
                     </div>
                     <!-- BOTON COTIZACIÓN -->
-                    <input type="submit" data-modal="Card1" value="Enviar Mensaje" class="btn btn-solicitud"
-                        id="btn-solicitud">
+                    <input type="submit" value="Enviar Mensaje" class="btn-cotizar"
+                        id="btn-cotizar">
+                        
                 </form>
+                <picture class="content__imgs--cotizar ">
+                    <!-- <img src="images/bgFormulario1.png" alt="" class="img__cotizar"> -->
+                </picture>
+                <!-- MODAL DE COTIZAR -->
+                <div class="cotizar__container">
+                    <div class="cotizar__content--card">
+                        <img src="images/icon-check.svg" alt="" class="img__cotizar--card">
+                        <p class="card__title">Gracias Cotizar</p>
+        
+                        <p class="card__description">
+                            En breve nos pondremos en contacto contigo.
+                            Trabajaremos rápido para brindarte soluciones <span class="destinos--span">Destinos
+                                Express</span>, tu transportadora de confianza.
+                        </p>
+        
+                        <button type="submit" class="btn btn--salir-card" id="btn--salir-card">Gracias</button>
+                    </div>
+                </div>
             </div>
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="waves" viewBox="0 0 1440 320">
-                <path fill="#0099ff" fill-opacity="1" d="M0,96L40,117.3C80,139,160,181,240,208C320,235,400,245,480,234.7C560,224,640,192,720,170.7C800,149,880,139,960,138.7C1040,139,1120,149,1200,138.7C1280,128,1360,96,1400,80L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
-            </svg> -->
         </section>
+
 
     </main>
 
