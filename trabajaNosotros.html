@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con nosotros</title>
+    <link rel="stylesheet" href="css/header.css">
+    <style>
+        .header{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header__container">
+            <picture class="figure__header">
+                <img src="images/DestinosLogo.svg.png" title="Destinos Express" class="figure__logo"
+                    alt="logo-destinos-express">
+            </picture>
+
+            <div class="nav__header--content">
+                <div class="nav__header">
+                    <picture class="figure__header">
+                        <img src="images/DestinosLogo.svg.png" title="Destinos Express"
+                            class="figure__logo nav__logo--title" alt="logo-destinos-express">
+                    </picture>
+                    <div class="nav__header--grid">
+                        <div class="nav__header--container flex__center grid--gap">
+                            
+                            <div class="dropdown__container">
+                                <ul class="dropdown__trigger">
+                                    <li class="nav__item" id="item__drop">
+                                        <a href="#" class="nav__link" id="link__drop">
+                                            <img loading="lazy" src="images/iconServicios.png" class="icon__services"
+                                                alt="">
+                                            Servicios
+                                            <img loading="lazy" src="images/icon-arrow.svg" id="arrow"
+                                                class="icon__arrow" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item"><a class="nav__link" href="#">Tansporte empresarial</a>
+                                    </li>
+                                    <li class="dropdown__item"><a class="nav__link" href="#">Transporte ingenería y
+                                            petroleras</a></li>
+                                    <li class="dropdown__item"><a class="nav__link" href="#">Mensajería empresarial</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <nav class="nav">
+                                <ul class="nav__list grid--gap flex__center">
+                                    <li class="nav__item nav__item--pages">
+                                        <a href="index.html" class="nav__link nav__link--page">
+                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
+                                                alt="">
+                                            Inicio
+                                        </a>
+                                    </li>
+                                    <li class="nav__item nav__item--pages ">
+                                        <a href="contacto.html" class="nav__link nav__link--page">
+                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
+                                                alt="">
+                                            Contacto
+                                        </a>
+                                    </li>
+                                    <li class="nav__item ">
+                                        <a href="trabajaNosotros.html" class="nav__link nav__item--pages item-pages-active">
+                                            <img loading="lazy" src="images/iconTrabajaConNosotros.png"
+                                                class="icon__services" alt="">
+                                            Trabaja con nosotros
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="nav__froms--container grid--gap">
+                            <button class="btn open-modal" id="reservaForm">Reservar</button>
+                            <button class="btn open-modal" id="lineaForm">Línea Honesta</button>
+                            <a href="https://clientesdestinos.tmovil.co/js/" class="btn" target="_blank">Afiliados</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="box__model" id="menu" title="Menú">
+                <img loading="lazy" src="images/icon-hamburger.svg" class="box__model--icon" alt="Menú">
+            </a>
+        </div>
+
+        <!-- MODAL DE RESERVACIÓN -->
+        <div class="modal__container modal__container--reserva" id="modalReserva">
+            <div class="modal__content modal__content--reserva">
+                <h2 class="reserva__title center">Bienvenido(a)</h2>
+                <p class="reserva__paragraph center">Aquí puedes reservar, deja tu datos y atenderemos tu
+                    solicitud</p>
+                <form action=""  class="form__modal form__reserva ">
+
+                    <div class="from__responsive">
+                        <div class="from__row">
+                            <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
+                            <div class="from__input">
+                                <label class="labels" for="name" id="name-label">Nombre</label>
+                                <input class="inputs" type="text" name="name" id="name" autocomplete="on"
+                                    placeholder="Escribe tu nombre" required>
+                            </div>
+                            <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
+                            <div class="from__input">
+                                <label class="labels" for="services" id="services-label">Tipo De Servicio</label>
+                                <select class="selected" name="services" id="services" required>
+                                    <option value="">Seleccione Servicio</option>
+                                    <option value="ejecutivo">Ejecutivo</option>
+                                    <option value="empresarial">Empresarial</option>
+                                    <option value="normal">Normal</option>
+                                </select>
+                            </div>
+                            <!-- ENTRADA DE FECHA Y HORA -->
+                            <div class="from__input">
+                                <label class="labels" for="datetime" id="datetime-label">Fecha y Hora</label>
+                                <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
+                            </div>
+                        </div>
+
+                        <div class="from__row">
+                            <!-- ENTRADA DE TELEFONO -->
+                            <div class="from__input">
+                                <label class="labels" for="phone" id="phone-label">Celular</label>
+                                <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
+                                    autocomplete="on" required>
+                            </div>
+
+
+                            <!-- ENTRADA DE SELECCION TIPO VEHICULO -->
+                            <div class="from__input">
+                                <label class="labels" for="vehiculo" id="vehiculo-label">Tipo De Vehículo</label>
+                                <select class="selected" name="vehiculo" id="vehiculo" required>
+                                    <option value="">Seleccione Vehículo</option>
+                                    <option value="camionetas">Camionetas</option>
+                                    <option value="dobleCabina">Doble Cabina</option>
+                                    <option value="miniVan">Mini Van</option>
+                                    <option value="vans">Vans</option>
+                                    <option value="Buses">Buses</option>
+                                </select>
+                            </div>
+                            <!-- ENTRADA DE DESTINO -->
+                            <div class="from__input">
+                                <label class="labels" for="destino" id="destino-label">Destino</label>
+                                <input class="inputs" type="text" name="destino" id="destino"
+                                    placeholder="Escribe tu destino" required>
+                            </div>
+                        </div>
+
+                        <div class="from__row">
+                            <!-- ENTRADA DE EMAIL -->
+                            <div class="from__input">
+                                <label class="labels" for="email" id="email-label">Email</label>
+                                <input class="inputs" type="email" name="email" id="email"
+                                    placeholder="Escribe tu email" autocomplete="on" required>
+                            </div>
+                            <!-- ENTRADA DE CIUDAD -->
+                            <div class="from__input">
+                                <label class="labels" for="ciudad" id="ciudad-label">Ciudad</label>
+                                <input class="inputs" type="text" name="ciudad" id="ciudad"
+                                    placeholder="Escribe tu ciudad" required>
+                            </div>
+                            <!-- ENTRADA DE ITINERARIO DE VUELO -->
+                            <div class="from__input">
+                                <label class="labels" for="itirenario" id="itirenario-label">Itinerario de vuelo</label>
+                                <input class="inputs" type="text" name="itirenario" id="itirenario"
+                                    placeholder="Escribe tu itirenario" required>
+                            </div>
+                        </div>
+
+                        <div class="from__row">
+                            <!-- ENTRADA DE EMPRESA -->
+                            <div class="from__input">
+                                <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
+                                <input class="inputs" type="text" name="Empresa" id="Empresa"
+                                    placeholder="Escribe tu Empresa" required>
+                            </div>
+                            <!-- ENTRADA DE DIRECCION -->
+                            <div class="from__input">
+                                <label class="labels" for="direccion" id="direccion-label">Dirección</label>
+                                <input class="inputs" type="text" name="direccion" id="direccion"
+                                    placeholder="Escribe tu direccion" required>
+                            </div>
+                            <!-- ENTRADA DE COMENTARIOS -->
+                            <div class="from__input">
+                                <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
+                                <textarea class="textarea" name="comentarios" id="comentarios"
+                                    placeholder="Escribe tus comentarios" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- BOTON COTIZACIÓN -->
+                    <input type="submit" data-modal="Card1" value="Solicitar cotización" class="btn btn-solicitud"
+                        id="btn-solicitud">
+                </form>
+
+                <a href="#" class="close__modal">
+                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar"
+                        id="close-modal" class="close__modal--icon">
+                </a>
+            </div>
+        </div>
+        <!-- MODAL DE LINEA HONESTA -->
+        <div class="modal__container modal__container--linea" id="modalLinea">
+            <div class="modal__content modal__content--linea">
+                <h2 class="reserva__title center">Línea honesta</h2>
+                <p class="reserva__paragraph center">Denuncias relacionadas con conductas deshonestas</p>
+                <form action="" method="GET" class="form__modal from__linea">
+
+                    <div class="from__responsive">
+                        <div class="from__row">
+                            <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
+                            <div class="from__input">
+                                <label class="labels" for="asunto" id="asunto-label">Asunto</label>
+                                <select class="selected" name="asunto" id="asunto" required>
+                                    <option value="">Apropiación de recursos</option>
+                                    <option value="solicitud">Solicitud de dinero para cierre</option>
+                                    <option value="conflictos">Conflicto de intereses</option>
+                                    <option value="falsedad">Falsedad de información</option>
+                                </select>
+                            </div>
+                            <!-- ENTRADA DE FECHA Y HORA -->
+                            <div class="from__input">
+                                <label class="labels" for="datetime" id="datetime-label">Fecha y Hora</label>
+                                <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
+                            </div>
+
+                            <!-- ENTRADA DE SELECCION INVOLUCRADO -->
+                            <div class="from__input">
+                                <label class="labels" for="involucrado" id="involucrado-label">Involucrado</label>
+                                <select class="selected" name="involucrado" id="involucrado" required>
+                                    <option value="">Seleccione Cliente</option>
+                                    <option value="provedor">Provedor</option>
+                                    <option value="aliado">Aliado</option>
+                                    <option value="conductor">Conductor</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form__row">
+                            <!-- ENTRADA DE CARGO/NOMBRE INVOLUCRADO -->
+                            <div class="from__input">
+                                <label class="labels" for="cargo" id="cargo-label">Nombre y/o cargo del
+                                    involucrado</label>
+                                <input class="inputs" type="text" name="cargo" id="cargo" placeholder="Escribe el cargo"
+                                    required>
+                            </div>
+
+                            <!-- ENTRADA DE LUGAR DE LOS HECHOS -->
+                            <div class="from__input">
+                                <label class="labels" for="ocurrido" id="ocurrido-label">¿Dónde Ocurrió?</label>
+                                <input class="inputs" type="text" name="ocurrido" id="ocurrido"
+                                    placeholder="Escribe dónde ocurrió" required>
+                            </div>
+
+                            <!-- ENTRADA DE COMENTARIOS -->
+                            <div class="from__input">
+                                <label class="labels" for="situacion" id="situacion-label">Descripción de la
+                                    situación</label>
+                                <textarea class="textarea" name="situacion" id="situacion"
+                                    placeholder="Escribe tu situación" rows="4" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="from__row">
+                            <!-- ENTRADA DE ARCHIVO -->
+                            <div class="from__input">
+                                <label for="file" class="labels" id="file-label">Seleccionar archivo</label>
+                                <input type="file" name="file" id="file" class="filebtn" accept=".jpg, .png, .pdf"
+                                    required>
+                            </div>
+
+                            <!-- ENTRADA DE DECISION -->
+                            <div class="from__input">
+                                <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
+                                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
+                                    ¿Desea ser contactado(a)
+                                </label>
+                            </div>
+
+                            <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
+                            <div class="from__input">
+                                <label class="labels" for="name" id="name-label">Name</label>
+                                <input class="inputs" type="text" name="name" id="name" placeholder="Escribe tu nombre"
+                                    autocomplete="on" required>
+                            </div>
+                        </div>
+
+                        <div class="from__row">
+                            <!-- ENTRADA DE TELEFONO -->
+                            <div class="from__input">
+                                <label class="labels" for="phone" id="phone-label">Celular</label>
+                                <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
+                                    autocomplete="on" required>
+
+                            </div>
+                            <!-- ENTRADA DE EMAIL -->
+                            <div class="from__input">
+                                <label class="labels" for="email" id="email-label">Email</label>
+                                <input class="inputs" type="email" name="email" id="email" autocomplete="on"
+                                    placeholder="Escribe tu email" required>
+                            </div>
+
+                            <!-- ENTRADA DE DECISION -->
+                            <div class="from__input">
+                                <label for="checkbox" class="checkbox-lab" id="checkbox-label">
+                                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox" required>
+                                    Estoy de acuerdo con los términos y condiciones
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOTON REPORTE  -->
+                    <input type="button" value="Enviar Reporte" data-modal="Card2" class="btn btn-reserva"
+                        id="btn-solicitud">
+                </form>
+
+                <a href="#" class="close__modal close__modal--honesta" id="close__modal--honesta">
+                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar"
+                        id="close-modal" class="close__modal--icon">
+                </a>
+            </div>
+        </div>
+        <!-- CARDBACK DE RESERVACIÖN -->
+        <section class="card__back--container back--reservacion-container" id="cardBack">
+            <div class="card__back--content back--reservacion-content">
+                <img loading="lazy" src="images/icon-check.svg" alt="icon-check" class="icon__check">
+
+                <p class="card__title">Gracias por tu reserva</p>
+
+                <p class="card__description">
+                    En breve nos pondremos en contacto contigo para confirmar la reservación solicitada.
+                    Espero tengas buen viaje te desea <span class="destinos--span">Destinos Express</span>, tu
+                    transportadora de confianza.
+                </p>
+
+                <button type="submit" class="btn-confimacion btn" id="btn--salir-card">Salir</button>
+            </div>
+        </section>
+
+        <!-- CARDBACK DE SOPORTE -->
+        <section class="card__back--container back--linea-container" id="cardBack">
+            <div class="card__back--content back--linea-content">
+                <img loading="lazy" src="images/icon-soporte.png" alt="icon-support" class="icon__check">
+
+                <p class="card__title">Gracias por tu información</p>
+
+                <p class="card__description">
+                    En breve nos pondremos en contacto contigo para dar soporte a tu problema.
+                    Trabajaremos rápido para brindarte soluciones <span class="destinos--span">Destinos
+                        Express</span>, tu transportadora de confianza.
+                </p>
+
+                <button type="submit" class="btn-confimacion btn" id="btn--salir-card">Gracias</button>
+            </div>
+        </section>
+
+    </header>
+
+    <main class="main">
+        
+    </main>
+    <script src="js/header.js"></script>
+
+     <!-- SCRIPT MAIN.JS -->
+     <script src="js/navegacion.js"></script>
+</body>
+</html>

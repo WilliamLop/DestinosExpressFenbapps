@@ -487,6 +487,56 @@
 
 }
 
+.cotizar__content{
+    width: 100%;
+}
+
+.section__cotizar--container {
+    position: relative;
+    display: grid;
+}
+
+.section__cotizar--container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bgFormulario2.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(1.5px) brightness(100%) saturate(100%);
+    z-index: -1;
+}
+
+
+.content__imgs--cotizar{
+    background-color: red;
+    background: url(../images/bgFormulario1.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height:200px;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.cotizar__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-self: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: white;
+    position: relative;
+    filter: drop-shadow(2px 2px 8px rgba(153, 153, 153, 0.774));
+    border-radius: .5rem;
+}
+
+
+
+
+
 /* @keyframes opacity{
     0%{
         opacity: 0;
@@ -643,7 +693,27 @@
         align-self: center;
         text-align: start;
     } 
+    .img__cotizar{
+        width: 100%;
+        height: 450px;
+    }
     
+    .cotizar__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        gap: 1rem;
+        background-color: white;
+    }
+
+    .content__imgs--cotizar{
+        background-color: red;
+        background: url(../images/bgFormulario1.png) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height:unset;
+        border-radius: .5rem 0 0 .5rem;
+    }
 }
 
 @media (min-width: 64rem) {
@@ -705,7 +775,7 @@
         font-size: 1.3em;
 
     }
-   
+    
 
 }
 

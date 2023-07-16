@@ -255,6 +255,7 @@ const imgMensajeria = document.querySelectorAll('.mensajeria__img');
 
 
 let currentIndex = 0;
+let currentIndex2 = 0;
 const maxIndex = linkTiposVehiculos.length;
 const maxIndexImgs = imgMensajeria.length;
 
@@ -266,12 +267,14 @@ setInterval(() => {
     imgTiposVehiculos[currentIndex].classList.add('img-camioneta-show');
 
     currentIndex = (currentIndex + 1) % maxIndex;
-}, 60000);
+}, 50000);
 
 
 setInterval(() => {
     removeActiveElements('mensajeria__img--show');
-    imgMensajeria[currentIndex].classList.add('mensajeria__img--show');
+    imgMensajeria[currentIndex2].classList.add('mensajeria__img--show');
 
-    currentIndex = (currentIndex + 1) % maxIndexImgs;
+    currentIndex2 = (currentIndex2 + 1) % maxIndexImgs;
 }, 4000);
+
+

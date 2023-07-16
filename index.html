@@ -30,17 +30,7 @@
                     </picture>
                     <div class="nav__header--grid">
                         <div class="nav__header--container flex__center grid--gap">
-                            <!-- <nav class="nav">
-                                <ul class="nav__list grid--gap flex__center">
-                                    <li class="nav__item">
-                                        <a href="#" class="nav__link">
-                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
-                                                alt="">
-                                            Inicio
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav> -->
+                            
                             <div class="dropdown__container">
                                 <ul class="dropdown__trigger">
                                     <li class="nav__item" id="item__drop">
@@ -64,15 +54,22 @@
                             </div>
                             <nav class="nav">
                                 <ul class="nav__list grid--gap flex__center">
-                                    <li class="nav__item">
-                                        <a href="#" class="nav__link">
+                                    <li class="nav__item  ">
+                                        <a href="#" class="nav__link item-pages-active nav__item--pages">
+                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
+                                                alt="">
+                                            Inicio
+                                        </a>
+                                    </li>
+                                    <li class="nav__item ">
+                                        <a href="contacto.html" class="nav__link nav__item--pages">
                                             <img loading="lazy" src="images/iconContacto.png" class="icon__services"
                                                 alt="">
                                             Contacto
                                         </a>
                                     </li>
-                                    <li class="nav__item">
-                                        <a href="#" class="nav__link">
+                                    <li class="nav__item ">
+                                        <a href="trabajaNosotros.html" class="nav__link nav__item--pages">
                                             <img loading="lazy" src="images/iconTrabajaConNosotros.png"
                                                 class="icon__services" alt="">
                                             Trabaja con nosotros
@@ -778,6 +775,65 @@
             </div>
         </section>
 
+        <!-- CONTENEDOR DE COTIZAR -->
+        <section class="section__cotizar--container">
+            <!-- <picture class="content__imgs--cotizar ">
+                <img src="images/bgFormulario2.png" alt="" class="img__cotizar img-cotixa">
+            </picture> -->
+            <div class="cotizar__content">
+                <picture class="content__imgs--cotizar ">
+                    <!-- <img src="images/bgFormulario1.png" alt="" class="img__cotizar"> -->
+                </picture>
+                <form action=""  class="form__modal ">
+                    <div class="from__responsive from__cotizar">
+                        <h3 class="form__title">Contáctanos y recibe más información</h3>
+                        <!-- <div class="from__row"> -->
+                            <!-- ENTRADA DE NOMBRE USUARIO Y EMPRESA-->
+                            <div class="from__input">
+                                <label class="labels" for="name" id="name-label">Nombre</label>
+                                <input class="inputs" type="text" name="name" id="name" autocomplete="on"
+                                    placeholder="Escribe tu nombre" required>
+
+                                <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
+                                <input class="inputs" type="text" name="Empresa" id="Empresa"
+                                    placeholder="Escribe tu Empresa" required>
+                            </div>
+                            <!-- ENTRADA DE TELEFONO Y GMAIL -->
+                            <div class="from__input">
+                            <!-- ENTRADA DE TELEFONO -->
+                                <label class="labels" for="phone" id="phone-label">Celular</label>
+                                <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
+                                    autocomplete="on" required>
+                            <!-- ENTRADA DE EMAIL -->
+                                <label class="labels" for="email" id="email-label">Email</label>
+                                <input class="inputs" type="email" name="email" id="email"
+                                    placeholder="Escribe tu email" autocomplete="on" required>
+                            </div>
+
+                        <!-- </div> -->
+
+                        <!-- <div class="from__row"> -->
+                            <!-- ENTRADA DE COMENTARIOS -->
+                            <div class="from__input">
+                                <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
+                                <textarea class="textarea" name="comentarios" id="comentarios"
+                                    placeholder="Escribe tus comentarios" rows="4"></textarea>
+                                <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
+                                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
+                                    ¿Desea ser contactado(a)
+                                </label>
+                            </div>
+                        <!-- </div>
+                         -->
+                    </div>
+                    <!-- BOTON COTIZACIÓN -->
+                    <input type="submit" data-modal="Card1" value="Enviar Mensaje" class="btn btn-solicitud"
+                        id="btn-solicitud">
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <!-- SCRIPT HEADER JS -->
@@ -788,6 +844,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- SCRIPT MAIN.JS -->
     <script src="js/main.js"></script>
+    <script src="js/navegacion.js"></script>
+
 
 
 </body>

@@ -300,17 +300,28 @@ body.modal-open{
 
 .nav__link:hover{
     color: orange;
-
 }
 
-@keyframes opacity{
+
+
+.nav__item--pages{
+    padding-bottom: .4rem;
+}
+
+.item-pages-active{
+    border-bottom: 1px solid transparent;
+    color: orange;
+    border-color: orange;
+    transition: .5s ease-in-out;
+}
+/* @keyframes opacity{
     0%{
         opacity: 0;
     }
     100%{
         opacity: 1;
     }
-}
+} */
 
 /* MediaQuerys */
 
@@ -441,6 +452,10 @@ body.modal-open{
         margin-top: 1rem;
     }
 
+    .nav__link{
+        padding: .2rem;
+    }
+    
 }
 
 /* Dispositivos desktop mini de 1024px */
