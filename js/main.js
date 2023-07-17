@@ -324,11 +324,11 @@ const redes = document.querySelectorAll('.info__redes--img');
 redes.forEach(imgs => {
     imgs.addEventListener('mouseover', (e) =>{
         const imgType = imgs.getAttribute('alt').split('-')[1];
-        imgs.setAttribute('src', `../images/icon-${imgType}-yellow.svg`);
+        imgs.setAttribute('src', `./images/icon-${imgType}-yellow.svg`);
     });
     imgs.addEventListener('mouseout', (e) =>{
         const imgType = imgs.getAttribute('alt').split('-')[1];
-        imgs.setAttribute('src', `../images/icon-${imgType}.svg`);
+        imgs.setAttribute('src', `./images/icon-${imgType}.svg`);
     });
 });
 
