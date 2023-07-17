@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="images/logoDestinos.png">
     <title>Destinos Express – Servicio empresarial, ejecutivo y turístico</title>
+    <script src="https://kit.fontawesome.com/766c25c2d0.js" crossorigin="anonymous"></script>
     <!-- ESTILOS HEADER CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
@@ -40,8 +41,9 @@
                                 <ul class="dropdown__trigger">
                                     <li class="nav__item" id="item__drop">
                                         <a href="#" class="nav__link" id="link__drop">
-                                            <img loading="lazy" src="images/iconServicios.png" class="icon__services"
-                                                alt="">
+                                            <!-- <img loading="lazy" src="images/iconServicios.png" class="icon__services"
+                                                alt=""> -->
+                                            <i class="fa-solid fa-arrow-down-wide-short"></i>
                                             Servicios
                                             <img loading="lazy" src="images/icon-arrow.svg" id="arrow"
                                                 class="icon__arrow" alt="">
@@ -49,34 +51,36 @@
                                     </li>
                                 </ul>
                                 <ul class="dropdown__list">
-                                    <li class="dropdown__item"><a class="nav__link" href="#">Tansporte empresarial</a>
+                                    <li class="dropdown__item"><a class="nav__link--drop" href="#">Tansporte empresarial</a>
                                     </li>
-                                    <li class="dropdown__item"><a class="nav__link" href="#">Transporte ingenería y
+                                    <li class="dropdown__item"><a class="nav__link--drop" href="#">Transporte ingenería y
                                             petroleras</a></li>
-                                    <li class="dropdown__item"><a class="nav__link" href="#">Mensajería empresarial</a>
+                                    <li class="dropdown__item"><a class="nav__link--drop" href="#">Mensajería empresarial</a>
                                     </li>
                                 </ul>
                             </div>
                             <nav class="nav">
                                 <ul class="nav__list grid--gap flex__center">
                                     <li class="nav__item  ">
-                                        <a href="#" class="nav__link item-pages-active nav__item--pages">
-                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
-                                                alt="">
+                                        <a href="#" class="nav__link home-link item-pages-active nav__item--pages">
+                                            <!-- <img loading="lazy" src="images/iconContacto.png" class="icon__services"
+                                                alt=""> -->
+                                            <i class="fa-solid fa-house"></i>
+                                            
                                             Inicio
                                         </a>
                                     </li>
                                     <li class="nav__item ">
                                         <a href="contacto.html" class="nav__link nav__item--pages">
-                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
-                                                alt="">
+                                            <!-- <img loading="lazy" src="images/iconContacto.png" class="icon__services"
+                                                alt=""> -->
+                                                <i class="fa-regular fa-address-card"></i>
                                             Contacto
                                         </a>
                                     </li>
                                     <li class="nav__item ">
                                         <a href="trabajaNosotros.html" class="nav__link nav__item--pages">
-                                            <img loading="lazy" src="images/iconTrabajaConNosotros.png"
-                                                class="icon__services" alt="">
+                                            <i class="fa-solid fa-truck-fast"></i>
                                             Trabaja con nosotros
                                         </a>
                                     </li>
@@ -85,9 +89,9 @@
                         </div>
 
                         <div class="nav__froms--container grid--gap">
-                            <button class="btn open-modal" id="reservaForm">Reservar</button>
-                            <button class="btn open-modal" id="lineaForm">Línea Honesta</button>
-                            <a href="https://clientesdestinos.tmovil.co/js/" class="btn" target="_blank">Afiliados</a>
+                            <button class="btn modals--btns open-modal" id="reservaForm">Reservar</button>
+                            <button class="btn modals--btns open-modal" id="lineaForm">Línea Honesta</button>
+                            <a href="https://clientesdestinos.tmovil.co/js/" class="btn modals--btns" target="_blank">Afiliados</a>
                         </div>
                     </div>
                 </div>
@@ -482,23 +486,23 @@
                 <nav class="nav__transporte">
                     <ul class="transporte__list">
                         <div class="content__transporte--item">
-                            <li class="transporte__item features__link--active" data-article="1">
+                            <li class="transporte__item   features__link--active transporte__item--active" data-article="1">
                                 <a href="#" class="transporte__link">Camioneta</a>
                             </li>
-                            <li class="transporte__item" data-article="2">
+                            <li class="transporte__item   " data-article="2">
                                 <a href="#" class="transporte__link">Doble Cabina</a>
                             </li>
-                            <li class="transporte__item" data-article="3">
+                            <li class="transporte__item  " data-article="3">
                                 <a href="#" class="transporte__link">Mini Van</a>
                             </li>
                         </div>
                         <div class="content__transporte--item item--content">
 
-                            <li class="transporte__item" data-article="4">
+                            <li class="transporte__item  " data-article="4">
                                 <a href="#" class="transporte__link">Van</a>
                             </li>
 
-                            <li class="transporte__item" data-article="5">
+                            <li class="transporte__item  " data-article="5">
                                 <a href="#" class="transporte__link">Bus</a>
                             </li>
                         </div>
@@ -724,8 +728,12 @@
 
                     </div>
                     <!-- If we need navigation buttons -->
-                    <div class="btn-slider button-prev"><</div>
-                            <div class="btn-slider button-next">></div>
+                    <div class="btn-slider  button-prev">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="btn-slider button-next">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                     </div>
 
                 </div>
@@ -862,7 +870,7 @@
         <!-- CONTENEDOR TBRAJAMOS CONTIGO -->
         <div class="work__container">
             <div class="work__content container">
-                <img src="images/icons8-coche-75.png" class="work__img" alt="">
+                <img src="images/ilustrationTrabaja.svg" class="work__img" alt="">
                 <div class="work__info">
                     <h3 class="work__title">Queremos trabajar contigo</h3>
                     <p class="work__paragraph">Nuestro equipo de trabajo está listo para atnederte</p>
@@ -915,15 +923,15 @@
                     <div class="ubi__content">
                         <h3 class="ubi__title">Bogotá</h3>
                         <p class="footer__text">
-                            <img src="images/icon-location.svg" alt="">
+                            <i class="fa-solid fa-location-dot"></i>
                             Carrera 71 No. 48A - 55 Normandia
                         </p>
                         <p class="footer__text">
-                            <img src="images/icon-phone.svg" alt="">
+                            <i class="fa-solid fa-phone"></i>
                             (+57) 302 406 0101 - (1) 482 4050
                         </p>
                         <p class="footer__text">
-                            <img src="images/icon-email.svg" alt="">
+                            <i class="fa-solid fa-envelope"></i>
                             example@fylo.com
                         </p>
     
@@ -931,15 +939,15 @@
                     <div class="ubi__content">
                         <h3 class="ubi__title">Medellín</h3>
                         <p class="footer__text">
-                            <img src="images/icon-location.svg" alt="">
+                            <i class="fa-solid fa-location-dot"></i>
                             Cll. 34 b # 65d – 02 Oficina 201 B
                         </p>
                         <p class="footer__text">
-                            <img src="images/icon-phone.svg" alt="">
+                            <i class="fa-solid fa-phone"></i>
                             (4) 520 4795
                         </p>
                         <p class="footer__text">
-                            <img src="images/icon-email.svg" alt="">
+                            <i class="fa-solid fa-envelope"></i>
                             example@fylo.com
                         </p>
     
@@ -947,15 +955,15 @@
                     <div class="ubi__content">
                         <h3 class="ubi__title">Calí</h3>
                         <p class="footer__text">
-                            <img src="images/icon-location.svg" alt="">
+                            <i class="fa-solid fa-location-dot"></i>
                             Avenida 4ta Norte #7N-46
                         </p>
                         <p class="footer__text">
-                            <img src="images/icon-phone.svg" alt="">
+                            <i class="fa-solid fa-phone"></i>
                             (2) 489 1221
                         </p>
                         <p class="footer__text">
-                            <img src="images/icon-email.svg" alt="">
+                            <i class="fa-solid fa-envelope"></i>
                             example@fylo.com
                         </p>
     

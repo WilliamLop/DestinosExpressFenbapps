@@ -316,6 +316,21 @@ btnSrCard.addEventListener('click', (e) => {
 });
 
 
-console.log(btnSrCard);
+// CAMBIAR EL COLOR DE LAS REDES AL HACER HOVER
+
+
+const redes = document.querySelectorAll('.info__redes--img');
+
+redes.forEach(imgs => {
+    imgs.addEventListener('mouseover', (e) =>{
+        const imgType = imgs.getAttribute('alt').split('-')[1];
+        imgs.setAttribute('src', `../images/icon-${imgType}-yellow.svg`);
+    });
+    imgs.addEventListener('mouseout', (e) =>{
+        const imgType = imgs.getAttribute('alt').split('-')[1];
+        imgs.setAttribute('src', `../images/icon-${imgType}.svg`);
+    });
+});
+
 
 

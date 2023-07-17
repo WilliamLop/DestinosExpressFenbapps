@@ -48,7 +48,7 @@ window.addEventListener('scroll', (e) => {
         }
     }else{
         this.document.getElementsByClassName("header")[0].style.top = '-200px';
-        this.document.getElementsByClassName("header")[0].style.backgroundColor = '#171717';
+        this.document.getElementsByClassName("header")[0].style.backgroundColor = '#0f0e17';
     }
 
     ubicacionPrincipal = desplazamientoActual;
@@ -90,7 +90,7 @@ navLinkDrop.addEventListener('mouseleave', () => {
     setTimeout(() => {
         if (!dropdowmList.matches(':hover')) {
             hideDropdown();
-            LinkDrop.style.color= '#aaaaaa';
+            LinkDrop.style.color= '#fffffe';
         }
     }, 300);
 
@@ -99,12 +99,12 @@ navLinkDrop.addEventListener('mouseleave', () => {
 
 dropdowmList.addEventListener('mouseenter', () => {
     showDropdown();
-    LinkDrop.style.color = 'red';
+    LinkDrop.style.color = '#a7a9be';
 });
 
 dropdowmList.addEventListener('mouseleave', () => {
     hideDropdown();
-    LinkDrop.style.color= '#aaaaaa';
+    LinkDrop.style.color= '#fffffe';
 });
 
 navLinkDrop.addEventListener('click', (e) => {
@@ -112,10 +112,10 @@ navLinkDrop.addEventListener('click', (e) => {
     if (e.target.classList.contains('nav__link')) {
         if (dropdowmList.classList.contains('dropdown__list--show')) {
             hideDropdown();
-            LinkDrop.style.color = '#aaaaaa';
+            LinkDrop.style.color = '#fffffe';
         } else {
             showDropdown();
-            LinkDrop.style.color = 'orange';
+            LinkDrop.style.color = '#ff8906';
         }
     }
 });
@@ -320,5 +320,4 @@ if (window.innerWidth >= 718) {
         }
     }
 });
-
 

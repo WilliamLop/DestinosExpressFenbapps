@@ -1,5 +1,8 @@
 // Obtener todos los elementos de navegación
-const navLinks = document.querySelectorAll('.nav__link--page');
+const navLinks = document.querySelectorAll('.nav__item--pages');
+const navLinksDrops = document.querySelectorAll('.nav__link--drop');
+console.log(navLinksDrops);
+
 
 // Función para eliminar la clase activa de todos los elementos de navegación
 const removeActiveElements2 = (selector) => {
@@ -20,4 +23,19 @@ navLinks.forEach((itemNav) => {
             itemNav.classList.add('item-pages-active');
         }
     });
+    itemNav.addEventListener('mouseover', (e) =>{
+        if (!itemNav.classList.contains('item-pages-active')) {
+            removeActiveElements2('item-pages-active');
+            itemNav.classList.add('item-pages-active');
+            removeActiveElements2('nav__link-hover');
+            itemNav.classList.add('nav__link-hover');
+
+        }
+    });
+    itemNav.addEventListener('mouseout', (e) => {
+        removeActiveElements2('item-pages-active');
+        removeActiveElements2('nav__link-hover');
+        document.querySelector('.home-link').classList.add('item-pages-active');
+    });
 });
+
