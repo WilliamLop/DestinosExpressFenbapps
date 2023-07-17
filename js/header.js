@@ -48,7 +48,7 @@ window.addEventListener('scroll', (e) => {
         }
     }else{
         this.document.getElementsByClassName("header")[0].style.top = '-200px';
-        this.document.getElementsByClassName("header")[0].style.backgroundColor = '#0f0e17';
+        this.document.getElementsByClassName("header")[0].style.backgroundColor = '#353535';
     }
 
     ubicacionPrincipal = desplazamientoActual;

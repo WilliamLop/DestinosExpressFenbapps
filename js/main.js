@@ -63,6 +63,8 @@ const tabButtons = document.querySelectorAll('.transporte__item');
 const buttonPrev = document.querySelector('.button-prev');
 const buttonNext = document.querySelector('.button-next');
 const transporteContent = document.querySelectorAll('.transporte__content');
+const ContainerVehiculos = document.querySelector('.swiper--touch');
+console.log(ContainerVehiculos);
 
 // Variable para almacenar el índice del elemento activo
 let currentActiveItem = 0;
@@ -105,6 +107,7 @@ function updateActiveItem() {
     removeActiveElements('features__link--active');
     // Llamar a la función 'removeActiveElements' para eliminar la clase 'transporte__article--show' de todos los elementos
     removeActiveElements('transporte__article--show');
+    removeActiveElements('transporte__item--active');
     
     // Obtener el número de artículo del elemento activo utilizando su atributo 'data-article'
     const articleNumber = tabButtons[currentActiveItem].getAttribute('data-article');
@@ -115,6 +118,7 @@ function updateActiveItem() {
     articleShow.classList.add('transporte__article--show');
     // Agregar la clase 'features__link--active' al botón correspondiente al elemento activo para resaltarlo
     tabButtons[currentActiveItem].classList.add('features__link--active');
+    tabButtons[currentActiveItem].classList.add('transporte__item--active');
 }
 
 // Variable para almacenar el incio del elemento activo
@@ -126,14 +130,14 @@ let isMouseDown = false;
 
 // Escucha el evento touchstart en el objeto documento
 // Este evento se activa cuando el usuario empieza a tocar la pantalla
-document.addEventListener('touchstart', (e) => {
+ContainerVehiculos.addEventListener('touchstart', (e) => {
     // Almacena la coordenada X inicial del evento táctil
     touchStartX = e.changedTouches[0].screenX;
 });
 
 // Escucha el evento touchend en el objeto documento
 // Este evento se activa cuando el usuario deja de tocar la pantalla
-document.addEventListener('touchend', (e) => {
+ContainerVehiculos.addEventListener('touchend', (e) => {
       // Almacena la coordenada X final del evento táctil
     touchEndX = e.changedTouches[0].screenX;
     // Llama a la función handleSwipe para manejar el gesto de deslizamiento
@@ -143,7 +147,7 @@ document.addEventListener('touchend', (e) => {
 
 // Escucha el evento mousedown en el objeto documento
 // Este evento se activa cuando el usuario pulsa el botón del ratón
-document.addEventListener('mousedown', (e) => {
+ContainerVehiculos.addEventListener('mousedown', (e) => {
     // Establece la variable isMouseDown a true para indicar que el botón del ratón se mantiene pulsado en ese momento
     isMouseDown = true;
     // Almacena la coordenada X inicial del evento del ratón
@@ -153,7 +157,7 @@ document.addEventListener('mousedown', (e) => {
 
 // Escucha el evento mouseup en el objeto documento
 // Este evento se activa cuando el usuario suelta el botón del ratón
-document.addEventListener('mouseup', (e) => {
+ContainerVehiculos.addEventListener('mouseup', (e) => {
     // Establece la variable isMouseDown a false para indicar que el botón del ratón ya no se mantiene pulsado
     isMouseDown = false;
     // Almacena la coordenada X final del evento del ratón
@@ -164,7 +168,7 @@ document.addEventListener('mouseup', (e) => {
 
 // Escucha el evento mousemove en el objeto documento
 // Este evento se activa cuando el usuario mueve el cursor del ratón
-document.addEventListener('mousemove', (e) => {
+ContainerVehiculos.addEventListener('mousemove', (e) => {
     // Comprueba si el botón del ratón se mantiene pulsado
     if (isMouseDown) {
          // Si lo es, actualiza la coordenada X final del evento del ratón
@@ -206,7 +210,7 @@ function handleSwipe() {
 tabButtons.forEach((tabLink, index) => {
     tabLink.addEventListener('click',  (e) => {
         e.preventDefault();
-        if(!tabLink.classList.contains('features__link--active')){
+        // if(!tabLink.classList.contains('features__link--active')){
 
             const articleNumber = tabLink.getAttribute('data-article');
 
@@ -214,15 +218,42 @@ tabButtons.forEach((tabLink, index) => {
 
             removeActiveElements('features__link--active');
             removeActiveElements('transporte__article--show');
+            removeActiveElements('transporte__item--active');
 
             articleShow.classList.add('transporte__article--show');
             tabLink.classList.add('features__link--active');
+            tabLink.classList.add('transporte__item--active');
 
             // Actualizar el valor de la variable 'currentActiveItem' con el índice del elemento activo
+        
             currentActiveItem = index;
-
-        }
+        // }
     });
+
+      // Add mouseover event listener
+    tabLink.addEventListener('mouseover', (e) => {
+        e.preventDefault();
+        // Remove active classes from all elements
+        removeActiveElements('features__link--active');
+        removeActiveElements('transporte__item--active');
+        // Add active classes to the hovered element
+        tabLink.classList.add('features__link--active');
+        tabLink.classList.add('transporte__item--active');
+    });
+    // Add mouseout event listener
+    tabLink.addEventListener('mouseout', (e) => {
+        e.preventDefault();
+        // Remove active classes from all elements
+        removeActiveElements('features__link--active');
+        removeActiveElements('transporte__item--active');
+        // Add active classes back to the current active item
+        const currentTabLink = tabButtons[currentActiveItem];
+        currentTabLink.classList.add('features__link--active');
+        currentTabLink.classList.add('transporte__item--active');
+    });
+
+    
+    
 });
 
 
@@ -236,10 +267,9 @@ const imgChange = document.getElementById('imgChange');
 linkTiposVehiculos.forEach((tipoVehiculo, index) => {
     tipoVehiculo.addEventListener('click', (e) => {
         e.preventDefault();
-        if(!tipoVehiculo.classList.contains('vehiculo__item--active')){
-            removeActiveElements('vehiculo__item--active');
-            tipoVehiculo.classList.add('vehiculo__item--active');
-        }
+            removeActiveElements('vehiculo__item--show');
+            tipoVehiculo.classList.add('vehiculo__item--show');
+            currentActiveItem = index;        // }
 
         imgTiposVehiculos.forEach((imgTipo, imgIndex) => {
             if(imgIndex === index){
@@ -247,6 +277,22 @@ linkTiposVehiculos.forEach((tipoVehiculo, index) => {
                 imgTipo.classList.add('img-camioneta-show');
             }
         });
+    });
+      // Add mouseover event listener
+    tipoVehiculo.addEventListener('mouseover', (e) => {
+        e.preventDefault();
+        // Remove active classes from all elements
+        removeActiveElements('vehiculo__item--show');
+        tipoVehiculo.classList.add('vehiculo__item--show');
+    });
+    // Add mouseout event listener
+    tipoVehiculo.addEventListener('mouseout', (e) => {
+        e.preventDefault();
+        // Remove active classes from all elements
+        removeActiveElements('vehiculo__item--show');
+        // Add active classes back to the current active item
+        const currenttipoVehiculo = linkTiposVehiculos[currentActiveItem];
+        currenttipoVehiculo.classList.add('vehiculo__item--show');
     });
 });
 
@@ -260,8 +306,8 @@ const maxIndex = linkTiposVehiculos.length;
 const maxIndexImgs = imgMensajeria.length;
 
 setInterval(() => {
-    removeActiveElements('vehiculo__item--active');
-    linkTiposVehiculos[currentIndex].classList.add('vehiculo__item--active');
+    removeActiveElements('vehiculo__item--show');
+    linkTiposVehiculos[currentIndex].classList.add('vehiculo__item--show');
 
     removeActiveElements('img-camioneta-show');
     imgTiposVehiculos[currentIndex].classList.add('img-camioneta-show');

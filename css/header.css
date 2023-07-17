@@ -46,9 +46,9 @@ body.modal-open {
     width: 100%;
     top: 0;
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(143, 143, 143, 0.105);
     transition: .5s ease;
     animation: opacity 2s ease;
+    /* border: 1px solid red; */
 }
 
 .header__container {
@@ -93,7 +93,7 @@ body.modal-open {
 }
 
 .nav__header {
-    background: var(--black);
+    background: #202020;
     position: absolute;
     top: 0;
     right: 0;
@@ -134,6 +134,8 @@ body.modal-open {
     gap: .6rem;
     color: var(--titles-white);
     transition: color .5s ease-in-out;
+    border-bottom: 1px solid transparent;
+
 }
 
 
@@ -421,13 +423,16 @@ body.modal-open {
 
 /* Dispositivos tablet de 768px */
 @media (min-width: 48rem) {
+    .icons-header{
+        display: none;
+    }
 
     .header {
         box-sizing: border-box;
         position: fixed;
         width: 100%;
         top: 0;
-        padding: 1rem 0 0 0;
+        padding: 1rem 0 .2rem 0;
     }
 
     .header__container {
@@ -561,6 +566,8 @@ body.modal-open {
         padding: .2rem;
     }
 
+    
+
 }
 
 /* Dispositivos desktop mini de 1024px */
@@ -574,10 +581,32 @@ body.modal-open {
 }
 
 /* Dispositivos desktop de 1280px */
-@media (min-width: 80rem) {}
+@media (min-width: 80rem) {
+    .modals--btns {
+        font-family: inherit;
+        font-weight: 600;
+        font-size: .95em;
+        padding: .3rem .4rem;
+    }
+
+
+
+}
 
 /* Dispositivos desktop de 1440px */
-@media (min-width: 90rem) {}
+@media (min-width: 90rem) {
+
+    .figure__logo {
+        width: 120px;
+    }
+    .nav__link {
+        font-size: 1.1em;
+    }
+    .modals--btns {
+        padding: .4rem .4em;
+    }
+
+}
 
 /* Dispositivos desktop de 1920px */
 @media (min-width: 100rem) {
@@ -603,6 +632,11 @@ body.modal-open {
 
     .open-modal {
         font-size: 1em;
+    }
+
+    .modals--btns {
+        font-size: 1em;
+        padding: .4rem .7em;
     }
 
 
