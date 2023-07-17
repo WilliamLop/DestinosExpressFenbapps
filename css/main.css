@@ -258,9 +258,7 @@ html {
     border-radius: .2rem .2rem 0 0;
 }
 
-.transporte__item:hover{
-    background-color: var(--black);
-}
+
 
 .vehiculo__item--change {
     border-bottom: 5px solid transparent;
@@ -654,9 +652,7 @@ html {
 .features__link--active {
     border-color: var(--black);
 }
-.features__link--active:hover {
-    border-color: var(--very-orange);
-}
+
 
 
 /* Float Shadow */
