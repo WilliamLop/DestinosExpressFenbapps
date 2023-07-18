@@ -55,7 +55,7 @@ html {
 }
 
 .blur {
-    filter: blur(.7px) brightness(70%) saturate(70%);
+    filter: blur(.7px);
 }
 
 .main__info--home {
@@ -104,6 +104,34 @@ html {
 .home__title--change {
     color: var(--orange-ligth);
     font-size: .7em;
+}
+
+.btn-cotizar{
+    display: block;
+    padding: .5rem 0;
+    width: 120px;
+    margin: 0 auto;
+    background: #2098D1;
+    font-family: inherit;
+    border-radius: .5rem;
+    border: none;
+    font-weight: 600;
+    color: var(--titles-white);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    border: 1px solid transparent;
+}
+
+
+.btn-cotizar:hover{
+    background-color: transparent;
+    border-color: var(--very-orange);
+    color: var(--titles-black);
+
+}
+.dc--linea{
+    margin: .8rem auto;
 }
 
 
@@ -607,15 +635,15 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../images/polygon-scatter-haikei-mobile.svg) no-repeat;
-    background-size: cover;
-    background-position: bottom center;
+    /* background: url(../images/polygon-scatter-haikei-mobile.svg) no-repeat; */
+    /* background-size: cover; */
+    /* background-position: bottom center; */
     filter: blur(.5px) brightness(100%) saturate(90%);
 }
 
 
 .content__imgs--cotizar {
-    background: url(../images/bgFormulario2.png) no-repeat;
+    background: url(../images/cotizarimg.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     height: 200px;
@@ -631,7 +659,7 @@ html {
     margin: 2rem auto;
     background-color: white;
     position: relative;
-    filter: drop-shadow(1px 1px 3px rgba(19, 19, 19, 0.719));
+    filter: drop-shadow(1px 1px 3px #6969698c);
     border-radius: .5rem;
 }
 
@@ -640,6 +668,12 @@ html {
     margin: 1rem auto;
     background-color: #ffff;
     /* border: 1px solid  black; */
+}
+
+.form__title{
+    color: var(--titles-black);
+    font-size: 1.3em;
+    text-align: center;
 }
 
 .waves {
@@ -815,6 +849,12 @@ html {
 .mensajeria__paragraph{
     line-height: 1.6;
 }
+
+
+
+/* INPUTS */
+
+
 /* @keyframes opacity{
     0%{
         opacity: 0;
@@ -1024,7 +1064,7 @@ html {
 
     .content__imgs--cotizar {
         background-color: red;
-        background: url(../images/bgFormulario2.png) no-repeat;
+        background: url(../images/cotizarimg.jpg) no-repeat;
         background-size: cover;
         background-position: left;
         height: unset;
@@ -1044,10 +1084,11 @@ html {
         left: 0;
         width: 100%;
         height: 100%;
+        background-color: #eee;
         /* background: url(../images/bgFormulario2.png) no-repeat; */
-        background: url(../images/polygon-scatter-haikei-desktop.svg) no-repeat;
-        background-size: cover;
-        background-position: left bottom;
+        /* background: url(../images/polygon-scatter-haikei-desktop.svg) no-repeat; */
+        /* background-size: cover; */
+        /* background-position: left bottom; */
         /* filter: blur(1.5px) brightness(100%) saturate(100%); */
         /* z-index: -1; */
     }
@@ -1087,6 +1128,9 @@ html {
         width: 150px;
         padding: .7rem 0;
         margin: 0;
+    }
+    .form__title{
+        text-align: start;
     }
 
 }

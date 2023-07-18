@@ -3,7 +3,7 @@
 :root {
     --black: #0f0e17;
     --pragraph-black: #a7a9be;
-    --orange-ligth: #ff8906;
+    --orange-ligth: #f8961e;
     --very-orange: #7f5af0;
     --main-gray: #fffffe;
     --titles-black: #2b2c34;
@@ -235,17 +235,20 @@ body.modal-open {
     background-color: var(--main-gray);
     width: 90%;
     max-width: 1000px;
-    padding: 1rem;
+    height: 90%;
+    padding: 2rem 0;
     margin: 2rem auto;
     position: relative;
     opacity: 0;
     border-radius: .5rem;
+    overflow-y: auto;
 }
 
 .modal__content--show {
     overflow-y: auto;
     opacity: 1;
     transition: opacity 1.2s ease-in-out;
+
 }
 
 .form__modal {
@@ -254,14 +257,86 @@ body.modal-open {
 }
 
 .from__input {
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
+    position: relative;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
     width: 100%;
     margin-top: 1rem;
+    background-color: #F9F9F9;
+    border: 1px solid #E5E5E5;
+    border-radius: 0 .5rem .5rem 0;
 }
 
+.from__input--content {
+    display: flex;
+    flex-direction: column;
+}
 
+.from--icon {
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid #79797973;
+
+}
+
+.inputs {
+    padding: .5rem;
+    border: 1px solid transparent;
+    background-color: #eee;
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.selected {
+    border: none;
+    height: 32px;
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 0 .5rem .5rem 0;
+
+}
+
+.reserva__title {
+    font-size: 1.5em;
+    color: var(--titles-black);
+}
+
+.reserva__paragraph {
+    color: var(--GrayishBlue);
+    margin: .5rem 0;
+}
+
+.btn-solicitud {
+    display: block;
+    margin: auto;
+    padding: .6rem 1rem;
+    margin-top: 1rem;
+    width: 150px;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--orange-ligth);
+    color: var(--titles-white);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .7s ease-in-out;
+}
+
+.btn-reserva{
+    margin: 1rem auto 0 auto;
+}
+
+.from--datos--decition{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.btn-solicitud:hover{
+    background-color: var(--very-orange);
+}
 
 .modal__content--hide {
     opacity: 0;
@@ -276,6 +351,18 @@ body.modal-open {
     position: absolute;
     top: 2%;
     right: 3.6%;
+    border: 1px solid transparent;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    transition: .5s ease-in-out;
+}
+
+.close__modal:hover {
+    color: #e63946;
+    border-color: #e63946;
 }
 
 .close__modal--prevent {
@@ -408,6 +495,11 @@ body.modal-open {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
 }
+.container__decision{
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+}
 
 
 /* @keyframes opacity{
@@ -423,7 +515,7 @@ body.modal-open {
 
 /* Dispositivos tablet de 768px */
 @media (min-width: 48rem) {
-    .icons-header{
+    .icons-header {
         display: none;
     }
 
@@ -542,6 +634,45 @@ body.modal-open {
         padding: .2rem .4rem;
     }
 
+    .modal__content {
+        max-height: 550px;
+    }
+
+    .from__responsive--one {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    /* .from__responsive--two {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    } */
+
+    .modal__content {
+        height: 85%;
+    }
+
+    .btn-solicitud {
+        margin: 0;
+        padding: .7rem 1rem;
+        margin-top: 0rem;
+        width: 160px;
+    }
+
+    .center {
+        text-align: left;
+        width: 90%;
+        margin: auto;
+    }
+
+    .reserva__paragraph {
+        margin: .6rem auto;
+    }
+
+    .btn-reserva{
+        margin: 1rem 0 0 0;
+    }
 }
 
 /* Dispositivos desktop mini */
@@ -555,9 +686,6 @@ body.modal-open {
     }
 
     .from__input {
-        display: flex;
-        flex-direction: column;
-        gap: .3rem;
         width: 100%;
         margin-top: 1rem;
     }
@@ -566,7 +694,7 @@ body.modal-open {
         padding: .2rem;
     }
 
-    
+
 
 }
 
@@ -599,9 +727,11 @@ body.modal-open {
     .figure__logo {
         width: 120px;
     }
+
     .nav__link {
         font-size: 1.1em;
     }
+
     .modals--btns {
         padding: .4rem .4em;
     }

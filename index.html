@@ -110,113 +110,170 @@
                     solicitud</p>
                 <form action="" class="form__modal form__reserva ">
 
-                    <div class="from__responsive">
-                        <div class="from__row">
+                    <div class="from__responsive--one">
+                        <div class="from__datos--user">
                             <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
                             <div class="from__input">
-                                <label class="labels" for="name" id="name-label">Nombre</label>
-                                <input class="inputs" type="text" name="name" id="name" autocomplete="on"
-                                    placeholder="Escribe tu nombre" required>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="name" id="name-label"></label>
+                                    <input class="inputs" type="text" name="name" id="name" autocomplete="on"
+                                    placeholder="Nombre" required>
+                                </div>
+                            </div>
+                            <!-- ENTRADA DE EMAIL -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="email" id="email-label"></label>
+                                    <input class="inputs" type="email" name="email" id="email"
+                                        placeholder="Email" autocomplete="on" required>
+                                </div>
+                            </div>
+
+                            <!-- ENTRADA DE DIRECCION -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="direccion" id="direccion-label"></label>
+                                    <input class="inputs" type="text" name="direccion" id="direccion" placeholder="Direccion" required>
+                                </div>        
+                            </div>
+
+                            <!-- ENTRADA DE TELEFONO -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="phone" id="phone-label"></label>
+                                    <input class="inputs" type="tel" name="phone" id="phone" placeholder="Celular"
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
+                                        autocomplete="on" required>
+                                </div>        
+                            </div>
+                           
+                            <!-- ENTRADA DE FECHA Y HORA -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="datetime" id="datetime-label"></label>
+                                    <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
+                                </div>    
+                            </div>
+                            <!-- ENTRADA DE CIUDAD -->
+                            
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-city"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="ciudad" id="ciudad-label"></label>
+                                    <input class="inputs" type="text" name="ciudad" id="ciudad" placeholder="Origen" required>
+                                </div>        
+                            </div>
+                        </div>
+
+                        <div class="from__datos--reserva">
+
+                            <!-- ENTRADA DE DESTINO -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="destino" id="destino-label"></label>
+                                    <input class="inputs" type="text" name="destino" id="destino" placeholder="Destino" required>
+                                </div>
                             </div>
                             <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
                             <div class="from__input">
-                                <label class="labels" for="services" id="services-label">Tipo De Servicio</label>
-                                <select class="selected" name="services" id="services" required>
-                                    <option value="">Seleccione Servicio</option>
-                                    <option value="ejecutivo">Ejecutivo</option>
-                                    <option value="empresarial">Empresarial</option>
-                                    <option value="normal">Normal</option>
-                                </select>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-suitcase"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="services" id="services-label"></label>
+                                    <select class="selected" name="services" id="services" required>
+                                        <option value="">Seleccione Servicio</option>
+                                        <option value="empresarial">Empresarial</option>
+                                        <option value="ejecutivo">Aeropuerto</option>
+                                        <option value="ejecutivo">Turistico y eventos</option>
+                                        <option value="normal">Elite VIP</option>
+                                        <option value="normal">Ingenieria y Petroleras</option>
+                                        <option value="normal">Mensajeria Empresarial</option>
+                                    </select>
+                                </div>    
                             </div>
-                            <!-- ENTRADA DE FECHA Y HORA -->
-                            <div class="from__input">
-                                <label class="labels" for="datetime" id="datetime-label">Fecha y Hora</label>
-                                <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
-                            </div>
-                        </div>
-
-                        <div class="from__row">
-                            <!-- ENTRADA DE TELEFONO -->
-                            <div class="from__input">
-                                <label class="labels" for="phone" id="phone-label">Celular</label>
-                                <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
-                                    autocomplete="on" required>
-                            </div>
-
 
                             <!-- ENTRADA DE SELECCION TIPO VEHICULO -->
                             <div class="from__input">
-                                <label class="labels" for="vehiculo" id="vehiculo-label">Tipo De Vehículo</label>
-                                <select class="selected" name="vehiculo" id="vehiculo" required>
-                                    <option value="">Seleccione Vehículo</option>
-                                    <option value="camionetas">Camionetas</option>
-                                    <option value="dobleCabina">Doble Cabina</option>
-                                    <option value="miniVan">Mini Van</option>
-                                    <option value="vans">Vans</option>
-                                    <option value="Buses">Buses</option>
-                                </select>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-van-shuttle"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="vehiculo" id="vehiculo-label"></label>
+                                    <select class="selected" name="vehiculo" id="vehiculo" required>
+                                        <option value="">Seleccione Vehículo</option>
+                                        <option value="camionetas">Camionetas</option>
+                                        <option value="dobleCabina">Doble Cabina</option>
+                                        <option value="miniVan">Mini Van</option>
+                                        <option value="vans">Vans</option>
+                                        <option value="Buses">Buses</option>
+                                    </select>
+                                </div>    
                             </div>
-                            <!-- ENTRADA DE DESTINO -->
-                            <div class="from__input">
-                                <label class="labels" for="destino" id="destino-label">Destino</label>
-                                <input class="inputs" type="text" name="destino" id="destino"
-                                    placeholder="Escribe tu destino" required>
-                            </div>
-                        </div>
 
-                        <div class="from__row">
-                            <!-- ENTRADA DE EMAIL -->
-                            <div class="from__input">
-                                <label class="labels" for="email" id="email-label">Email</label>
-                                <input class="inputs" type="email" name="email" id="email"
-                                    placeholder="Escribe tu email" autocomplete="on" required>
-                            </div>
-                            <!-- ENTRADA DE CIUDAD -->
-                            <div class="from__input">
-                                <label class="labels" for="ciudad" id="ciudad-label">Ciudad</label>
-                                <input class="inputs" type="text" name="ciudad" id="ciudad"
-                                    placeholder="Escribe tu ciudad" required>
-                            </div>
                             <!-- ENTRADA DE ITINERARIO DE VUELO -->
                             <div class="from__input">
-                                <label class="labels" for="itirenario" id="itirenario-label">Itinerario de vuelo</label>
-                                <input class="inputs" type="text" name="itirenario" id="itirenario"
-                                    placeholder="Escribe tu itirenario" required>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="itirenario" id="itirenario-label"></label>
+                                    <input class="inputs" type="text" name="itirenario" id="itirenario" placeholder="Itirenario de vuelo" required>
+                                </div>        
                             </div>
-                        </div>
-
-                        <div class="from__row">
+                            
                             <!-- ENTRADA DE EMPRESA -->
                             <div class="from__input">
-                                <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
-                                <input class="inputs" type="text" name="Empresa" id="Empresa"
-                                    placeholder="Escribe tu Empresa" required>
-                            </div>
-                            <!-- ENTRADA DE DIRECCION -->
-                            <div class="from__input">
-                                <label class="labels" for="direccion" id="direccion-label">Dirección</label>
-                                <input class="inputs" type="text" name="direccion" id="direccion"
-                                    placeholder="Escribe tu direccion" required>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="Empresa" id="Empresa-label"></label>
+                                    <input class="inputs" type="text" name="Empresa" id="Empresa" placeholder="Empresa" required>
+                                </div>
                             </div>
                             <!-- ENTRADA DE COMENTARIOS -->
                             <div class="from__input">
-                                <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
-                                <textarea class="textarea" name="comentarios" id="comentarios"
-                                    placeholder="Escribe tus comentarios" rows="4"></textarea>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-comments"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="comentarios" id="comentarios-label"></label>
+                                    <textarea class="textarea" name="comentarios" id="comentarios" placeholder="Comentarios" rows="4"></textarea>
+                                </div>    
                             </div>
+                            
                         </div>
                     </div>
 
 
                     <!-- BOTON COTIZACIÓN -->
-                    <input type="submit" data-modal="Card1" value="Solicitar cotización" class="btn btn-solicitud"
+                    <input type="submit" data-modal="Card1" value="Solicitar cotización" class="btn-solicitud"
                         id="btn-solicitud">
                 </form>
 
                 <a href="#" class="close__modal">
-                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar"
-                        id="close-modal" class="close__modal--icon">
+                    <i class="fa-solid fa-xmark"></i>
                 </a>
             </div>
         </div>
@@ -227,120 +284,169 @@
                 <p class="reserva__paragraph center">Denuncias relacionadas con conductas deshonestas</p>
                 <form action="" method="GET" class="form__modal from__linea">
 
-                    <div class="from__responsive">
-                        <div class="from__row">
-                            <!-- ENTRADA DE SELECCION TIPO DE SERVICIO -->
+                    <div class="from__responsive--one">
+                        <div class="from__datos--user">
+                            <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
                             <div class="from__input">
-                                <label class="labels" for="asunto" id="asunto-label">Asunto</label>
-                                <select class="selected" name="asunto" id="asunto" required>
-                                    <option value="">Apropiación de recursos</option>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="name" id="name-label"></label>
+                                    <input class="inputs" type="text" name="name" id="name" autocomplete="on"
+                                    placeholder="Nombre" required>
+                                </div>
+                            </div>
+                            <!-- ENTRADA DE EMAIL -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="email" id="email-label"></label>
+                                    <input class="inputs" type="email" name="email" id="email"
+                                        placeholder="Email" autocomplete="on" required>
+                                </div>
+                            </div>
+                            
+
+                            <!-- ENTRADA DE TELEFONO -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="phone" id="phone-label"></label>
+                                    <input class="inputs" type="tel" name="phone" id="phone" placeholder="Celular"
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
+                                        autocomplete="on" required>
+                                </div>        
+                            </div>
+                           
+                            <!-- ENTRADA DE FECHA Y HORA -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="datetime" id="datetime-label"></label>
+                                    <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
+                                </div>    
+                            </div>
+                            <!-- ENTRADA DE ASUNTO -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="asunto" id="asunto-label"></label>
+                                    <select class="selected" name="asunto" id="asunto" required>
+                                    <option value="">Seleccione Asunto</option>
+                                    <option value="apropiacion">Apropiación de recursos</option>
                                     <option value="solicitud">Solicitud de dinero para cierre</option>
                                     <option value="conflictos">Conflicto de intereses</option>
                                     <option value="falsedad">Falsedad de información</option>
-                                </select>
-                            </div>
-                            <!-- ENTRADA DE FECHA Y HORA -->
-                            <div class="from__input">
-                                <label class="labels" for="datetime" id="datetime-label">Fecha y Hora</label>
-                                <input class="inputs" type="datetime-local" name="datetime" id="datetime" required>
+                                    </select>
+                                </div>
                             </div>
 
+                             <!-- ENTRADA DE LUGAR DE LOS HECHOS -->
+                             <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="ocurrido" id="ocurrido-label"></label>
+                                    <input class="inputs" type="text" name="ocurrido" id="ocurrido" placeholder="¿Dónde Ocurrió?" required>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="from__datos--reserva">
+                                
+                            <!-- ENTRADA DE CARGO/NOMBRE INVOLUCRADO -->
+                            <div class="from__input">
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-person"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="cargo" id="cargo-label"></label>
+                                    <input class="inputs" type="text" name="cargo" id="cargo" placeholder="Nombre o cargo del involucrado" required>
+                                </div>    
+                            </div>
                             <!-- ENTRADA DE SELECCION INVOLUCRADO -->
                             <div class="from__input">
-                                <label class="labels" for="involucrado" id="involucrado-label">Involucrado</label>
-                                <select class="selected" name="involucrado" id="involucrado" required>
-                                    <option value="">Seleccione Cliente</option>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="involucrado" id="involucrado-label"></label>
+                                    <select class="selected" name="involucrado" id="involucrado" required>
+                                    <option value="">Seleccione Involucrado</option>
                                     <option value="provedor">Provedor</option>
                                     <option value="aliado">Aliado</option>
                                     <option value="conductor">Conductor</option>
                                     <option value="otro">Otro</option>
-                                </select>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
+                           
 
-                        <div class="form__row">
-                            <!-- ENTRADA DE CARGO/NOMBRE INVOLUCRADO -->
+                            <!-- ENTRADA DESCRIPCION SITUACION -->
                             <div class="from__input">
-                                <label class="labels" for="cargo" id="cargo-label">Nombre y/o cargo del
-                                    involucrado</label>
-                                <input class="inputs" type="text" name="cargo" id="cargo" placeholder="Escribe el cargo"
-                                    required>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-comments"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label class="labels" for="situacion" id="situacion-label"></label>
+                                    <textarea class="textarea" name="situacion" id="situacion" placeholder="Descripción de la situación" rows="4" required></textarea>
+                                </div>
                             </div>
-
-                            <!-- ENTRADA DE LUGAR DE LOS HECHOS -->
-                            <div class="from__input">
-                                <label class="labels" for="ocurrido" id="ocurrido-label">¿Dónde Ocurrió?</label>
-                                <input class="inputs" type="text" name="ocurrido" id="ocurrido"
-                                    placeholder="Escribe dónde ocurrió" required>
-                            </div>
-
-                            <!-- ENTRADA DE COMENTARIOS -->
-                            <div class="from__input">
-                                <label class="labels" for="situacion" id="situacion-label">Descripción de la
-                                    situación</label>
-                                <textarea class="textarea" name="situacion" id="situacion"
-                                    placeholder="Escribe tu situación" rows="4" required></textarea>
-                            </div>
-                        </div>
-
-                        <div class="from__row">
+                            
                             <!-- ENTRADA DE ARCHIVO -->
                             <div class="from__input">
-                                <label for="file" class="labels" id="file-label">Seleccionar archivo</label>
-                                <input type="file" name="file" id="file" class="filebtn" accept=".jpg, .png, .pdf"
-                                    required>
+                                <div class="from--icon">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                </div>
+                                <div class="from__input--content">
+                                    <label for="file" class="labels" id="file-label"></label>
+                                    <input type="file" name="file" id="file" class="filebtn" accept=".jpg, .png, .pdf" required>
+                                </div>    
+                            </div>
+                            
+                            <div class="container__decision">
+                                <!-- ENTRADA DE DECISION -->
+                                <div class="from__input--dc">
+                                    <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
+                                        <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
+                                        ¿Desea ser contactado(a)
+                                    </label>
+                                </div>
+    
+                                <!-- ENTRADA DE DECISION -->
+                                <div class="from__input--dc">
+                                    <label for="checkbox" class="checkbox-lab" id="checkbox-label">
+                                        <input type="checkbox" class="checkbox" name="checkbox" id="checkbox" required>
+                                        Estoy de acuerdo con los términos y condiciones
+                                    </label>
+                                </div>
                             </div>
 
-                            <!-- ENTRADA DE DECISION -->
-                            <div class="from__input">
-                                <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
-                                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
-                                    ¿Desea ser contactado(a)
-                                </label>
-                            </div>
-
-                            <!-- ENTRADA DE TEXTO NOMBRE USUARIO -->
-                            <div class="from__input">
-                                <label class="labels" for="name" id="name-label">Name</label>
-                                <input class="inputs" type="text" name="name" id="name" placeholder="Escribe tu nombre"
-                                    autocomplete="on" required>
-                            </div>
                         </div>
-
-                        <div class="from__row">
-                            <!-- ENTRADA DE TELEFONO -->
-                            <div class="from__input">
-                                <label class="labels" for="phone" id="phone-label">Celular</label>
-                                <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
-                                    autocomplete="on" required>
-
-                            </div>
-                            <!-- ENTRADA DE EMAIL -->
-                            <div class="from__input">
-                                <label class="labels" for="email" id="email-label">Email</label>
-                                <input class="inputs" type="email" name="email" id="email" autocomplete="on"
-                                    placeholder="Escribe tu email" required>
-                            </div>
-
-                            <!-- ENTRADA DE DECISION -->
-                            <div class="from__input">
-                                <label for="checkbox" class="checkbox-lab" id="checkbox-label">
-                                    <input type="checkbox" class="checkbox" name="checkbox" id="checkbox" required>
-                                    Estoy de acuerdo con los términos y condiciones
-                                </label>
-                            </div>
-                        </div>
+                       
+                        
+                        
                     </div>
-
                     <!-- BOTON REPORTE  -->
-                    <input type="button" value="Enviar Reporte" data-modal="Card2" class="btn btn-reserva"
+                    <input type="button" value="Enviar Reporte" data-modal="Card2" class="btn-reserva btn-solicitud"
                         id="btn-solicitud">
                 </form>
 
                 <a href="#" class="close__modal close__modal--honesta" id="close__modal--honesta">
-                    <img loading="lazy" src="images/icon-close-modal.svg" alt="icon-close" tiitle="Cerrar"
-                        id="close-modal" class="close__modal--icon">
+                    <i class="fa-solid fa-xmark"></i>
+
                 </a>
             </div>
         </div>
@@ -795,47 +901,75 @@
                     <div class="from__responsive">
                         <h3 class="form__title">Contáctanos y recibe más información</h3>
                         <!-- <div class="from__row"> -->
-                        <!-- ENTRADA DE NOMBRE USUARIO Y EMPRESA-->
+                        <!-- ENTRADA DE NOMBRE USUARIO-->
                         <div class="from__input">
-                            <label class="labels" for="name" id="name-label">Nombre</label>
-                            <input class="inputs" type="text" name="name" id="name" autocomplete="on"
-                                placeholder="Escribe tu nombre" required>
-
-                            <label class="labels" for="Empresa" id="Empresa-label">Empresa</label>
-                            <input class="inputs" type="text" name="Empresa" id="Empresa"
-                                placeholder="Escribe tu Empresa" required>
+                            <div class="from--icon">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="from__input--content">
+                                <label class="labels" for="name" id="name-label"></label>
+                                <input class="inputs" type="text" name="name" id="name" autocomplete="on" placeholder="Nombre" required>
+                            </div>     
                         </div>
+                        <!-- ENTRADA DE NOMBRE EMPRESA-->
+                        <div class="from__input">
+                            <div class="from--icon">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div class="from__input--content">
+                                <label class="labels" for="Empresa" id="Empresa-label"></label>
+                                <input class="inputs" type="text" name="Empresa" id="Empresa" placeholder="Empresa" required>
+                            </div>    
+                        </div>    
                         <!-- ENTRADA DE TELEFONO Y GMAIL -->
                         <div class="from__input">
                             <!-- ENTRADA DE TELEFONO -->
-                            <label class="labels" for="phone" id="phone-label">Celular</label>
-                            <input class="inputs" type="tel" name="phone" id="phone" placeholder="Número de celular"
-                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10"
-                                autocomplete="on" required>
-                            <!-- ENTRADA DE EMAIL -->
-                            <label class="labels" for="email" id="email-label">Email</label>
-                            <input class="inputs" type="email" name="email" id="email" placeholder="Escribe tu email"
-                                autocomplete="on" required>
+                            <div class="from--icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="from__input--content">
+                                <label class="labels" for="phone" id="phone-label"></label>
+                                <input class="inputs" type="tel" name="phone" id="phone" placeholder="Celular"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" autocomplete="on" required>
+                            </div>    
                         </div>
+
+                        <!-- ENTRADA DE EMAIL -->
+                        <div class="from__input">
+                            <div class="from--icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="from__input--content">
+                                <label class="labels" for="email" id="email-label"></label>
+                                <input class="inputs" type="email" name="email" id="email" placeholder="Email" autocomplete="on" required>
+                            </div>    
+                        </div> 
 
                         <!-- </div> -->
 
                         <!-- <div class="from__row"> -->
                         <!-- ENTRADA DE COMENTARIOS -->
                         <div class="from__input">
-                            <label class="labels" for="comentarios" id="comentarios-label">Comentarios</label>
-                            <textarea class="textarea" name="comentarios" id="comentarios"
-                                placeholder="Escribe tus comentarios" rows="4"></textarea>
-                            <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
-                                <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
-                                ¿Desea ser contactado(a)
-                            </label>
+                            <div class="from--icon">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                            <div class="from__input--content">
+                                <label class="labels" for="comentarios" id="comentarios-label"></label>
+                                <textarea class="textarea" name="comentarios" id="comentarios" placeholder="Comentarios" rows="4"></textarea>
+                            </div>
+                           
                         </div>
                         <!-- </div>
-                         -->
+                        -->
                     </div>
+                    <div class="from__input--dc dc--linea">
+                        <label for="checkbox2" class="checkbox-lab" id="checkbox-label">
+                            <input type="checkbox" class="checkbox" name="checkbox" id="checkbox2" required>
+                            ¿Desea ser contactado(a)
+                        </label>  
+                    </div> 
                     <!-- BOTON COTIZACIÓN -->
-                    <input type="submit" value="Enviar Mensaje" class="btn-cotizar" id="btn-cotizar">
+                    <input type="submit" value="Contactar" class="btn-cotizar" id="btn-cotizar">
 
                 </form>
                 <picture class="content__imgs--cotizar ">
