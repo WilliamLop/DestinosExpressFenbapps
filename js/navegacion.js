@@ -1,7 +1,6 @@
 // Obtener todos los elementos de navegación
 const navLinks = document.querySelectorAll('.nav__item--pages');
 const navLinksDrops = document.querySelectorAll('.nav__link--drop');
-console.log(navLinksDrops);
 
 
 // Función para eliminar la clase activa de todos los elementos de navegación

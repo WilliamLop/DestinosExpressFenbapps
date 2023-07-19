@@ -31,8 +31,8 @@ body {
     padding: 0;
     background-color: #0000000b;
     position: relative;
-    height: 10vh;
     font-family: 'Bai Jamjuree', sans-serif;
+    z-index: -99;
 }
 
 body.modal-open {

@@ -132,7 +132,6 @@ function showModal() {
 
     openModal.forEach((modalOpen, modalIndex) => {
         modalOpen.addEventListener('click', () => {
-            console.log(modalIndex);
             openModalContainer.forEach((containerOpen, containerIndex) => {
                 if (containerIndex === modalIndex) {
                     containerOpen.classList.add('modal__container--show');
@@ -157,8 +156,6 @@ function showModal() {
     closeModal.forEach((modalCierre, modalIndex) => {
         modalCierre.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log(modalIndex + 'cerrar');
-
             openModalContainer.forEach((containerOpen, containerIndex) => {
                 if (containerIndex === modalIndex) {
 
@@ -232,7 +229,6 @@ nameInputs.forEach((input, index) => {
     });
 });
 
-console.log(nameInputs);
 
 // FUNCION  PARA RECORRER LOS MODALES Y MOSTRAR LAS CARD
 
@@ -284,7 +280,6 @@ function showCardModal() {
 
 
                 if (index === containerIndex) {
-                    console.log('Si entra');
                     setTimeout(() => {
                         container.classList.remove('card__back--container-show');
 

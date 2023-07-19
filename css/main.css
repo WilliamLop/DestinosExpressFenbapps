@@ -642,9 +642,6 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../images/polygon-scatter-haikei-mobile.svg) no-repeat;
-    background-size: cover;
-    background-position: bottom center;
     filter: blur(1px) brightness(50%) saturate(90%);
 }
 
@@ -879,6 +876,41 @@ html {
 }
 
 
+/* CONTENEDOR Y ELEMENTOS COMUNICATIVOS, WHATSAPP, PAYU, CHATBOT */
+
+.container--btns--floats{
+    display: grid;
+    position: fixed;
+    right: 3.5%;
+    bottom: 2%;
+    padding: .7rem .5rem;
+    gap: 1rem;
+    backdrop-filter: blur(12px);
+    background-color: #00000031;
+    border-radius: .5rem;
+}
+
+.btn__float{
+    font-size: 1.7em;
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    border-radius: 100%;
+    padding: .3rem;
+    background-color: #eeee;
+    transition: .6s ease;
+}
+
+.btn-wap{
+    background-color: #1ec229;
+}
+
+.btn__wap:hover{
+    background-color: #65666d;
+    filter: drop-shadow(2px 2px 5px #eeeeee52);
+}
+
 
 /* INPUTS */
 
@@ -965,8 +997,6 @@ html {
     .img__vehiculos {
         max-height: 250px;
         object-fit: cover;
-        filter: drop-shadow(2px 2px 8px #838383ee);
-
     }
 
     .vehiculo__subtitle {
@@ -1115,9 +1145,6 @@ html {
         height: 100%;
         /* background-color: #eee; */
         /* background: url(../images/bgFormulario2.png) no-repeat; */
-        background: url(../images/polygon-scatter-haikei-desktop.svg) no-repeat;
-        background-size: cover;
-        background-position: left bottom;
         z-index: -1;
     }
 

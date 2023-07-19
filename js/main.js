@@ -1,4 +1,4 @@
-
+AOS.init();
 // Código para la escritura del texto automatico en home
 let typed = new Typed('#element-text', {
     strings: ['tu mejor aliado en transporte.', 'eficiente y confiable.', 'rápido y seguro.'],
@@ -64,7 +64,6 @@ const buttonPrev = document.querySelector('.button-prev');
 const buttonNext = document.querySelector('.button-next');
 const transporteContent = document.querySelectorAll('.transporte__content');
 const ContainerVehiculos = document.querySelector('.swiper--touch');
-console.log(ContainerVehiculos);
 
 // Variable para almacenar el índice del elemento activo
 let currentActiveItem = 0;
