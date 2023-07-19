@@ -9,6 +9,24 @@
         .header{
             background-color: black;
         }
+        .main__container{
+            text-align: center;
+            background-color: #eee;
+            margin-top: 3.5rem;
+            padding: 1rem 0;
+            font-family: inherit;
+            display: grid;
+            gap: 2rem;
+        }
+        .nav__link--drop{
+            color: --black;
+        }
+
+        .img-desarrollo{
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -41,34 +59,31 @@
                                     </li>
                                 </ul>
                                 <ul class="dropdown__list">
-                                    <li class="dropdown__item"><a class="nav__link" href="#">Tansporte empresarial</a>
+                                    <li class="dropdown__item"><a class="nav__link nav__link--drop " href="#">Tansporte empresarial</a>
                                     </li>
-                                    <li class="dropdown__item"><a class="nav__link" href="#">Transporte ingenería y
+                                    <li class="dropdown__item"><a class="nav__link nav__link--drop" href="#">Transporte ingenería y
                                             petroleras</a></li>
-                                    <li class="dropdown__item"><a class="nav__link" href="#">Mensajería empresarial</a>
+                                    <li class="dropdown__item"><a class="nav__link nav__link--drop" href="#">Mensajería empresarial</a>
                                     </li>
                                 </ul>
                             </div>
                             <nav class="nav">
                                 <ul class="nav__list grid--gap flex__center">
-                                    <li class="nav__item nav__item--pages">
-                                        <a href="index.html" class="nav__link nav__link--page">
-                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
-                                                alt="">
+                                    <li class="nav__item  ">
+                                        <a href="#" class="nav__link nav__item--pages">
+                                            <i class="fa-solid fa-house icons-header"></i>
                                             Inicio
                                         </a>
                                     </li>
-                                    <li class="nav__item nav__item--pages ">
-                                        <a href="contacto.html" class="nav__link nav__link--page">
-                                            <img loading="lazy" src="images/iconContacto.png" class="icon__services"
-                                                alt="">
+                                    <li class="nav__item ">
+                                        <a href="contacto.html" class="nav__link nav__item--pages">
+                                                <i class="fa-regular fa-address-card icons-header"></i>
                                             Contacto
                                         </a>
                                     </li>
                                     <li class="nav__item ">
-                                        <a href="trabajaNosotros.html" class="nav__link nav__item--pages item-pages-active">
-                                            <img loading="lazy" src="images/iconTrabajaConNosotros.png"
-                                                class="icon__services" alt="">
+                                        <a href="trabajaNosotros.html" class="nav__link home-link item-pages-active  nav__item--pages">
+                                            <i class="fa-solid fa-truck-fast icons-header"></i>
                                             Trabaja con nosotros
                                         </a>
                                     </li>
@@ -369,11 +384,15 @@
     </header>
 
     <main class="main">
-        
+        <div class="main__container">
+            <h1>Pagina de trabaja con nosotros en desarrollo</h1>
+            <img src="images/endesarrollo.svg" alt="" class="img-desarrollo">
+        </div>
     </main>
+    
     <script src="js/header.js"></script>
 
-     <!-- SCRIPT MAIN.JS -->
-     <script src="js/navegacion.js"></script>
+    <!-- SCRIPT MAIN.JS -->
+    <script src="js/navegacion.js"></script>
 </body>
 </html>
