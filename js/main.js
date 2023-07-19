@@ -380,3 +380,5 @@ redes.forEach(imgs => {
 
 
 
+// console.log(nameInput);
+

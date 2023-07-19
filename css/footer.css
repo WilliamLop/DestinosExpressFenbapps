@@ -1,5 +1,19 @@
+
+
+:root {
+    --black: #31393c;
+    --pragraph-black: #65666d;
+    --orange-ligth: #f8961e;
+    --very-orange: #0077b6;
+    --main-gray: #fffffe;
+    --titles-black: #2b2c34;
+    --titles-white: #fffffe;
+    --GrayishBlue: hsl(201, 11%, 66%);
+    --blue-text: #8ecae6;
+}
+
 .footer {
-    background-color: black;
+    background-color: #0a100d;
     color: white;
 }
 
@@ -30,7 +44,7 @@
 .info__text--footer{
     width: 100%;
     line-height: 1.5;
-
+    color: var(--GrayishBlue);
 }
 
 .nav__footer{
@@ -55,6 +69,7 @@
 
 .copy__text{
     text-align: center;
+    color: var(--GrayishBlue);
 }
 
 .transportadora__img{
@@ -66,11 +81,40 @@
     line-height: 1.8;
 }
 
+.ubi__title{
+    color: var(--titles-white);
+}
+
+.redes__link {
+    color: var(--titles-white);
+    font-size: 1.5em;
+    transition: color .5s ease-in-out;
+}
+
+.redes__link:hover {
+    color: var(--orange-ligth);
+}
+
 .footer__text{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
+    color: var(--GrayishBlue);
+    font-size: .9em;
+}
+
+.footer__text i{
+    color: var(--orange-ligth);
+}
+
+.footer__link{
+    color: var(--GrayishBlue);
+    transition: color .6s ease-in-out;
+}
+
+.footer__link:hover{
+    color: var(--orange-ligth);
 }
 
 .footer__list{

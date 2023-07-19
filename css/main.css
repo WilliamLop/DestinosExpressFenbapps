@@ -106,12 +106,16 @@ html {
     font-size: .7em;
 }
 
+.home__paragraph{
+    color: var(--GrayishBlue);
+}
+
 .btn-cotizar{
     display: block;
     padding: .5rem 0;
     width: 120px;
     margin: 0 auto;
-    background: #2098D1;
+    background: var(--orange-ligth);
     font-family: inherit;
     border-radius: .5rem;
     border: none;
@@ -125,9 +129,8 @@ html {
 
 
 .btn-cotizar:hover{
-    background-color: transparent;
-    border-color: var(--very-orange);
-    color: var(--titles-black);
+    background-color: var(--very-orange);
+    color: var(--titles-white);
 
 }
 .dc--linea{
@@ -193,7 +196,7 @@ html {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: var(--very-orange) !important;
+    background-color: var(--orange-ligth) !important;
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
@@ -296,6 +299,8 @@ html {
     cursor: pointer;
     vertical-align: center;
     border-radius: .2rem;
+    text-transform: uppercase;
+    font-size: .9em;
 }
 
 
@@ -309,7 +314,9 @@ html {
 }
 
 .transporte__link {
-    color: white;
+    color: var(--titles-white);
+    font-weight: 600;
+    font-size: 1em;
 }
 
 .displayNone {
@@ -429,8 +436,8 @@ html {
 }
 
 .vehiculo__subtitle{
-    background-color: #70707027;
-    color: var(--titles-black);
+    background-color: var(--titles-black);
+    color: var(--titles-white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -484,7 +491,7 @@ html {
 .btn-slider {
     position: absolute;
     height: 25px;
-    background-color: var(--very-orange);
+    background-color: var(--titles-black);
     width: 25px;
     top: 300px;
     display: flex;
@@ -534,7 +541,7 @@ html {
 /* ESTILO COMPROMISOS */
 
 .main__container--compromiso {
-    background-color: black;
+    background-color: #0a100d;
     padding: 2rem 0;
 }
 
@@ -549,7 +556,7 @@ html {
 }
 
 .compromiso__info:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--very-orange);
+    border-bottom: 1px solid var(--GrayishBlue);
 }
 
 .compromiso__info {
@@ -570,6 +577,7 @@ html {
 
 .section__mensajeria--container {
     padding: 2rem 0;
+    background-color: #ffff;
 
 }
 
@@ -606,7 +614,6 @@ html {
     object-fit: contain;
     opacity: 0;
     transition: opacity .5s;
-    filter: drop-shadow(2px 2px 8px #838383ee);
 
 }
 
@@ -635,10 +642,10 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: url(../images/polygon-scatter-haikei-mobile.svg) no-repeat; */
-    /* background-size: cover; */
-    /* background-position: bottom center; */
-    filter: blur(.5px) brightness(100%) saturate(90%);
+    background: url(../images/polygon-scatter-haikei-mobile.svg) no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    filter: blur(1px) brightness(50%) saturate(90%);
 }
 
 
@@ -657,16 +664,16 @@ html {
     width: 80%;
     max-width: 1000px;
     margin: 2rem auto;
-    background-color: white;
+    background-color: var(--titles-white);
     position: relative;
-    filter: drop-shadow(1px 1px 3px #6969698c);
+    filter: drop-shadow(2px 2px 6px rgba(53, 53, 53, 0.13));
     border-radius: .5rem;
 }
 
 .from__cotizar {
     width: 90%;
     margin: 1rem auto;
-    background-color: #ffff;
+    background-color: var(--titles-white);
     /* border: 1px solid  black; */
 }
 
@@ -707,13 +714,14 @@ html {
     padding: 1rem;
     width: 90%;
     max-width: 500px;
-    background-color: white;
+    background-color: var(--titles-white);
     margin: auto;
     text-align: center;
     display: grid;
     gap: 1rem;
     opacity: 0;
     transition: opacity .1s ease;
+    border-radius: .5rem;
 
 }
 
@@ -728,14 +736,28 @@ html {
 
 
 .work__container {
-    background-color: #eee;
+    background-color: #ffff;
     padding: 3rem 0;
 }
 
 .work__content {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     text-align: center;
+}
+
+.work__info{
+    display: grid;
+    gap: .5rem;
+}
+.work__title{
+    font-size: 1.5em;
+    color: var(--titles-black);
+}
+
+.work__paragraph{
+    color: var(--GrayishBlue);
+    font-size: .95em;
 }
 
 .work__img {
@@ -744,13 +766,20 @@ html {
     max-width: 300px;
 }
 
+.name__tile{
+    color: var(--orange-ligth);
+}
+
 .btn__work {
     justify-self: center;
     width: 50%;
+    padding: .7rem 0;
+    border-radius: .4rem;
+    font-weight: 600;
 }
 
 .features__link--active {
-    border-color: #22223b;
+    border-color: var(--orange-ligth);
 }
 
 
@@ -767,7 +796,7 @@ html {
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
-    background-color: var(--very-orange);
+    background-color: #f79824;
 }
 
 .transporte__item--active:before {
@@ -795,7 +824,7 @@ html {
 .transporte__item--active {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
-    background-color: #0096c7;
+    background-color: var(--titles-black);
     /* move the element up by 5px */
 }
 
@@ -814,16 +843,12 @@ html {
     background-color: var(--orange-ligth);
 }
 
-
-.redes__link {
-    color: var(--titles-white);
-    font-size: 1.5em;
-    transition: color .5s ease-in-out;
+.fa-car,
+.fa-users{
+    color: var(--titles-black);
 }
 
-.redes__link:hover {
-    color: var(--very-orange);
-}
+
 .grid--items{
     display: grid;
     gap: .5rem;
@@ -832,8 +857,10 @@ html {
 .model__text{
     padding: .3rem;
     text-align: center;
-    border-top: 1px solid #8d8c8cad;
-    border-bottom: 1px solid #8d8c8cad;
+    border-top: 1px solid var(--GrayishBlue);
+    border-bottom: 1px solid var(--GrayishBlue);
+    color: var(--pragraph-black);
+    font-weight: 400;
 }
 
 .link__mensajeria{
@@ -842,12 +869,13 @@ html {
     padding: .6rem 0;
     margin: 0 auto;
     border-radius: .3rem;
-    background-color: #219ebc;
+    background-color: var(--orange-ligth);
 
 }
 
 .mensajeria__paragraph{
     line-height: 1.6;
+    color: var(--GrayishBlue);
 }
 
 
@@ -969,7 +997,8 @@ html {
     }
 
     .transporte__item {
-        width: 100px;
+        box-sizing: border-box;
+        width: 50%;
     }
 
     /* .vehiculo__list--camioneta li:nth-child(-n+2){
@@ -1021,7 +1050,7 @@ html {
 
     .compromiso__info:nth-child(-n + 2) {
         border-bottom: none;
-        border-right: 1px solid var(--very-orange);
+        border-right: 1px solid var(--GrayishBlue);
     }
 
     .compromiso__paragraph {
@@ -1066,7 +1095,7 @@ html {
         background-color: red;
         background: url(../images/cotizarimg.jpg) no-repeat;
         background-size: cover;
-        background-position: left;
+        background-position: center;
         height: unset;
         border-radius: .5rem 0 0 .5rem;
         grid-column: 1 / 2;
@@ -1084,13 +1113,12 @@ html {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #eee;
+        /* background-color: #eee; */
         /* background: url(../images/bgFormulario2.png) no-repeat; */
-        /* background: url(../images/polygon-scatter-haikei-desktop.svg) no-repeat; */
-        /* background-size: cover; */
-        /* background-position: left bottom; */
-        /* filter: blur(1.5px) brightness(100%) saturate(100%); */
-        /* z-index: -1; */
+        background: url(../images/polygon-scatter-haikei-desktop.svg) no-repeat;
+        background-size: cover;
+        background-position: left bottom;
+        z-index: -1;
     }
 
     .work__content {
@@ -1100,6 +1128,11 @@ html {
 
     .work__img {
         margin: 0;
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+    .work__info{
+        grid-column: 2 / 3;
     }
 
     .btn__work {
@@ -1132,6 +1165,12 @@ html {
     .form__title{
         text-align: start;
     }
+
+    .transporte__link {
+        color: var(--titles-white);
+        font-size: 1.em;
+    }
+    
 
 }
 

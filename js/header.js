@@ -16,9 +16,9 @@ window.onbeforeunload = function () {
 
 // Evento para abrir el menu mobile
 btnMenu.addEventListener('click', () => {
-    
+
     navHeader.classList.toggle('nav__header--active');
-    
+
     if (navHeader.classList.contains('nav__header--active')) {
         btnMenuIcon.setAttribute('src', './images/icon-close-menu.svg');
         navHeaderContent.classList.add('nav__header--contentBg');
@@ -40,15 +40,15 @@ btnMenu.addEventListener('click', () => {
 window.addEventListener('scroll', (e) => {
     e.preventDefault();
     const desplazamientoActual = window.pageYOffset;
-    if(ubicacionPrincipal >= desplazamientoActual){
+    if (ubicacionPrincipal >= desplazamientoActual) {
         this.document.getElementsByClassName("header")[0].style.top = '0px';
 
-        if(ubicacionPrincipal <=10){
+        if (ubicacionPrincipal <= 10) {
             this.document.getElementsByClassName("header")[0].style.backgroundColor = 'transparent';
         }
-    }else{
+    } else {
         this.document.getElementsByClassName("header")[0].style.top = '-200px';
-        this.document.getElementsByClassName("header")[0].style.backgroundColor = '#353535';
+        this.document.getElementsByClassName("header")[0].style.backgroundColor = '#0a100d';
     }
 
     ubicacionPrincipal = desplazamientoActual;
@@ -90,7 +90,7 @@ navLinkDrop.addEventListener('mouseleave', () => {
     setTimeout(() => {
         if (!dropdowmList.matches(':hover')) {
             hideDropdown();
-            LinkDrop.style.color= '#fffffe';
+            LinkDrop.style.color = '#fffffe';
         }
     }, 300);
 
@@ -104,7 +104,7 @@ dropdowmList.addEventListener('mouseenter', () => {
 
 dropdowmList.addEventListener('mouseleave', () => {
     hideDropdown();
-    LinkDrop.style.color= '#fffffe';
+    LinkDrop.style.color = '#fffffe';
 });
 
 navLinkDrop.addEventListener('click', (e) => {
@@ -134,7 +134,7 @@ function showModal() {
         modalOpen.addEventListener('click', () => {
             console.log(modalIndex);
             openModalContainer.forEach((containerOpen, containerIndex) => {
-                if(containerIndex === modalIndex){
+                if (containerIndex === modalIndex) {
                     containerOpen.classList.add('modal__container--show');
                     btnMenu.classList.add('close__modal--prevent');
                     navHeaderContent.classList.add('filters');
@@ -143,12 +143,12 @@ function showModal() {
                 }
             });
             openModalContent.forEach((contentOpen, contentIndex) => {
-                if(contentIndex === modalIndex){
+                if (contentIndex === modalIndex) {
                     contentOpen.classList.add('modal__content--show');
                 }
             });
             document.body.classList.add('modal-open');
-            
+
 
         });
     });
@@ -160,8 +160,8 @@ function showModal() {
             console.log(modalIndex + 'cerrar');
 
             openModalContainer.forEach((containerOpen, containerIndex) => {
-                if(containerIndex === modalIndex){
-                    
+                if (containerIndex === modalIndex) {
+
                     containerOpen.classList.add('modal__container--hide');
                     btnMenu.classList.remove('close__modal--prevent');
                     // figureLogo.classList.remove('filters');
@@ -171,18 +171,18 @@ function showModal() {
 
                     main.classList.remove('blur');
 
-                    
-                    
+
+
                     setTimeout(() => {
                         containerOpen.classList.remove('modal__container--show');
                     }, 360);
                     if (window.innerWidth >= 768) {
                         document.body.classList.remove('modal-open');
-                    }                                     
+                    }
                 }
             });
             openModalContent.forEach((contentOpen, contentIndex) => {
-                if(contentIndex === modalIndex){
+                if (contentIndex === modalIndex) {
                     setTimeout(() => {
                         contentOpen.classList.remove('modal__content--show');
                     }, 120);
@@ -191,12 +191,12 @@ function showModal() {
             if (window.innerWidth >= 768) {
                 document.body.classList.remove('modal-open');
             }
-            
+
 
         });
-        
+
     });
-    
+
 }
 // Funcion para abrir modales
 showModal();
@@ -218,7 +218,21 @@ function resertForm() {
     });
 }
 
+const formBack = document.querySelector('.form__modal');
+const nameInputs = document.querySelectorAll('input[name="name"]');
 
+nameInputs.forEach((input, index) => {
+    input.addEventListener('input', () => {
+        let nameValue = input.value;
+        let spanElements = document.querySelectorAll('.name__tile');
+
+        spanElements.forEach((spanElement) => {
+            spanElement.textContent = nameValue + "!";
+        });
+    });
+});
+
+console.log(nameInputs);
 
 // FUNCION  PARA RECORRER LOS MODALES Y MOSTRAR LAS CARD
 
@@ -231,8 +245,8 @@ function showCardModal() {
         button.addEventListener('click', (e) => {
             // Validacion de formularios
             form.forEach((formContent, fromIndex) => {
-                if(fromIndex === index){
-                    if(formContent.checkValidity()) {
+                if (fromIndex === index) {
+                    if (formContent.checkValidity()) {
                         e.preventDefault();
                         cardBackContainer.forEach((modal, modalIndex) => {
                             if (index === modalIndex) {
@@ -252,12 +266,14 @@ function showCardModal() {
                                 modalCotnent.classList.remove('card__back__content--show');
                             }
                         });
-                    }else{
+                    } else {
                         formContent.reportValidity();
                     }
                 }
             });
-            
+
+
+
         });
     });
 
@@ -265,7 +281,7 @@ function showCardModal() {
     btnSalirCard.forEach((btnSalir, index) => {
         btnSalir.addEventListener('click', () => {
             cardBackContainer.forEach((container, containerIndex) => {
-                
+
 
                 if (index === containerIndex) {
                     console.log('Si entra');
@@ -273,7 +289,7 @@ function showCardModal() {
                         container.classList.remove('card__back--container-show');
 
                         // Mover el enfoque al inicio del formulario
-                        form[containerIndex].scrollIntoView({ behavior: 'smooth', block: 'start'});
+                        form[containerIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
 
                     }, 300);
                 }
@@ -296,7 +312,7 @@ const navItem = document.querySelectorAll('.nav__item');
 
 navItem.forEach((item, index) => {
     item.addEventListener('mouseenter', () => {
-    
+
     });
 });
 
@@ -304,10 +320,10 @@ navItem.forEach((item, index) => {
 // resize del menu
 
 window.addEventListener('resize', () => {
-if (window.innerWidth >= 718) {
+    if (window.innerWidth >= 718) {
         const isMenuActive = document.querySelector('.nav__header--active');
-    
-        if(isMenuActive){
+
+        if (isMenuActive) {
             navHeader.classList.remove('nav__header--active');
             btnMenuIcon.setAttribute('src', './images/icon-hamburger.svg');
             main.classList.remove('blur');

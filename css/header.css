@@ -70,7 +70,22 @@ body.modal-open {
     object-fit: cover;
     aspect-ratio: 8 / 9;
 }
+.img-card-back{
+    width: 100%;
+    max-width: 100px;
+}
 
+.img-card-back2{
+    width: 100%;
+    max-width: 170px;
+}
+
+.btn--salir-card{
+    padding: .6rem 0 !important;
+    border-radius: .5rem;
+    width: 120px;
+    margin: 0 auto;
+}
 .nav__header--content {
     position: absolute;
     top: 0;
@@ -157,7 +172,7 @@ body.modal-open {
 
 
 .dropdown__list {
-    padding: .5rem 0 0 2rem;
+    padding: .6rem 0 .3rem 2rem;
     display: grid;
     gap: 1rem;
     font-size: .9em;
@@ -168,7 +183,8 @@ body.modal-open {
 }
 
 .nav__link--drop {
-    color: var(--GrayishBlue);
+    color: #bebebe;
+    font-weight: 500;
 }
 
 .nav__link--drop:hover {
@@ -209,7 +225,7 @@ body.modal-open {
     bottom: 0;
     height: 0vh;
     background: #05050597;
-    filter: brightness(80%) saturate(90%);
+    filter: brightness(95%) saturate(95%);
 
     display: grid;
     width: 100%;
@@ -232,7 +248,7 @@ body.modal-open {
 .modal__content {
     box-sizing: border-box;
     border: 1px solid black;
-    background-color: var(--main-gray);
+    background-color: #F4F4F4;
     width: 90%;
     max-width: 1000px;
     height: 90%;
@@ -266,7 +282,10 @@ body.modal-open {
     margin-top: 1rem;
     background-color: #F9F9F9;
     border: 1px solid #E5E5E5;
-    border-radius: 0 .5rem .5rem 0;
+    border-radius: 0 .3rem .3rem 0;
+    transition: .6s ease-in-out;
+    filter: drop-shadow(1px 1px 3px #97979728);
+
 }
 
 .from__input--content {
@@ -278,24 +297,86 @@ body.modal-open {
     height: 32px;
     display: grid;
     place-items: center;
-    border-right: 1px solid #79797973;
+    border-right: 1px solid #7979795e;
+    transition: .6s ease-in-out;
+    color: #969696;
+
 
 }
 
 .inputs {
     padding: .5rem;
     border: 1px solid transparent;
-    background-color: #eee;
-    border-radius: 0 .5rem .5rem 0;
+    border-bottom: 1px solid #eeee;
+    background-color: transparent;
+    border-radius: 0 .3rem .3rem 0;
+    font-family: inherit;
+    color: var(--black);
+    font-weight: 700;
+    font-size: .9em;
 }
 
+.inputs:focus-within{
+    outline: none;
+}
+
+::placeholder{
+    color: var(--pragraph-black);
+    font-weight: 400;
+}
 .selected {
     border: none;
-    height: 32px;
+    height: 35px;
     cursor: pointer;
-    background-color: #eee;
-    border-radius: 0 .5rem .5rem 0;
+    background-color: transparent;
+    border-radius: 0 .3rem .3rem 0;
+    transition: .6s ease-in-out;
+    font-family: inherit;
+    color: var(--black);
+    font-weight: 600;
+}
 
+.from__input:focus-within .from--icon {
+    border-color: var(--orange-ligth);
+    
+}
+.from__input:focus-within {
+    border-color: var(--orange-ligth);
+}
+
+.from__input:focus-within .fa-icon {
+    color: var(--orange-ligth);
+}
+
+
+
+.selected:focus-within{
+    outline: none;
+    color: var(--orange-ligth);
+    
+}
+
+.selected option:first-child{
+    color: var(--pragraph-black);
+}
+
+.selected option{
+    color: var(--black);
+    font-weight: 600;
+    
+}
+
+
+.textarea{
+    border:transparent;
+    border-radius: 0 .3rem .3rem 0;
+    font-family: inherit;
+    transition: .6s ease-in-out;
+    resize: none;
+}
+
+.textarea:focus-within{
+    outline: none;
 }
 
 .reserva__title {
@@ -373,6 +454,20 @@ body.modal-open {
     cursor: pointer;
 }
 
+.checkbox-lab{
+    color: var(--GrayishBlue);
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.checkbox{
+    cursor: pointer;
+}
+
+.checkbox:checked{
+    color: red;
+}
+
 
 /* CARDS BACK */
 .card__back--container {
@@ -401,17 +496,49 @@ body.modal-open {
 
 .card__back--content {
     text-align: center;
-    background-color: white;
-    width: 80%;
+    background-color: var(--titles-white);
+    width: 90%;
     margin: 0 auto;
     border-radius: .5rem;
-    max-width: 450px;
-    padding: 1rem .5rem;
+    max-width: 550px;
+    padding: 2rem .5rem;
     display: grid;
     gap: 1rem;
     opacity: 0;
+    filter: drop-shadow(2px 2px 6px #f780003a);
 }
 
+.card__title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.destinos--span{
+    color: var(--orange-ligth);
+    font-weight: 600;
+}
+
+.span__transportadora{
+    color: var(--black);
+    font-weight: 600;
+
+}
+
+.btn-confimacion{
+    width: 120px;
+    padding: .7rem 0 !important;
+    border-radius: .5rem;
+    margin: 0 auto;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card__description{
+    line-height: 1.6;
+    color: var(--GrayishBlue);
+    font-size: .95em;
+}
 .card__back__content--show {
     opacity: 1;
     transition: opacity 1.2s ease-in-out;
@@ -583,6 +710,11 @@ body.modal-open {
         gap: 1rem;
     }
 
+        
+    .nav__link--drop {
+        color: var(--titles-black);
+    }
+
     .btn {
         padding: .2rem .3rem;
     }
@@ -602,10 +734,10 @@ body.modal-open {
         box-sizing: border-box;
         display: block;
         position: absolute;
-        background-color: white;
+        background-color: var(--titles-white);
         top: 32px;
-        border-top: 15px solid var(--very-orange);
-        height: 160px;
+        border-top: 15px solid var(--orange-ligth);
+        height: 170px;
         width: 220px;
         display: grid;
         justify-content: center;
@@ -702,7 +834,8 @@ body.modal-open {
 @media (min-width: 64rem) {
 
     .dropdown__list {
-        border-top: 9px solid var(--very-orange);
+        padding: .7rem 0 .7rem 2rem;
+        border-top: 9px solid var(--orange-ligth);
 
     }
 
