@@ -763,9 +763,7 @@ html {
     max-width: 300px;
 }
 
-.name__tile{
-    color: var(--orange-ligth);
-}
+
 
 .btn__work {
     justify-self: center;

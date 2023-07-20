@@ -366,6 +366,10 @@ body.modal-open {
     
 }
 
+.name__tile{
+    color: var(--orange-ligth);
+}
+
 
 .textarea{
     border:transparent;
