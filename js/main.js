@@ -304,7 +304,7 @@ let currentIndex2 = 0;
 const maxIndex = linkTiposVehiculos.length;
 const maxIndexImgs = imgMensajeria.length;
 
-setInterval(() => {
+// setInterval(() => {
     removeActiveElements('vehiculo__item--show');
     linkTiposVehiculos[currentIndex].classList.add('vehiculo__item--show');
 
@@ -312,7 +312,7 @@ setInterval(() => {
     imgTiposVehiculos[currentIndex].classList.add('img-camioneta-show');
 
     currentIndex = (currentIndex + 1) % maxIndex;
-}, 50000);
+// });
 
 
 setInterval(() => {
