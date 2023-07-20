@@ -1,4 +1,7 @@
-AOS.init();
+AOS.init({
+    once: true
+});
+
 // Código para la escritura del texto automatico en home
 let typed = new Typed('#element-text', {
     strings: ['Tú mejor aliado en transporte', 'Eficiente y confiable', 'Rápido y seguro'],
