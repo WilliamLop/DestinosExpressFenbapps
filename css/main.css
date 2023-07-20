@@ -881,10 +881,10 @@ html {
     position: fixed;
     right: 3.5%;
     bottom: 2%;
-    padding: .7rem .5rem;
-    gap: 1rem;
+    padding: .5rem;
+    /* gap: 1rem; */
     backdrop-filter: blur(12px);
-    background-color: #00000031;
+    background-color: #6c757d49;
     border-radius: .5rem;
 }
 
@@ -905,10 +905,39 @@ html {
 }
 
 .btn__wap:hover{
-    background-color: #65666d;
-    filter: drop-shadow(2px 2px 5px #eeeeee52);
+    background-color: #212529;
+    filter: drop-shadow(1px 1px 3px #e9ecef36);
 }
 
+
+.content--btns--floats{
+    display: grid;
+    gap: 1rem;
+    /* background-color: red; */
+    clip-path: inset(100% 0 0 0);
+    height: 0;
+    transition: .5s ease-in-out;
+}
+
+.content--btns--floats--show{
+    clip-path: inset(0 0 0 0);
+    height: unset;
+    transition: .5s ease-in-out;
+    margin-bottom: 1rem;
+}  
+
+.fa-arrow-up{
+    transition: .4s ease;
+}
+
+.rotate--arrow--btns{
+    transform: rotate(-180deg);
+}
+
+.contenedor__btns--links a{
+    border: 1px solid black,
+    
+}
 
 /* INPUTS */
 

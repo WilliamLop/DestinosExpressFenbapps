@@ -381,3 +381,14 @@ redes.forEach(imgs => {
 
 // console.log(nameInput);
 
+const btnsBody = document.getElementById('botonesBody');
+const contentBtns = document.querySelector('.content--btns--floats');
+const arrowBtns = document.querySelector('.fa-arrow-up');
+
+console.log(contentBtns);
+
+btnsBody.addEventListener('click', (e) =>{
+    e.preventDefault();
+    contentBtns.classList.toggle('content--btns--floats--show');
+    arrowBtns.classList.toggle('rotate--arrow--btns');
+});
